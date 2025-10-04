@@ -75,7 +75,7 @@ git add .
 git commit -m "Initial commit: PM Standards Comparison Tool"
 
 # Add your GitHub repository (replace with YOUR username and repo name)
-git remote add origin https://github.com/YOUR-USERNAME/pm-standards-comparison.git
+git remote add origin https://github.com/S-Shoaib79/pm-standards-comparison.git
 
 # Push to GitHub
 git branch -M main

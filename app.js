@@ -79,14 +79,8 @@ async function loadData() {
 
 // Repository View Setup
 function setupRepositoryView() {
-    const searchInput = document.getElementById('repoSearch');
     const filterChips = document.querySelectorAll('.filter-chip');
     let currentFilter = 'all';
-
-    // Search functionality
-    searchInput.addEventListener('input', (e) => {
-        displayRepositoryContent(e.target.value, currentFilter);
-    });
 
     // Filter chips
     filterChips.forEach(chip => {
@@ -94,7 +88,7 @@ function setupRepositoryView() {
             filterChips.forEach(c => c.classList.remove('active'));
             chip.classList.add('active');
             currentFilter = chip.dataset.filter;
-            displayRepositoryContent(searchInput.value, currentFilter);
+            displayRepositoryContent('', currentFilter);
         });
     });
 

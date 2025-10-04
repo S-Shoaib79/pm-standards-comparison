@@ -555,6 +555,502 @@
           "Use management by exception to empower project managers"
         ]
       }
+    },
+    "scope": {
+      "pmbok": {
+        "title": "Scope within Delivery Performance Domain",
+        "description": "PMBOK 7 focuses on outcomes and deliverables inside performance domains; scope is controlled within planning and project work.",
+        "page": 53,
+        "keyPoints": [
+          "Outcome and value oriented approach",
+          "Scope controlled within planning and project work domains",
+          "Focus on delivering value rather than just scope",
+          "Integration with other performance domains",
+          "Adaptive scope management for changing environments"
+        ]
+      },
+      "prince2": {
+        "title": "Product-Based Planning",
+        "description": "PRINCE2 is very product-focused with product descriptions driving scope, quality, and acceptance. Product Breakdown Structure and Product Flow Diagrams are core techniques.",
+        "page": 26,
+        "keyPoints": [
+          "Product descriptions drive scope, quality, acceptance",
+          "Product Breakdown Structure (PBS) as core technique",
+          "Product Flow Diagrams for dependencies",
+          "Clear product-based acceptance criteria",
+          "Product focus ensures tangible deliverables"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Scope Management Practice",
+        "description": "ISO defines scope management as a discrete practice (7.4) — define, control, confirm scope delivery.",
+        "page": [38, 7],
+        "keyPoints": [
+          "Formal scope definition process",
+          "Scope control mechanisms",
+          "Scope confirmation and validation",
+          "Work Breakdown Structure approach",
+          "Standard processes for scope management"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "All require formal definition, control and confirmation of scope/deliverables",
+          "Work breakdown structures (WBS/PBS) are foundational concepts",
+          "Change control processes linked to scope management",
+          "Stakeholder involvement in scope definition",
+          "Quality criteria integrated with scope"
+        ],
+        "differences": [
+          "PRINCE2's explicit 'product' artifacts are unique in their centrality to planning and acceptance",
+          "PMBOK is more outcome/value oriented",
+          "ISO lays out standard processes for scope management",
+          "PRINCE2 Product Descriptions provide most detailed specifications",
+          "PMBOK integrates scope most fully into overall delivery approach"
+        ],
+        "recommendations": [
+          "Use PRINCE2 product-based planning for deliverable-focused projects",
+          "Apply PMBOK approach for outcome-driven, value-focused projects",
+          "Adopt ISO systematic approach for standardization across portfolio",
+          "Combine PRINCE2 Product Descriptions with PMBOK value focus",
+          "Tailor scope formality to project complexity and risk"
+        ]
+      }
+    },
+    "change": {
+      "pmbok": {
+        "title": "Change Management across Domains",
+        "description": "PMBOK 7 addresses change across planning and project work; tailoring determines specific control mechanisms.",
+        "page": 227,
+        "keyPoints": [
+          "Change integrated across multiple domains",
+          "Tailoring determines specific control mechanisms",
+          "Focus on adapting to change rather than resisting",
+          "Change as part of uncertainty management",
+          "Flexible change control approaches"
+        ]
+      },
+      "prince2": {
+        "title": "Issues & Change Control Practice",
+        "description": "PRINCE2 has a dedicated Issues & change control practice with change proposals, issue registers, and formal process for assessing/deciding on changes with clear responsibilities.",
+        "page": [186, 270],
+        "keyPoints": [
+          "Change proposals as formal artifacts",
+          "Issue registers for tracking",
+          "Formal assessment and decision process",
+          "Clear roles and responsibilities for change",
+          "Integration with business case justification"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Change Control Guidance",
+        "description": "ISO provides change control guidance (7.10) — establish framework, identify and assess change requests, plan implementation and closure.",
+        "page": [30, 43],
+        "keyPoints": [
+          "Establish change control framework",
+          "Identify and assess change requests",
+          "Plan implementation of approved changes",
+          "Change closure and verification",
+          "Linkage to business case and objectives"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "Formal request/assessment/approval/implementation/closure lifecycle for changes",
+          "Linkage to business case and plan adjustments",
+          "Clear authority and escalation paths",
+          "Documentation and tracking of changes",
+          "Impact analysis before approval"
+        ],
+        "differences": [
+          "PRINCE2 provides detailed roles and templates for issues/change handling",
+          "PMBOK leaves the specific mechanism to tailoring and the project's chosen approach",
+          "ISO provides clause-level steps to adopt",
+          "PRINCE2 combines issue and change management in single practice",
+          "PMBOK emphasizes adaptability over formal process"
+        ],
+        "recommendations": [
+          "Use PRINCE2 formal process for projects requiring strict governance",
+          "Apply PMBOK flexible approach for agile/adaptive projects",
+          "Adopt ISO framework for organizational standardization",
+          "Combine PRINCE2 templates with PMBOK adaptability",
+          "Tailor change control rigor to project risk level"
+        ]
+      }
+    },
+    "benefits": {
+      "pmbok": {
+        "title": "Value Delivery System",
+        "description": "PMBOK 7 focuses on value delivery and outcomes (system for value delivery); business-case thinking embedded in principles.",
+        "page": 279,
+        "keyPoints": [
+          "System for value delivery as holistic concept",
+          "Business case thinking embedded in principles",
+          "Focus on outcomes and benefits realization",
+          "Integration with organizational strategy",
+          "Value as guiding principle for decisions"
+        ]
+      },
+      "prince2": {
+        "title": "Business Case Practice",
+        "description": "Business Case practice is central in PRINCE2; evolves through life cycle and is the basis for continued justification of the project.",
+        "page": [31, 74],
+        "keyPoints": [
+          "Business Case as central document",
+          "Evolves through project lifecycle",
+          "Basis for continued justification",
+          "Regular reviews at stage boundaries",
+          "Clear investment appraisal and benefits forecast"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Benefits Management Practice",
+        "description": "ISO provides benefits management practice (7.3) — identify, analyse, monitor, maintain benefits in alignment with strategy.",
+        "page": [17, 36],
+        "keyPoints": [
+          "Systematic benefits identification",
+          "Benefits analysis and quantification",
+          "Monitoring benefits throughout lifecycle",
+          "Maintaining benefits alignment with strategy",
+          "Post-project benefits realization"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "Business case / benefits must be defined, monitored and used to justify/terminate projects",
+          "Alignment with organizational strategy required",
+          "Benefits tracked throughout project lifecycle",
+          "All require ongoing justification for project continuation",
+          "Post-project benefits realization emphasized"
+        ],
+        "differences": [
+          "PRINCE2's lifecycle explicitly ties business case updates to stage boundaries and approvals",
+          "PMBOK treats benefits as part of the overall value-delivery system",
+          "ISO provides structured benefit management activities",
+          "PRINCE2 Business Case is most central to governance",
+          "PMBOK has broadest value delivery perspective"
+        ],
+        "recommendations": [
+          "Use PRINCE2 approach for projects requiring strict business justification",
+          "Apply PMBOK value delivery system for strategic initiatives",
+          "Adopt ISO structured approach for portfolio-level benefits tracking",
+          "Combine PRINCE2 Business Case rigor with PMBOK value focus",
+          "Regular benefits reviews regardless of chosen framework"
+        ]
+      }
+    },
+    "communication": {
+      "pmbok": {
+        "title": "Communication across Domains",
+        "description": "Communication integrated across Planning & Project Work domains; emphasizes adapting to cadence and stakeholders.",
+        "page": 137,
+        "keyPoints": [
+          "Integrated across multiple performance domains",
+          "Adaptive to delivery cadence and stakeholder needs",
+          "Emphasis on effective rather than excessive communication",
+          "Multiple communication methods and models",
+          "Tailored communication strategies"
+        ]
+      },
+      "prince2": {
+        "title": "Communication in Organizing and Plans",
+        "description": "Communications integrated into Organizing and Plans practices; includes standard management products (highlight reports, checkpoint reports).",
+        "page": 61,
+        "keyPoints": [
+          "Standard management products for reporting",
+          "Highlight reports for Project Board",
+          "Checkpoint reports for progress tracking",
+          "Communication Management Approach document",
+          "Defined reporting frequencies and formats"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Communication Management Practice",
+        "description": "ISO provides communication management practice (7.13) — plan, distribute, monitor impact.",
+        "page": [48, 50],
+        "keyPoints": [
+          "Communication planning process",
+          "Information distribution mechanisms",
+          "Monitoring communication effectiveness",
+          "Stakeholder communication needs analysis",
+          "Standard communication processes"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "Plan communications, select formats/cadence, monitor impact",
+          "Stakeholder communication needs drive approach",
+          "Regular progress reporting required",
+          "Multiple communication channels utilized",
+          "Documentation of communication approaches"
+        ],
+        "differences": [
+          "PRINCE2 offers a set of named report types and templates",
+          "PMBOK provides models and tailoring guidance",
+          "ISO provides standard process steps for planning and reporting",
+          "PRINCE2 has most prescriptive reporting structure",
+          "PMBOK emphasizes communication adaptability most"
+        ],
+        "recommendations": [
+          "Use PRINCE2 templates for structured reporting environments",
+          "Apply PMBOK flexible approach for diverse stakeholder groups",
+          "Adopt ISO framework for organizational communication standards",
+          "Combine PRINCE2 report types with PMBOK tailoring",
+          "Match communication formality to governance requirements"
+        ]
+      }
+    },
+    "procurement": {
+      "pmbok": {
+        "title": "Procurement in Planning & Project Work",
+        "description": "Procurement appears as part of Planning performance domain and Project Work considerations.",
+        "page": [138, 247],
+        "keyPoints": [
+          "Procurement integrated into planning domain",
+          "Focus on procurement processes within project context",
+          "Emphasis on collaborative relationships",
+          "Contract types and selection criteria",
+          "Procurement risk management"
+        ]
+      },
+      "prince2": {
+        "title": "Supplier Management",
+        "description": "Supplier side is formalized (Senior Supplier role); procurement aspects integrated into organizing, plans and quality practices.",
+        "page": [28, 109],
+        "keyPoints": [
+          "Senior Supplier role on Project Board",
+          "Formal supplier representation in governance",
+          "Supplier assurance responsibilities",
+          "Integration with product-based planning",
+          "Commercial relationship management"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Procurement Management Practice",
+        "description": "ISO provides procurement management practice (7.17) — plan procurement, evaluate/select suppliers, administer and close contracts.",
+        "page": [51, 52],
+        "keyPoints": [
+          "Plan procurement activities",
+          "Evaluate and select suppliers systematically",
+          "Contract administration procedures",
+          "Contract closure processes",
+          "Supplier performance management"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "Plan → select → administer → close lifecycle; alignment with project objectives",
+          "Supplier selection criteria and evaluation",
+          "Contract types and management approaches",
+          "Risk management in procurement",
+          "Performance monitoring of suppliers"
+        ],
+        "differences": [
+          "PRINCE2's governance/role model assigns formal supplier representation and assurance roles",
+          "PMBOK focuses on procurement processes within the project context",
+          "ISO prescribes clause-level procurement steps",
+          "PRINCE2 integrates supplier most deeply into governance",
+          "ISO provides most structured procurement process"
+        ],
+        "recommendations": [
+          "Use PRINCE2 approach for projects with significant supplier dependencies",
+          "Apply PMBOK processes for diverse procurement scenarios",
+          "Adopt ISO framework for organizational procurement standardization",
+          "Use PRINCE2 Senior Supplier role for governance clarity",
+          "Tailor procurement formality to contract value and risk"
+        ]
+      }
+    },
+    "lessons": {
+      "pmbok": {
+        "title": "Learning Throughout Project",
+        "description": "Learning throughout the project; measurement and feedback (Measurement domain) and PMIstandards+ for ongoing practices.",
+        "page": [142, 279],
+        "keyPoints": [
+          "Continuous learning throughout project",
+          "Integration with measurement domain",
+          "PMIstandards+ platform for knowledge sharing",
+          "Retrospectives and feedback loops",
+          "Organizational learning emphasis"
+        ]
+      },
+      "prince2": {
+        "title": "Learn from Experience Principle",
+        "description": "Principle 'Learn from experience' and explicit techniques to capture lessons and feed them into tailoring and future projects.",
+        "page": 41,
+        "keyPoints": [
+          "Core principle of the methodology",
+          "Lessons Log as management product",
+          "Regular lessons capture throughout project",
+          "Lessons applied to project tailoring",
+          "Lessons Report at project closure"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Lessons Learned Practice",
+        "description": "ISO includes lessons learned as a practice (7.18) — identify, disseminate lessons.",
+        "page": 52,
+        "keyPoints": [
+          "Systematic lessons identification",
+          "Lessons dissemination processes",
+          "Integration into organizational knowledge base",
+          "Regular lessons capture activities",
+          "Application to future projects"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "Capture, disseminate and apply lessons to improve future projects and tailoring choices",
+          "Regular capture throughout project lifecycle",
+          "Organizational knowledge management",
+          "Retrospectives and review sessions",
+          "Application to future project planning"
+        ],
+        "differences": [
+          "PRINCE2 makes learning a core principle",
+          "PMBOK integrates learning most fully with measurement",
+          "ISO treats lessons as discrete practice",
+          "PRINCE2 has most formal lessons documentation (Lessons Log)",
+          "PMBOK emphasizes continuous learning most"
+        ],
+        "recommendations": [
+          "Use PRINCE2 Lessons Log for structured capture",
+          "Apply PMBOK continuous learning approach for adaptive projects",
+          "Adopt ISO framework for organizational knowledge management",
+          "Regular lessons sessions regardless of methodology",
+          "Create searchable lessons repository for organization"
+        ]
+      }
+    },
+    "measurement": {
+      "pmbok": {
+        "title": "Measurement & Uncertainty Domains",
+        "description": "Dedicated Measurement domain and Uncertainty domain (includes risk, complexity, ambiguity). Emphasizes outcomes-based measures.",
+        "page": [86, 160, 208],
+        "keyPoints": [
+          "Dedicated performance domain for measurement",
+          "Outcomes-based measures emphasized",
+          "Uncertainty domain for risk, complexity, ambiguity",
+          "Multiple measurement approaches",
+          "Integration with all performance domains"
+        ]
+      },
+      "prince2": {
+        "title": "Progress Practice with Tolerances",
+        "description": "Progress practice with tolerance reporting, highlight/exception reports and metrics for stage control.",
+        "page": 25,
+        "keyPoints": [
+          "Tolerance-based management by exception",
+          "Highlight reports for regular progress",
+          "Exception reports when tolerances breached",
+          "Six performance targets tracked",
+          "Stage-based measurement and control"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Reporting and Monitoring",
+        "description": "ISO provides reporting (7.15) and guidance for monitoring project performance and reporting outputs.",
+        "page": 30,
+        "keyPoints": [
+          "Performance monitoring processes",
+          "Reporting frameworks and formats",
+          "Key performance indicators",
+          "Progress tracking mechanisms",
+          "Variance analysis and corrective action"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "Define what to measure, use measures for decision-making and governance, handle uncertainty explicitly",
+          "Baselines for comparison",
+          "Regular progress reporting",
+          "Variance analysis and corrective action",
+          "Multiple measurement dimensions (time, cost, scope, quality)"
+        ],
+        "differences": [
+          "PMBOK provides a performance-domain view and wider set of measures",
+          "PRINCE2 prescribes management products/reports and tolerances for exception handling",
+          "ISO maps reporting to standardized processes",
+          "PRINCE2 tolerance mechanism is unique",
+          "PMBOK integrates measurement most comprehensively"
+        ],
+        "recommendations": [
+          "Use PRINCE2 tolerance approach for clear escalation triggers",
+          "Apply PMBOK measurement domain for comprehensive performance view",
+          "Adopt ISO framework for standardized reporting",
+          "Combine PRINCE2 exception reporting with PMBOK metrics",
+          "Tailor measurement frequency to project pace and risk"
+        ]
+      }
+    },
+    "tailoring": {
+      "pmbok": {
+        "title": "Dedicated Tailoring Section",
+        "description": "PMBOK 7 has a dedicated Tailoring section; tailoring driven by principles, organizational values and project context; recommends PMIstandards+ for context-specific practices.",
+        "page": 193,
+        "keyPoints": [
+          "Dedicated section on tailoring",
+          "Tailoring driven by principles and context",
+          "PMIstandards+ for context-specific guidance",
+          "Step-by-step tailoring process",
+          "Emphasis on appropriate adaptation"
+        ]
+      },
+      "prince2": {
+        "title": "Tailor to Suit the Project Principle",
+        "description": "Explicit principle 'Tailor to suit the project'; tailoring decisions captured in initiation docs and approved by Project Board; practical guidance on what/how to tailor.",
+        "page": [48, 66],
+        "keyPoints": [
+          "Core principle of methodology",
+          "Tailoring decisions documented in initiation",
+          "Project Board approval of tailoring",
+          "Practical guidance on what to tailor",
+          "Examples of tailoring for different contexts"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "Adaptation to Context",
+        "description": "ISO emphasizes selecting approaches based on organizational/contextual considerations; ISO 21502 advises on how to adapt management practices to project context.",
+        "page": 26,
+        "keyPoints": [
+          "Context-based adaptation guidance",
+          "Organizational considerations for tailoring",
+          "Selection of appropriate practices",
+          "Scalability of processes",
+          "Industry and project type considerations"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "All require tailoring to project size, complexity, delivery method, risk, and organizational environment",
+          "Context assessment as foundation for tailoring",
+          "Documentation of tailoring decisions",
+          "Balance between standardization and flexibility",
+          "Stakeholder involvement in tailoring choices"
+        ],
+        "differences": [
+          "PRINCE2 expects formal tailoring decisions to be approved by governance (Project Board) and captured in initiation documentation",
+          "PMBOK focuses on tailoring guided by principles and provides a catalog of models/methods (less prescriptive about approval steps)",
+          "ISO focuses on organizational selection criteria and alignment; less prescriptive about specific approval gates (left to organizational practice)",
+          "PMBOK has most extensive tailoring guidance",
+          "PRINCE2 has most formal tailoring approval process"
+        ],
+        "recommendations": [
+          "Use PRINCE2 formal approval for tailoring in governed environments",
+          "Apply PMBOK principle-based tailoring for flexible adaptation",
+          "Adopt ISO approach for organizational consistency",
+          "Document tailoring rationale regardless of methodology",
+          "Regular review of tailoring effectiveness"
+        ]
+      }
     }
   },
   "insights": {

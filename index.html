@@ -29,18 +29,15 @@
             <div id="repository" class="tab-content active">
                 <div class="content-header">
                     <h2>Standards Repository</h2>
-                    <p>Explore and search through all PM standards documentation</p>
+                    <p>Explore all PM standards documentation</p>
                 </div>
                 
-                <div class="search-panel">
-                    <input type="text" id="repoSearch" placeholder="🔍 Search across all standards (e.g., 'risk management', 'stakeholder')" />
-                    <div class="filter-chips">
-                        <button class="filter-chip active" data-filter="all">All Standards</button>
-                        <button class="filter-chip" data-filter="pmbok">PMBOK 7</button>
-                        <button class="filter-chip" data-filter="prince2">PRINCE2</button>
-                        <button class="filter-chip" data-filter="iso21500">ISO 21500</button>
-                        <button class="filter-chip" data-filter="iso21502">ISO 21502</button>
-                    </div>
+                <div class="filter-chips" style="margin-bottom: 30px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="filter-chip active" data-filter="all">All Standards</button>
+                    <button class="filter-chip" data-filter="pmbok">PMBOK 7</button>
+                    <button class="filter-chip" data-filter="prince2">PRINCE2</button>
+                    <button class="filter-chip" data-filter="iso21500">ISO 21500</button>
+                    <button class="filter-chip" data-filter="iso21502">ISO 21502</button>
                 </div>
 
                 <div id="repositoryContent" class="standards-grid">
@@ -61,16 +58,17 @@
                         <option value="">-- Choose a topic to compare --</option>
                         <option value="risk">Risk Management</option>
                         <option value="stakeholder">Stakeholder Engagement</option>
-                        <option value="planning">Project Planning</option>
-                        <option value="scope">Scope Management</option>
-                        <option value="schedule">Schedule Management</option>
-                        <option value="cost">Cost Management</option>
+                        <option value="planning">Planning (scope/schedule/cost)</option>
+                        <option value="scope">Scope & Requirements / Product focus</option>
                         <option value="quality">Quality Management</option>
-                        <option value="resources">Resource Management</option>
-                        <option value="communication">Communication</option>
-                        <option value="procurement">Procurement</option>
-                        <option value="integration">Integration Management</option>
-                        <option value="governance">Governance</option>
+                        <option value="change">Change Control & Issues</option>
+                        <option value="benefits">Benefits & Business Case</option>
+                        <option value="communication">Communications & Reporting</option>
+                        <option value="procurement">Procurement & Contracts</option>
+                        <option value="lessons">Lessons Learned & Continuous Improvement</option>
+                        <option value="measurement">Measurement, Performance & Uncertainty</option>
+                        <option value="governance">Governance & Roles</option>
+                        <option value="tailoring">Tailoring & Adaptation</option>
                     </select>
                 </div>
 
