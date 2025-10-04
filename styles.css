@@ -533,6 +533,218 @@ body {
     color: var(--info);
 }
 
+/* Uniqueness Analysis */
+.uniqueness-intro {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.uniqueness-intro p {
+    color: var(--text-gray);
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.uniqueness-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.uniqueness-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.uniqueness-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.uniqueness-card.pmbok-unique {
+    border-top: 4px solid var(--pmbok-color);
+}
+
+.uniqueness-card.prince2-unique {
+    border-top: 4px solid var(--prince2-color);
+}
+
+.uniqueness-card.iso-unique {
+    border-top: 4px solid var(--iso-color);
+}
+
+.uniqueness-header {
+    padding: 25px;
+    text-align: center;
+    background: var(--bg-light);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.standard-icon-large {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.uniqueness-header h3 {
+    color: var(--text-dark);
+    margin: 10px 0 8px 0;
+    font-size: 1.4em;
+}
+
+.standard-tagline {
+    color: var(--text-gray);
+    font-size: 0.95em;
+    font-style: italic;
+    margin: 0;
+}
+
+.uniqueness-content {
+    padding: 25px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.uniqueness-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uniqueness-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.uniqueness-item:hover {
+    background: #f0f4ff;
+    transform: translateX(5px);
+}
+
+.uniqueness-item:last-child {
+    margin-bottom: 0;
+}
+
+.uniqueness-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.uniqueness-badge {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.uniqueness-item h4 {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.uniqueness-description {
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin: 12px 0;
+    font-size: 0.95em;
+}
+
+.uniqueness-meta {
+    margin-top: 12px;
+}
+
+.uniqueness-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+}
+
+.uniqueness-summary h3 {
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.recommendation-card {
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.recommendation-card.pmbok-rec {
+    border-top: 4px solid var(--pmbok-color);
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.05) 0%, white 100%);
+}
+
+.recommendation-card.prince2-rec {
+    border-top: 4px solid var(--prince2-color);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, white 100%);
+}
+
+.recommendation-card.iso-rec {
+    border-top: 4px solid var(--iso-color);
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, white 100%);
+}
+
+.recommendation-card h4 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.recommendation-card ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.recommendation-card li {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.no-features {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
 /* Insights Dashboard */
 .insights-grid {
     display: grid;
@@ -1017,6 +1229,14 @@ body {
     .phase-content {
         grid-template-columns: 1fr;
     }
+    
+    .uniqueness-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recommendation-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1034,6 +1254,14 @@ body {
     }
     
     .standards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .uniqueness-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recommendation-grid {
         grid-template-columns: 1fr;
     }
     

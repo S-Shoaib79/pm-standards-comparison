@@ -17,6 +17,7 @@
             <div class="nav-tabs">
                 <button class="tab-btn active" data-tab="repository">📚 Standards Repository</button>
                 <button class="tab-btn" data-tab="comparison">⚖️ Comparison Engine</button>
+                <button class="tab-btn" data-tab="uniqueness">⭐ Uniqueness Analysis</button>
                 <button class="tab-btn" data-tab="insights">💡 Insights Dashboard</button>
                 <button class="tab-btn" data-tab="process">🔧 Process Generator</button>
             </div>
@@ -77,6 +78,92 @@
                     <div class="comparison-placeholder">
                         <div class="placeholder-icon">⚖️</div>
                         <p>Select a topic above to view detailed comparisons</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uniqueness Analysis Tab -->
+            <div id="uniqueness" class="tab-content">
+                <div class="content-header">
+                    <h2>⭐ Uniqueness Analysis</h2>
+                    <p>Discover what makes each PM standard distinctive and when to leverage their unique strengths</p>
+                </div>
+
+                <div class="uniqueness-intro">
+                    <p>Each project management standard brings unique value. Understanding what sets them apart helps you choose the right framework for your context and leverage the best of each approach.</p>
+                </div>
+
+                <div class="uniqueness-grid">
+                    <!-- PMBOK Unique Features -->
+                    <div class="uniqueness-card pmbok-unique">
+                        <div class="uniqueness-header">
+                            <span class="standard-icon-large">📘</span>
+                            <h3>PMBOK 7 Unique Features</h3>
+                            <p class="standard-tagline">Principle-Based & Value-Driven</p>
+                        </div>
+                        <div id="pmbokUnique" class="uniqueness-content">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- PRINCE2 Unique Features -->
+                    <div class="uniqueness-card prince2-unique">
+                        <div class="uniqueness-header">
+                            <span class="standard-icon-large">📗</span>
+                            <h3>PRINCE2 Unique Features</h3>
+                            <p class="standard-tagline">Structured & Governance-Focused</p>
+                        </div>
+                        <div id="prince2Unique" class="uniqueness-content">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- ISO Unique Features -->
+                    <div class="uniqueness-card iso-unique">
+                        <div class="uniqueness-header">
+                            <span class="standard-icon-large">📙</span>
+                            <h3>ISO 21500/21502 Unique Features</h3>
+                            <p class="standard-tagline">International & Universally Applicable</p>
+                        </div>
+                        <div id="isoUnique" class="uniqueness-content">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uniqueness-summary">
+                    <h3>🎯 When to Leverage Each Standard's Strengths</h3>
+                    <div class="recommendation-grid">
+                        <div class="recommendation-card pmbok-rec">
+                            <h4>Choose PMBOK When:</h4>
+                            <ul>
+                                <li>You need flexibility and adaptability</li>
+                                <li>Working with agile or hybrid approaches</li>
+                                <li>Focus is on value delivery and outcomes</li>
+                                <li>Team needs principle-based guidance</li>
+                                <li>Seeking PMI certification alignment</li>
+                            </ul>
+                        </div>
+                        <div class="recommendation-card prince2-rec">
+                            <h4>Choose PRINCE2 When:</h4>
+                            <ul>
+                                <li>Strong governance is required</li>
+                                <li>Clear roles and accountability needed</li>
+                                <li>Stage-based control is beneficial</li>
+                                <li>Business justification is critical</li>
+                                <li>Working in UK/European context</li>
+                            </ul>
+                        </div>
+                        <div class="recommendation-card iso-rec">
+                            <h4>Choose ISO When:</h4>
+                            <ul>
+                                <li>International standardization needed</li>
+                                <li>Integration with ISO 9001/31000</li>
+                                <li>Generic framework for any industry</li>
+                                <li>Portfolio/programme context important</li>
+                                <li>Consensus-based approach preferred</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -30,6 +30,7 @@ function initializeApp() {
     setupTabNavigation();
     setupRepositoryView();
     setupComparisonEngine();
+    setupUniquenessAnalysis();
     setupInsightsDashboard();
     setupProcessGenerator();
     setupPDFModal();
@@ -250,6 +251,59 @@ function displayComparison(topic) {
         </div>
     `;
 
+    container.innerHTML = html;
+}
+
+// Uniqueness Analysis Setup
+function setupUniquenessAnalysis() {
+    displayUniquenessAnalysis();
+}
+
+function displayUniquenessAnalysis() {
+    const unique = standardsData.insights.unique;
+    
+    // Group by standard
+    const pmbokFeatures = unique.filter(item => item.standard === 'pmbok');
+    const prince2Features = unique.filter(item => item.standard === 'prince2');
+    const isoFeatures = unique.filter(item => item.standard === 'iso21500' || item.standard === 'iso21502');
+    
+    // Display PMBOK unique features
+    displayStandardUniqueness('pmbokUnique', pmbokFeatures, 'pmbok');
+    
+    // Display PRINCE2 unique features
+    displayStandardUniqueness('prince2Unique', prince2Features, 'prince2');
+    
+    // Display ISO unique features
+    displayStandardUniqueness('isoUnique', isoFeatures, 'iso21500');
+}
+
+function displayStandardUniqueness(containerId, features, standard) {
+    const container = document.getElementById(containerId);
+    
+    if (!features || features.length === 0) {
+        container.innerHTML = '<p class="no-features">No unique features documented yet.</p>';
+        return;
+    }
+    
+    let html = '<ul class="uniqueness-list">';
+    features.forEach(feature => {
+        html += `
+            <li class="uniqueness-item">
+                <div class="uniqueness-item-header">
+                    <span class="uniqueness-badge">⭐ UNIQUE</span>
+                    <h4>${feature.topic}</h4>
+                </div>
+                <p class="uniqueness-description">${feature.description}</p>
+                <div class="uniqueness-meta">
+                    <button class="ref-badge" onclick="openPDF('${feature.standard}', ${feature.page})">
+                        📖 ${getStandardName(feature.standard)} Page ${feature.page}
+                    </button>
+                </div>
+            </li>
+        `;
+    });
+    html += '</ul>';
+    
     container.innerHTML = html;
 }
 
