@@ -8,6 +8,15 @@ const PDF_FILES = {
     iso21502: "ISO 21502-2020_ Project, programme and portfolio management - Guidance on project management.pdf"
 };
 
+// PDF page offsets: Add this number to reference page to get actual PDF page
+// To find offset: Open PDF, find where "Page 1" of content appears, subtract 1 from PDF page number
+const PDF_PAGE_OFFSETS = {
+    pmbok: 30,      // PMBOK content page 1 is at PDF page 30
+    prince2: 20,    // PRINCE2 content page 1 is at PDF page 20
+    iso21500: 0,    // ISO 21500 pages already correctly mapped
+    iso21502: 0     // ISO 21502 pages already correctly mapped
+};
+
 // Data structure for standards content
 let standardsData = {
     repository: [],
@@ -345,7 +354,7 @@ function displayDifferences() {
 
     let html = '<ul class="insight-list">';
     differences.forEach(item => {
-        html += `
+            html += `
             <li class="insight-item">
                 <strong>${item.topic}</strong>
                 <div class="difference-comparison">
@@ -554,8 +563,12 @@ function openPDF(standard, page) {
         return;
     }
 
-    title.textContent = `${getStandardName(standard)} - Page ${page}`;
-    viewer.src = `${encodeURIComponent(pdfFile)}#page=${page}`;
+    // Apply page offset to get actual PDF page number
+    const offset = PDF_PAGE_OFFSETS[standard] || 0;
+    const actualPage = page + offset;
+
+    title.textContent = `${getStandardName(standard)} - Page ${page} (PDF Page ${actualPage})`;
+    viewer.src = `${encodeURIComponent(pdfFile)}#page=${actualPage}`;
     modal.style.display = 'flex';
 }
 
@@ -581,7 +594,12 @@ function getCoverageLevel(topic, standard) {
 }
 
 function viewContext(itemId) {
-    alert('Context view feature - would show full section context');
+    // Find the item in repository
+    const item = standardsData.repository.find(i => i.id === itemId);
+    if (!item) return;
+    
+    // Open PDF at the specific page
+    openPDF(item.standard, item.page);
 }
 
 function exportProcess() {
