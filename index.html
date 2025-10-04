@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Standards Comparison Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>📊 PM Standards Hub</h1>
+                <p>PMBOK 7 • PRINCE2 • ISO 21500/21502</p>
+            </div>
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="repository">📚 Standards Repository</button>
+                <button class="tab-btn" data-tab="comparison">⚖️ Comparison Engine</button>
+                <button class="tab-btn" data-tab="insights">💡 Insights Dashboard</button>
+                <button class="tab-btn" data-tab="process">🔧 Process Generator</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content-wrapper">
+            <!-- Standards Repository Tab -->
+            <div id="repository" class="tab-content active">
+                <div class="content-header">
+                    <h2>Standards Repository</h2>
+                    <p>Explore and search through all PM standards documentation</p>
+                </div>
+                
+                <div class="search-panel">
+                    <input type="text" id="repoSearch" placeholder="🔍 Search across all standards (e.g., 'risk management', 'stakeholder')" />
+                    <div class="filter-chips">
+                        <button class="filter-chip active" data-filter="all">All Standards</button>
+                        <button class="filter-chip" data-filter="pmbok">PMBOK 7</button>
+                        <button class="filter-chip" data-filter="prince2">PRINCE2</button>
+                        <button class="filter-chip" data-filter="iso21500">ISO 21500</button>
+                        <button class="filter-chip" data-filter="iso21502">ISO 21502</button>
+                    </div>
+                </div>
+
+                <div id="repositoryContent" class="standards-grid">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Comparison Engine Tab -->
+            <div id="comparison" class="tab-content">
+                <div class="content-header">
+                    <h2>Comparison Engine</h2>
+                    <p>Compare standards side-by-side with deep linking to source documents</p>
+                </div>
+
+                <div class="comparison-selector">
+                    <label>Select Topic:</label>
+                    <select id="comparisonTopic">
+                        <option value="">-- Choose a topic to compare --</option>
+                        <option value="risk">Risk Management</option>
+                        <option value="stakeholder">Stakeholder Engagement</option>
+                        <option value="planning">Project Planning</option>
+                        <option value="scope">Scope Management</option>
+                        <option value="schedule">Schedule Management</option>
+                        <option value="cost">Cost Management</option>
+                        <option value="quality">Quality Management</option>
+                        <option value="resources">Resource Management</option>
+                        <option value="communication">Communication</option>
+                        <option value="procurement">Procurement</option>
+                        <option value="integration">Integration Management</option>
+                        <option value="governance">Governance</option>
+                    </select>
+                </div>
+
+                <div id="comparisonContent" class="comparison-view">
+                    <div class="comparison-placeholder">
+                        <div class="placeholder-icon">⚖️</div>
+                        <p>Select a topic above to view detailed comparisons</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insights Dashboard Tab -->
+            <div id="insights" class="tab-content">
+                <div class="content-header">
+                    <h2>Insights Dashboard</h2>
+                    <p>Comprehensive analysis of similarities, differences, and unique elements</p>
+                </div>
+
+                <div class="insights-grid">
+                    <div class="insight-card similarities">
+                        <div class="insight-header">
+                            <span class="insight-icon">🤝</span>
+                            <h3>Common Practices</h3>
+                        </div>
+                        <div id="similaritiesContent" class="insight-content">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="insight-card differences">
+                        <div class="insight-header">
+                            <span class="insight-icon">🔄</span>
+                            <h3>Key Differences</h3>
+                        </div>
+                        <div id="differencesContent" class="insight-content">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="insight-card unique">
+                        <div class="insight-header">
+                            <span class="insight-icon">⭐</span>
+                            <h3>Unique Elements</h3>
+                        </div>
+                        <div id="uniqueContent" class="insight-content">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insights-visual">
+                    <h3>Standards Coverage Map</h3>
+                    <div id="coverageMap" class="coverage-map">
+                        <!-- Visual representation -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Generator Tab -->
+            <div id="process" class="tab-content">
+                <div class="content-header">
+                    <h2>Tailored Process Generator</h2>
+                    <p>Generate evidence-based project processes for your specific scenario</p>
+                </div>
+
+                <div class="process-form">
+                    <div class="form-group">
+                        <label>Project Type:</label>
+                        <select id="projectType">
+                            <option value="software">Software Development</option>
+                            <option value="construction">Construction</option>
+                            <option value="research">Research & Development</option>
+                            <option value="marketing">Marketing Campaign</option>
+                            <option value="infrastructure">Infrastructure</option>
+                            <option value="organizational">Organizational Change</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Size:</label>
+                        <select id="projectSize">
+                            <option value="small">Small (< 6 months, < 10 people)</option>
+                            <option value="medium">Medium (6-18 months, 10-50 people)</option>
+                            <option value="large">Large (> 18 months, > 50 people)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Organizational Maturity:</label>
+                        <select id="maturity">
+                            <option value="low">Low - Ad hoc processes</option>
+                            <option value="medium">Medium - Some standardization</option>
+                            <option value="high">High - Optimized processes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Key Focus Areas (Select multiple):</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="risk" checked> Risk Management</label>
+                            <label><input type="checkbox" value="stakeholder" checked> Stakeholder Management</label>
+                            <label><input type="checkbox" value="quality"> Quality Assurance</label>
+                            <label><input type="checkbox" value="agile"> Agile Practices</label>
+                            <label><input type="checkbox" value="governance"> Governance</label>
+                            <label><input type="checkbox" value="compliance"> Compliance</label>
+                        </div>
+                    </div>
+
+                    <button id="generateProcess" class="btn-primary">🔧 Generate Tailored Process</button>
+                </div>
+
+                <div id="processOutput" class="process-output" style="display: none;">
+                    <!-- Generated process will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF Viewer Modal -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Standard Reference</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="pdfViewer" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

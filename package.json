@@ -1,0 +1,21 @@
+{
+  "name": "pm-standards-comparison",
+  "version": "1.0.0",
+  "description": "Project Management Standards Comparison Tool - PMBOK 7, PRINCE2, ISO 21500/21502",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "project-management",
+    "pmbok",
+    "prince2",
+    "iso",
+    "standards",
+    "comparison"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

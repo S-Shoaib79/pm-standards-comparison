@@ -1,0 +1,12 @@
+# Files to ignore during Vercel deployment
+node_modules/
+.git/
+*.md
+.gitignore
+*.docx
+
+# Optional: If PDFs are too large, you can exclude them
+# and host them elsewhere (Google Drive, Dropbox, etc.)
+# Uncomment the line below if needed:
+# *.pdf
+
