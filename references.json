@@ -691,6 +691,12 @@
       },
       {
         "standard": "pmbok",
+        "topic": "Stakeholder Engagement as Both Principle and Domain",
+        "description": "Uniquely frames stakeholder engagement as both a core Principle ('Effectively Engage with Stakeholders') and a dedicated Stakeholder Performance Domain, emphasizing building and maintaining relationships to foster alignment and satisfaction throughout the project.",
+        "page": 18
+      },
+      {
+        "standard": "pmbok",
         "topic": "Uncertainty Performance Domain",
         "description": "Uniquely frames risk within a broader 'Uncertainty Performance Domain' that explicitly groups risk with ambiguity, complexity, and volatility—contextualizing risk as one of several facets of uncertainty project teams must navigate.",
         "page": 93
