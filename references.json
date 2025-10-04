@@ -608,9 +608,45 @@
         "topic": "Lessons Learned and Continuous Improvement",
         "description": "All emphasize capturing and applying lessons learned to improve future project performance.",
         "references": [
-          { "standard": "pmbok", "page": 130 },
-          { "standard": "prince2", "page": 178 },
-          { "standard": "iso21502", "page": 88 }
+          { "standard": "pmbok", "page": 142 },
+          { "standard": "prince2", "page": 41 },
+          { "standard": "iso21502", "page": 52 }
+        ]
+      },
+      {
+        "topic": "Benefits & Business Case",
+        "description": "All require business case thinking and benefits identification to justify project investment and guide decision-making.",
+        "references": [
+          { "standard": "pmbok", "page": 279 },
+          { "standard": "prince2", "page": 74 },
+          { "standard": "iso21502", "page": 36 }
+        ]
+      },
+      {
+        "topic": "Communications & Reporting",
+        "description": "All standards plan communications, select formats/cadence, and monitor communication impact to stakeholders.",
+        "references": [
+          { "standard": "pmbok", "page": 137 },
+          { "standard": "prince2", "page": 61 },
+          { "standard": "iso21502", "page": 48 }
+        ]
+      },
+      {
+        "topic": "Procurement & Contracts",
+        "description": "All follow plan→select→administer→close lifecycle for procurement, with alignment to project objectives.",
+        "references": [
+          { "standard": "pmbok", "page": 138 },
+          { "standard": "prince2", "page": 109 },
+          { "standard": "iso21502", "page": 51 }
+        ]
+      },
+      {
+        "topic": "Scope/Requirements Management",
+        "description": "All require formal definition, control and confirmation of scope/deliverables to meet stakeholder needs.",
+        "references": [
+          { "standard": "pmbok", "page": 53 },
+          { "standard": "prince2", "page": 26 },
+          { "standard": "iso21502", "page": 38 }
         ]
       }
     ],
@@ -618,9 +654,9 @@
       {
         "topic": "Structural Philosophy",
         "standards": [
-          { "standard": "pmbok", "approach": "Principle-based with 12 principles and 8 performance domains. Emphasizes outcomes over processes.", "page": 18 },
-          { "standard": "prince2", "approach": "Process-based with 7 principles, 7 themes, and 7 processes. Highly structured methodology.", "page": 23 },
-          { "standard": "iso21500", "approach": "Process groups with 39 processes organized into 5 groups. Generic framework.", "page": 15 }
+          { "standard": "pmbok", "approach": "Principle-based with 12 principles and 8 performance domains. Emphasizes outcomes over processes.", "page": 45 },
+          { "standard": "prince2", "approach": "Method-based with 7 principles, 7 practices, and 7 processes. Highly structured methodology with defined roles.", "page": 38 },
+          { "standard": "iso21500", "approach": "ISO 21500 gives context/concepts; ISO 21502 provides detailed management practices. Neutral, adoptable framework.", "page": 35 }
         ]
       },
       {
@@ -634,17 +670,17 @@
       {
         "topic": "Governance Emphasis",
         "standards": [
-          { "standard": "pmbok", "approach": "Integrated within performance domains. Less prescriptive, allowing organizational flexibility.", "page": 35 },
-          { "standard": "prince2", "approach": "Heavy emphasis with defined Project Board, stage gates, and management by exception.", "page": 67 },
-          { "standard": "iso21502", "approach": "Moderate emphasis within governance process. Principles-based without prescription.", "page": 25 }
+          { "standard": "pmbok", "approach": "Integrated within performance domains. Less prescriptive, allowing organizational flexibility and tailoring to context.", "page": 36 },
+          { "standard": "prince2", "approach": "Strong governance model with explicit Project Board, manage-by-exception with tolerances, and clear accountabilities.", "page": 93 },
+          { "standard": "iso21502", "approach": "Defines governance framework aligned with organizational strategy and oversight. Clear Project Sponsor accountability.", "page": 17 }
         ]
       },
       {
         "topic": "Planning Approach",
         "standards": [
-          { "standard": "pmbok", "approach": "Activity-based planning with extensive scheduling techniques (CPM, PERT, etc.).", "page": 110 },
-          { "standard": "prince2", "approach": "Product-based planning: define products/deliverables first, then plan activities to create them.", "page": 156 },
-          { "standard": "iso21502", "approach": "Traditional activity-based planning with WBS. Balanced, generic approach.", "page": 45 }
+          { "standard": "pmbok", "approach": "Planning Performance Domain—supports multiple delivery cadences (predictive to adaptive). Planning variables, communication, metrics aligned to business case.", "page": 124 },
+          { "standard": "prince2", "approach": "Product-based planning: Product Breakdown Structure and Product Flow Diagrams. Relationship between project/stage/team plans with stage boundaries.", "page": 118 },
+          { "standard": "iso21502", "approach": "Planning practice (7.2) plus dedicated clauses for schedule (7.6) and cost (7.7). Prescriptive clause-level guidance.", "page": 30 }
         ]
       },
       {
@@ -662,62 +698,102 @@
           { "standard": "prince2", "approach": "Method with defined processes, roles, and documents. More prescriptive structure.", "page": 23 },
           { "standard": "iso21500", "approach": "High-level guidance. Most generic, intended for universal application.", "page": 5 }
         ]
+      },
+      {
+        "topic": "Benefits & Business Case Management",
+        "standards": [
+          { "standard": "pmbok", "approach": "Focus on value delivery and outcomes—business-case thinking embedded in principles. Part of overall value-delivery system.", "page": 279 },
+          { "standard": "prince2", "approach": "Business Case practice is central. Evolves through lifecycle and is basis for continued justification. Lifecycle explicitly ties business case updates to stage boundaries and approvals.", "page": 74 },
+          { "standard": "iso21502", "approach": "Benefits management practice (7.3)—identify, analyse, monitor, maintain benefits in alignment with strategy. Structured benefit management activities.", "page": 36 }
+        ]
+      },
+      {
+        "topic": "Communications & Reporting",
+        "standards": [
+          { "standard": "pmbok", "approach": "Integrated across Planning & Project Work domains. Emphasizes adapting to cadence and stakeholders. Provides models and tailoring guidance.", "page": 137 },
+          { "standard": "prince2", "approach": "Integrated into Organizing and Plans practices. Includes standard management products (highlight reports, checkpoint reports). Named report types and templates.", "page": 61 },
+          { "standard": "iso21502", "approach": "Communication management practice (7.13)—plan, distribute, monitor impact. Standard process steps for planning and reporting.", "page": 48 }
+        ]
+      },
+      {
+        "topic": "Procurement & Contracts",
+        "standards": [
+          { "standard": "pmbok", "approach": "Procurement appears as part of Planning performance domain and Project Work considerations. Focus on procurement processes within project context.", "page": 138 },
+          { "standard": "prince2", "approach": "Supplier side formalized (Senior Supplier role). Procurement integrated into organizing, plans and quality practices. Governance/role model assigns formal supplier representation and assurance roles.", "page": 109 },
+          { "standard": "iso21502", "approach": "Procurement management practice (7.17)—plan procurement, evaluate/select suppliers, administer and close contracts. Prescribes clause-level procurement steps.", "page": 51 }
+        ]
+      },
+      {
+        "topic": "Scope & Product Focus",
+        "standards": [
+          { "standard": "pmbok", "approach": "Focus on outcomes and deliverables inside performance domains. Scope controlled within planning and project work. Outcome/value oriented.", "page": 53 },
+          { "standard": "prince2", "approach": "Very product-focused—product descriptions drive scope, quality, acceptance. Product Breakdown Structure and Product Flow Diagrams are core techniques. Explicit 'product' artifacts central to planning.", "page": 26 },
+          { "standard": "iso21502", "approach": "Scope management as discrete practice (7.4)—define, control, confirm scope delivery. Standard processes for scope management.", "page": 38 }
+        ]
+      },
+      {
+        "topic": "Measurement & Performance Reporting",
+        "standards": [
+          { "standard": "pmbok", "approach": "Dedicated Measurement domain and Uncertainty domain. Emphasizes outcomes-based measures. Performance-domain view with wider set of measures.", "page": 160 },
+          { "standard": "prince2", "approach": "Progress practice with tolerance reporting, highlight/exception reports. Metrics for stage control. Prescribes management products/reports and tolerances for exception handling.", "page": 25 },
+          { "standard": "iso21502", "approach": "Reporting (7.15) with guidance for monitoring project performance and reporting outputs. Maps reporting to standardized processes.", "page": 30 }
+        ]
       }
     ],
     "unique": [
       {
         "standard": "pmbok",
         "topic": "Principles-Based Framework (Not Process-Based)",
-        "description": "PMBOK 7 fundamentally shifted from a process-based to a principles-based standard, built on 12 Project Management Principles that guide professional behavior rather than prescriptive processes. This reflects the full value delivery landscape and focuses on outcomes rather than just deliverables.",
-        "page": 7
+        "description": "Earlier editions of PMBOK, as well as PRINCE2 and ISO, were heavily process-oriented—focusing on sequences of activities and deliverables. The 7th Edition is unique because it abandons this rigid process view and instead defines 12 broad principles. These act as guiding philosophies (like stewardship, tailoring, stakeholder engagement) that can be applied flexibly to any type of project, traditional or agile.",
+        "page": 11
       },
       {
         "standard": "pmbok",
         "topic": "Performance Domains System",
-        "description": "Uniquely organized around eight interactive and interdependent Project Performance Domains (Stakeholder, Team, Development Approach, Planning, Project Work, Delivery, Measurement, Uncertainty) that represent a system of capabilities working together to achieve outcomes.",
-        "page": 10
+        "description": "Instead of grouping content into knowledge areas (like scope, cost, schedule), it introduces eight performance domains (Stakeholder, Team, Development Approach, Delivery, Measurement, Uncertainty, etc.). These domains interact as a system of capabilities—something PRINCE2 and ISO don't emphasize. This systemic design is unique to PMBOK 7.",
+        "page": 86
       },
       {
         "standard": "pmbok",
         "topic": "System for Value Delivery",
-        "description": "Presents a holistic systems view where projects are components of a larger system—including portfolios, programs, and operations—that work to advance organizational strategy and business objectives.",
-        "page": 13
+        "description": "PMBOK 7 positions projects as not just internal efforts but as strategic drivers of value. The 'system for value delivery' connects projects to portfolios, programs, and operations—ensuring alignment with business strategy. This strategic systems view is unique compared to PRINCE2 (which is more about governance) and ISO (which focuses more on practices).",
+        "page": 33
       },
       {
         "standard": "pmbok",
         "topic": "Team Performance Domain with Leadership & Culture",
-        "description": "Elevates human elements through dedicated Team Performance Domain, explicitly detailing project team culture, high-performing teams, leadership skills, and emotional intelligence as core project management aspects.",
-        "page": 25
+        "description": "While all standards mention teams, PMBOK 7 uniquely dedicates an entire domain to how teams function. It discusses project culture, psychological safety, leadership approaches, and emotional intelligence in detail. It treats teams not just as 'resources' but as a living system that impacts outcomes.",
+        "page": 94
       },
       {
         "standard": "pmbok",
         "topic": "Stakeholder Engagement as Both Principle and Domain",
-        "description": "Uniquely frames stakeholder engagement as both a core Principle ('Effectively Engage with Stakeholders') and a dedicated Stakeholder Performance Domain, emphasizing building and maintaining relationships to foster alignment and satisfaction throughout the project.",
-        "page": 18
+        "description": "Engagement isn't just a task here—it's both a principle (guiding philosophy for all projects) and a performance domain with its own success measures. The uniqueness is that PMBOK 7 makes relationship-building and co-creation with stakeholders central to project success, whereas PRINCE2 limits stakeholders to governance roles (Business, User, Supplier).",
+        "page": 87
       },
       {
         "standard": "pmbok",
         "topic": "Uncertainty Performance Domain",
-        "description": "Uniquely frames risk within a broader 'Uncertainty Performance Domain' that explicitly groups risk with ambiguity, complexity, and volatility—contextualizing risk as one of several facets of uncertainty project teams must navigate.",
-        "page": 93
+        "description": "Other standards treat 'risk' as a standalone area. PMBOK 7 broadens this by embedding risk inside the Uncertainty Performance Domain, which also covers ambiguity, complexity, and volatility. This holistic framing is unique—it forces project managers to think beyond measurable risks and consider unknowns, systemic complexity, and change volatility.",
+        "page": 181
       },
       {
         "standard": "pmbok",
         "topic": "Dedicated Tailoring Section",
-        "description": "Features an entire top-level section on Tailoring with detailed, step-by-step process for deliberately adapting project management approach, governance, and processes to specific project context.",
-        "page": 145
+        "description": "Tailoring has always been encouraged, but PMBOK 7 makes it central and structured. It includes a full top-level section that explains how to tailor step-by-step: assess context, design governance, adapt practices. Neither PRINCE2 nor ISO gives tailoring this much structured attention. This makes tailoring one of PMBOK 7's defining unique elements.",
+        "page": 193
       },
       {
         "standard": "pmbok",
         "topic": "Models, Methods, and Artifacts Toolkit",
-        "description": "Includes dedicated section providing flexible toolkit of commonly used options rather than prescribing specific tools—acting as high-level grouping that project teams can draw upon based on needs.",
-        "page": 171
+        "description": "Instead of prescribing one 'right' tool, PMBOK 7 provides a catalog-style toolkit of commonly used models (like servant leadership), methods (like Kanban), and artifacts (like risk registers). This flexible 'menu' approach is unique—it empowers practitioners to choose rather than follow a strict template.",
+        "page": 211
       },
       {
         "standard": "pmbok",
         "topic": "PMIstandards+™ Integration",
-        "description": "Uniquely integrated with PMIstandards+™, an interactive digital platform providing practitioners access to dynamic and evolving body of knowledge that supplements the printed guide.",
-        "page": 22
+        "description": "PMBOK 7 is the only standard that connects directly to a digital, evolving platform (PMIstandards+). This ensures the content is not static but continually updated with practices, examples, and case studies. Neither PRINCE2 nor ISO offers this living knowledge base.",
+        "page": 15
       },
       {
         "standard": "pmbok",
@@ -728,44 +804,44 @@
       {
         "standard": "prince2",
         "topic": "Five Integrated Elements Framework",
-        "description": "Built around five integrated elements: Principles, People, Practices (formerly Themes), Processes, and Project Context. The 'People' element explicitly covers leading successful change, teams, communication, and understanding the project ecosystem.",
-        "page": 4
+        "description": "Unlike PMBOK or ISO, PRINCE2 organizes its guidance into five integrated elements: Principles, People, Practices, Processes, and Project Context. This is unique because 'People' has now been elevated as a separate core element acknowledging that leadership, teamwork, communication, and organizational relationships are just as fundamental as processes and principles.",
+        "page": 64
       },
       {
         "standard": "prince2",
         "topic": "Seven Defined Process Journey",
-        "description": "Features seven defined Processes (Starting up, Directing, Initiating, Controlling a stage, Managing product delivery, Managing stage boundary, Closing) providing clear step-by-step journey through entire project lifecycle.",
-        "page": 214
+        "description": "PRINCE2 is unique for its clear step-by-step process model (e.g., 'Starting up a project,' 'Closing a project'). While PMBOK 7 moved away from prescriptive processes and ISO focuses on practices, PRINCE2 stands out for keeping a structured, linear process journey through the project lifecycle. This makes it especially appealing for organizations wanting strict control and repeatability.",
+        "page": 236
       },
       {
         "standard": "prince2",
         "topic": "Four-Layer Governance Structure",
-        "description": "Unique governance organized into four distinct management layers: Commissioning, Directing, Managing, and Delivering. Guided by 'Manage by exception' principle where authority is delegated by setting tolerances for seven performance targets.",
-        "page": 76
+        "description": "PRINCE2 defines a governance structure with four layers: Commissioning, Directing, Managing, Delivering. This multilayered structure clarifies 'who does what' at every level of authority. Neither PMBOK nor ISO provides governance in such a layered form.",
+        "page": 95
       },
       {
         "standard": "prince2",
         "topic": "Three-Interest Project Board",
-        "description": "Structures project board and management team to represent three specific primary stakeholder interests: Business, User, and Supplier—ensuring all key perspectives are formally represented in governance.",
-        "page": 74
+        "description": "Unlike PMBOK 7 (broad stakeholder focus) or ISO (sponsor/customer perspective), PRINCE2 assigns three formal stakeholder roles on its Project Board: Business (ensures project remains viable), User (ensures project meets end-user needs), Supplier (ensures technical delivery is possible). This triad model of governance is unique to PRINCE2.",
+        "page": 94
       },
       {
         "standard": "prince2",
         "topic": "Sustainability as Core Performance Target",
-        "description": "Uniquely elevates Sustainability to one of seven core performance targets that must be managed and controlled alongside traditional metrics like cost, time, quality, scope, risk, and benefits.",
-        "page": 7
+        "description": "Uniquely, PRINCE2 treats sustainability as one of seven mandatory performance targets to manage, alongside cost, time, quality, benefits, risk, and scope. Neither PMBOK nor ISO elevate sustainability to this level of importance.",
+        "page": 26
       },
       {
         "standard": "prince2",
         "topic": "Integrated Issues Practice",
-        "description": "Uniquely combines issue management and change control into single top-level Practice named 'Issues' with formal 5-step technique for managing both concerns together.",
-        "page": 168
+        "description": "PRINCE2 combines change control and issue management into a single integrated practice called 'Issues,' with a 5-step structured technique. This unification is unique—ISO and PMBOK treat them separately.",
+        "page": 187
       },
       {
         "standard": "prince2",
         "topic": "16 Specific Management Products",
-        "description": "Characterized by use of 16 specific management products (e.g., Business Case, Project Initiation Documentation, Risk Register) as formal documents required to manage project effectively.",
-        "page": 17
+        "description": "PRINCE2 uniquely formalizes 16 required management products (documents such as the Business Case, Project Initiation Documentation). These products act as 'control points' for governance and decision-making. The newest edition even adds a Digital and Data Management Approach, which provides structured guidance for how digital tools and data will be managed throughout the project.",
+        "page": 305
       },
       {
         "standard": "prince2",
@@ -776,50 +852,50 @@
       {
         "standard": "prince2",
         "topic": "Explicit Commercial Context",
-        "description": "Uniquely defines project context in terms of commercial customer-supplier relationship, providing specific guidance on adapting roles, plans, and practices when formal commercial agreement or contract exists.",
-        "page": 9
+        "description": "Uniquely defines project context in terms of commercial customer-supplier relationship, providing specific guidance on adapting roles, plans, and practices when formal commercial agreement or contract exists. PMBOK and ISO acknowledge contracts, but PRINCE2 integrates this directly into its method.",
+        "page": 28
       },
       {
         "standard": "iso21502",
-        "topic": "Integrated & Management Practices Structure",
-        "description": "Unique structure dividing guidance into 'Integrated project management practices' and 'Management practices for a project'—providing clear separation between lifecycle activities and specific management disciplines.",
-        "page": 18
+        "topic": "Two-Part Structure",
+        "description": "ISO 21502 uniquely divides its guidance into two categories: Integrated project management practices (covering the entire lifecycle) and Management practices for a project (specific functional areas). This dual-structure makes it easier to separate lifecycle guidance from specialized practices, something PMBOK and PRINCE2 don't do in the same way.",
+        "page": 26
       },
       {
         "standard": "iso21502",
-        "topic": "Formalized Pre-Project & Post-Project Activities",
-        "description": "Uniquely includes formalized sections on Pre-project activities (justifying project start) and Post-project activities (verifying outcomes are sustainable and benefits are being realized after closure).",
-        "page": 25
+        "topic": "Pre-Project and Post-Project Activities",
+        "description": "ISO 21502 uniquely formalizes what happens before and after a project: Pre-project ensures justification, feasibility, and organizational readiness; Post-project verifies sustainability of outcomes and benefits realization. PRINCE2 has a closure stage, and PMBOK discusses benefits, but neither standard formalizes pre/post activities as explicit lifecycle stages.",
+        "page": 34
       },
       {
         "standard": "iso21502",
         "topic": "Dedicated Governance Framework",
-        "description": "Provides dedicated governance framework to authorize, direct, and control the project, with clear accountability placed on Project Sponsor role for governance and achievement of objectives.",
-        "page": 9
+        "description": "ISO 21502 provides a full governance framework that clarifies how projects should be authorized, directed, and controlled. It uniquely assigns clear accountability to the Project Sponsor for achieving objectives. While PRINCE2 and PMBOK mention sponsors, ISO makes sponsor accountability explicit and central.",
+        "page": 17
       },
       {
         "standard": "iso21502",
         "topic": "Customer and Supplier Perspective",
-        "description": "Contains unique section describing project from customer and supplier perspective, outlining how governance and team structures should be determined by both parties when contractual boundary exists.",
-        "page": 7
+        "description": "Like PRINCE2, ISO 21502 recognizes customer-supplier relationships, but it does so differently: it emphasizes how governance and team structures should adapt when both parties are involved. This makes ISO 21502 broader and more adaptable across industries.",
+        "page": 15
       },
       {
         "standard": "iso21502",
-        "topic": "Societal Change Management",
-        "description": "Uniquely includes 'societal change' alongside organizational change as distinct management practice, recognizing that government or infrastructure projects have impacts extending beyond single organization into society at large.",
-        "page": 41
+        "topic": "Societal Change as Management Practice",
+        "description": "ISO 21502 is unique in explicitly including societal change (not just organizational change) as a management practice. This recognizes that some projects (government, infrastructure, public health) affect society at large and must consider long-term social impact. Neither PRINCE2 nor PMBOK frame change management this broadly.",
+        "page": 49
       },
       {
         "standard": "iso21502",
         "topic": "Separate Issues and Change Practices",
         "description": "Treats Issues management and Change control as two separate management practices (unlike PRINCE2 which combines them), providing distinct guidance for each discipline.",
-        "page": 35
+        "page": 36
       },
       {
         "standard": "iso21502",
         "topic": "Prerequisites for Formalizing PM",
-        "description": "Includes unique section on prerequisites for formalizing project management, providing guidance for organizations on what to consider before establishing formal PM environment—such as types of projects and organizational change capacity.",
-        "page": 16
+        "description": "ISO 21502 uniquely guides organizations on what to consider before even formalizing project management practices. It covers organizational maturity, readiness for structured governance, and the ability to absorb change. This is absent in PMBOK and PRINCE2, which assume the project environment already exists.",
+        "page": 24
       }
     ]
   }
