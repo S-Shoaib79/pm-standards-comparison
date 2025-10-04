@@ -160,6 +160,21 @@ function setupComparisonEngine() {
     });
 }
 
+// Helper function to generate page buttons
+function generatePageButtons(standard, page, standardName) {
+    if (Array.isArray(page)) {
+        return page.map((p, index) => 
+            `<button class="btn-link" onclick="openPDF('${standard}', ${p})">
+                📖 ${standardName} Page ${p}
+            </button>`
+        ).join('');
+    } else {
+        return `<button class="btn-link" onclick="openPDF('${standard}', ${page})">
+            📖 Open ${standardName} Page ${page}
+        </button>`;
+    }
+}
+
 function displayComparison(topic) {
     const container = document.getElementById('comparisonContent');
     const comparison = standardsData.comparisons[topic];
@@ -185,9 +200,9 @@ function displayComparison(topic) {
                             ${comparison.pmbok.keyPoints.map(p => `<li>${p}</li>`).join('')}
                         </ul>
                     </div>
-                    <button class="btn-link" onclick="openPDF('pmbok', ${comparison.pmbok.page})">
-                        📖 Open PMBOK Page ${comparison.pmbok.page}
-                    </button>
+                    <div class="page-buttons">
+                        ${generatePageButtons('pmbok', comparison.pmbok.page, 'PMBOK')}
+                    </div>
                 </div>
             </div>
 
@@ -205,9 +220,9 @@ function displayComparison(topic) {
                             ${comparison.prince2.keyPoints.map(p => `<li>${p}</li>`).join('')}
                         </ul>
                     </div>
-                    <button class="btn-link" onclick="openPDF('prince2', ${comparison.prince2.page})">
-                        📖 Open PRINCE2 Page ${comparison.prince2.page}
-                    </button>
+                    <div class="page-buttons">
+                        ${generatePageButtons('prince2', comparison.prince2.page, 'PRINCE2')}
+                    </div>
                 </div>
             </div>
 
@@ -225,9 +240,9 @@ function displayComparison(topic) {
                             ${comparison.iso.keyPoints.map(p => `<li>${p}</li>`).join('')}
                         </ul>
                     </div>
-                    <button class="btn-link" onclick="openPDF('${comparison.iso.standard}', ${comparison.iso.page})">
-                        📖 Open ISO Page ${comparison.iso.page}
-                    </button>
+                    <div class="page-buttons">
+                        ${generatePageButtons(comparison.iso.standard, comparison.iso.page, 'ISO')}
+                    </div>
                 </div>
             </div>
         </div>
@@ -290,6 +305,16 @@ function displayStandardUniqueness(containerId, features, standard) {
     
     let html = '<ul class="uniqueness-list">';
     features.forEach(feature => {
+        const pageButtons = Array.isArray(feature.page) 
+            ? feature.page.map(p => 
+                `<button class="ref-badge" onclick="openPDF('${feature.standard}', ${p})">
+                    📖 ${getStandardName(feature.standard)} Page ${p}
+                </button>`
+              ).join('')
+            : `<button class="ref-badge" onclick="openPDF('${feature.standard}', ${feature.page})">
+                📖 ${getStandardName(feature.standard)} Page ${feature.page}
+              </button>`;
+        
         html += `
             <li class="uniqueness-item">
                 <div class="uniqueness-item-header">
@@ -298,9 +323,7 @@ function displayStandardUniqueness(containerId, features, standard) {
                 </div>
                 <p class="uniqueness-description">${feature.description}</p>
                 <div class="uniqueness-meta">
-                    <button class="ref-badge" onclick="openPDF('${feature.standard}', ${feature.page})">
-                        📖 ${getStandardName(feature.standard)} Page ${feature.page}
-                    </button>
+                    ${pageButtons}
                 </div>
             </li>
         `;

@@ -324,6 +324,31 @@ body {
     background: var(--bg-light);
 }
 
+/* Page Buttons Container */
+.page-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.page-buttons .btn-link {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    font-size: 0.85em;
+}
+
+.uniqueness-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.uniqueness-meta .ref-badge {
+    flex: 0 0 auto;
+}
+
 .btn-primary {
     padding: 12px 24px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
