@@ -5,7 +5,7 @@
       "standard": "pmbok",
       "title": "Introduction to PMBOK 7",
       "content": "The PMBOK Guide 7th Edition represents a major shift from process-based to principle-based project management. It emphasizes value delivery and outcomes over rigid processes.",
-      "page": 1,
+      "page": 30,
       "keywords": ["introduction", "principles", "value delivery", "outcomes"]
     },
     {
@@ -13,7 +13,7 @@
       "standard": "pmbok",
       "title": "The 12 Project Management Principles",
       "content": "PMBOK 7 introduces 12 fundamental principles that guide project manager behavior and decision-making, including stewardship, team, stakeholder, value, systems thinking, leadership, tailoring, quality, complexity, risk, adaptability, and change.",
-      "page": 18,
+      "page": 45,
       "keywords": ["principles", "stewardship", "team", "stakeholder", "value", "leadership"]
     },
     {
@@ -21,7 +21,7 @@
       "standard": "pmbok",
       "title": "Performance Domains Overview",
       "content": "The eight performance domains are: Stakeholders, Team, Development Approach and Life Cycle, Planning, Project Work, Delivery, Measurement, and Uncertainty. These represent interconnected areas of focus.",
-      "page": 25,
+      "page": 86,
       "keywords": ["performance domains", "stakeholders", "team", "planning", "delivery"]
     },
     {
@@ -29,7 +29,7 @@
       "standard": "pmbok",
       "title": "Stakeholder Performance Domain",
       "content": "This domain addresses activities and functions associated with stakeholders. Effective stakeholder engagement is critical to project success and involves understanding needs, expectations, and managing relationships.",
-      "page": 73,
+      "page": 87,
       "keywords": ["stakeholders", "engagement", "relationships", "communication"]
     },
     {
@@ -37,15 +37,23 @@
       "standard": "pmbok",
       "title": "Team Performance Domain",
       "content": "Focuses on activities related to the people responsible for producing project deliverables. Covers team culture, leadership, high-performing teams, and creating an environment of trust and collaboration.",
-      "page": 93,
+      "page": 94,
       "keywords": ["team", "leadership", "culture", "collaboration", "performance"]
+    },
+    {
+      "id": "pmbok-planning-1",
+      "standard": "pmbok",
+      "title": "Development Approach Performance Domain",
+      "content": "Addresses the development approach of the project, including predictive, adaptive, and hybrid approaches.",
+      "page": 107,
+      "keywords": ["development approach", "predictive", "adaptive", "hybrid"]
     },
     {
       "id": "pmbok-planning-1",
       "standard": "pmbok",
       "title": "Planning Performance Domain",
       "content": "Addresses planning activities including estimating, scheduling, budgeting, and coordination. Planning is iterative throughout the project and adapts to changing conditions.",
-      "page": 110,
+      "page": 124,
       "keywords": ["planning", "scheduling", "budgeting", "estimating", "coordination"]
     },
     {
@@ -61,7 +69,7 @@
       "standard": "pmbok",
       "title": "Delivery Performance Domain",
       "content": "Focuses on delivering the scope and quality expected by stakeholders. Covers requirements management, scope management, and ensuring deliverables meet quality standards.",
-      "page": 125,
+      "page": 150,
       "keywords": ["delivery", "scope", "quality", "requirements", "deliverables"]
     },
     {
@@ -69,7 +77,7 @@
       "standard": "pmbok",
       "title": "Measurement Performance Domain",
       "content": "Addresses project performance assessment and measurement. Includes establishing baselines, tracking progress, and using metrics to support decision-making.",
-      "page": 130,
+      "page": 160,
       "keywords": ["measurement", "metrics", "performance", "monitoring", "baselines"]
     },
     {
@@ -77,7 +85,7 @@
       "standard": "pmbok",
       "title": "Tailoring Project Management",
       "content": "Extensive guidance on adapting project management approaches to fit the specific context, including consideration of development approach (predictive, adaptive, hybrid), governance, and organizational culture.",
-      "page": 178,
+      "page": 193,
       "keywords": ["tailoring", "adaptation", "agile", "hybrid", "context"]
     },
     {
@@ -85,7 +93,7 @@
       "standard": "prince2",
       "title": "Introduction to PRINCE2",
       "content": "PRINCE2 (PRojects IN Controlled Environments) is a process-based method providing a structured approach to project management with defined organization, roles, and procedures.",
-      "page": 12,
+      "page": 21,
       "keywords": ["introduction", "process-based", "structure", "control"]
     },
     {
@@ -93,7 +101,7 @@
       "standard": "prince2",
       "title": "The 7 PRINCE2 Principles",
       "content": "The seven principles are: Continued Business Justification, Learn from Experience, Defined Roles and Responsibilities, Manage by Stages, Manage by Exception, Focus on Products, and Tailor to Suit the Project Environment.",
-      "page": 23,
+      "page": 39,
       "keywords": ["principles", "business justification", "stages", "exception", "products"]
     },
     {
@@ -101,7 +109,7 @@
       "standard": "prince2",
       "title": "The 7 PRINCE2 Themes",
       "content": "The seven themes are aspects of project management that must be addressed continually: Business Case, Organization, Quality, Plans, Risk, Change, and Progress.",
-      "page": 45,
+      "page": 69,
       "keywords": ["themes", "business case", "organization", "quality", "risk"]
     },
     {
@@ -109,7 +117,7 @@
       "standard": "prince2",
       "title": "Organization Theme",
       "content": "Defines the project management team structure with clear roles and responsibilities. Key roles include Project Board (Executive, Senior User, Senior Supplier), Project Manager, and Team Manager.",
-      "page": 67,
+      "page": 93,
       "keywords": ["organization", "roles", "responsibilities", "project board", "governance"]
     },
     {
@@ -117,7 +125,7 @@
       "standard": "prince2",
       "title": "Risk Theme",
       "content": "Provides an approach to managing uncertainty. Includes Risk Management Strategy, Risk Register, and procedures for identifying, assessing, and controlling risks throughout the project.",
-      "page": 123,
+      "page": 167,
       "keywords": ["risk", "uncertainty", "risk register", "risk management"]
     },
     {
@@ -133,7 +141,7 @@
       "standard": "prince2",
       "title": "Product-Based Planning",
       "content": "PRINCE2's unique approach focuses on defining and delivering products (deliverables) rather than activities. Includes Product Description, Product Breakdown Structure, and Product Flow Diagram.",
-      "page": 156,
+      "page": 236,
       "keywords": ["products", "planning", "deliverables", "product breakdown"]
     },
     {
@@ -141,7 +149,7 @@
       "standard": "prince2",
       "title": "Business Case Theme",
       "content": "The Business Case is the key document that justifies the project investment. It is created at the start, maintained throughout, and verified at closure to ensure continued justification.",
-      "page": 78,
+      "page": 75,
       "keywords": ["business case", "justification", "investment", "benefits"]
     },
     {
@@ -149,7 +157,7 @@
       "standard": "prince2",
       "title": "Closing a Project Process",
       "content": "The final PRINCE2 process covering project closure activities, including verification of deliverables, benefits realization plan, lessons learned, and formal project closure.",
-      "page": 178,
+      "page": 297,
       "keywords": ["closure", "closing", "benefits", "lessons learned"]
     },
     {
@@ -779,13 +787,13 @@
     "unique": [
       {
         "standard": "pmbok",
-        "topic": "Principles-Based Framework (Not Process-Based)",
+        "topic": "Shift from process-based to principles-based standard",
         "description": "Earlier editions of PMBOK, as well as PRINCE2 and ISO, were heavily process-oriented—focusing on sequences of activities and deliverables. The 7th Edition is unique because it abandons this rigid process view and instead defines 12 broad principles. These act as guiding philosophies (like stewardship, tailoring, stakeholder engagement) that can be applied flexibly to any type of project, traditional or agile.",
-        "page": 11
+        "page": [11, 45]
       },
       {
         "standard": "pmbok",
-        "topic": "Performance Domains Instead of Knowledge Areas",
+        "topic": "Performance Domains instead of Knowledge Areas",
         "description": "Instead of grouping content into knowledge areas (like scope, cost, schedule), it introduces eight performance domains (Stakeholder, Team, Development Approach, Delivery, Measurement, Uncertainty, etc.). These domains interact as a system of capabilities—something PRINCE2 and ISO don't emphasize. This systemic design is unique to PMBOK 7.",
         "page": 86
       },
@@ -815,7 +823,7 @@
       },
       {
         "standard": "pmbok",
-        "topic": "Tailoring as a Dedicated Section",
+        "topic": "Tailoring as a dedicated section",
         "description": "Tailoring has always been encouraged, but PMBOK 7 makes it central and structured. It includes a full top-level section that explains how to tailor step-by-step: assess context, design governance, adapt practices. Neither PRINCE2 nor ISO gives tailoring this much structured attention. This makes tailoring one of PMBOK 7's defining unique elements.",
         "page": 193
       },
@@ -827,7 +835,7 @@
       },
       {
         "standard": "pmbok",
-        "topic": "PMIstandards+™ Integration",
+        "topic": "Integration with PMIstandards+™",
         "description": "PMBOK 7 is the only standard that connects directly to a digital, evolving platform (PMIstandards+). This ensures the content is not static but continually updated with practices, examples, and case studies. Neither PRINCE2 nor ISO offers this living knowledge base.",
         "page": 15
       },
@@ -883,7 +891,7 @@
         "standard": "iso21502",
         "topic": "Two-Part Structure",
         "description": "ISO 21502 uniquely divides its guidance into two categories: Integrated project management practices (covering the entire lifecycle) and Management practices for a project (specific functional areas). This dual-structure makes it easier to separate lifecycle guidance from specialized practices, something PMBOK and PRINCE2 don't do in the same way.",
-        "page": 34
+        "page": [26, 34]
       },
       {
         "standard": "iso21502",
