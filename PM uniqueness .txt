@@ -1,0 +1,160 @@
+Unique Aspects of A Guide to the Project Management Body of Knowledge
+(PMBOK® Guide) – Seventh Edition
+
+1. Core Philosophy and Structure
+●​ Shift from process-based to principles-based standard [pg 11, 45]​
+Earlier editions of PMBOK, as well as PRINCE2 and ISO, were heavily
+process-oriented—focusing on sequences of activities and deliverables. The 7th Edition
+is unique because it abandons this rigid process view and instead defines 12 broad
+principles. These act as guiding philosophies (like stewardship, tailoring, stakeholder
+engagement) that can be applied flexibly to any type of project, traditional or agile.​
+●​ Performance Domains instead of Knowledge Areas [pg 86]​
+Instead of grouping content into knowledge areas (like scope, cost, schedule), it
+introduces eight performance domains (Stakeholder, Team, Development Approach,
+Delivery, Measurement, Uncertainty, etc.). These domains interact as a system of
+capabilities—something PRINCE2 and ISO don’t emphasize. This systemic design is
+unique to PMBOK 7.​
+●​ System for Value Delivery [pg 33]​
+PMBOK 7 positions projects as not just internal efforts but as strategic drivers of
+value. The “system for value delivery” connects projects to portfolios, programs, and
+operations—ensuring alignment with business strategy. This strategic systems view is
+unique compared to PRINCE2 (which is more about governance) and ISO (which
+focuses more on practices).​
+
+2. People, Team, and Stakeholder Engagement
+●​ Team Performance Domain [pg 94]​
+While all standards mention teams, PMBOK 7 uniquely dedicates an entire domain to
+how teams function. It discusses project culture, psychological safety, leadership
+approaches, and emotional intelligence in detail. It treats teams not just as “resources”
+but as a living system that impacts outcomes.​
+●​ Stakeholder Engagement Principle + Domain [pg 87]​
+Engagement isn’t just a task here—it’s both a principle (guiding philosophy for all
+projects) and a performance domain with its own success measures. The uniqueness
+is that PMBOK 7 makes relationship-building and co-creation with stakeholders central
+to project success, whereas PRINCE2 limits stakeholders to governance roles
+(Business, User, Supplier).​
+
+3. Planning, Risk, and Tailoring
+
+●​ Uncertainty Performance Domain [pg 181]​
+Other standards treat “risk” as a standalone area. PMBOK 7 broadens this by
+embedding risk inside the Uncertainty Performance Domain, which also covers
+ambiguity, complexity, and volatility. This holistic framing is unique—it forces project
+managers to think beyond measurable risks and consider unknowns, systemic
+complexity, and change volatility.​
+●​ Tailoring as a dedicated section [pg 193]​
+Tailoring has always been encouraged, but PMBOK 7 makes it central and structured.
+It includes a full top-level section that explains how to tailor step-by-step: assess context,
+design governance, adapt practices. Neither PRINCE2 nor ISO gives tailoring this much
+structured attention. This makes tailoring one of PMBOK 7’s defining unique elements.​
+
+4. Other Unique Elements
+●​ Models, Methods, and Artifacts Section [pg 211]​
+Instead of prescribing one “right” tool, PMBOK 7 provides a catalog-style toolkit of
+commonly used models (like servant leadership), methods (like Kanban), and artifacts
+(like risk registers). This flexible “menu” approach is unique it empowers practitioners to
+choose rather than follow a strict template.​
+●​ Integration with PMIstandards+™ [pg15]​
+PMBOK 7 is the only standard that connects directly to a digital, evolving platform
+(PMIstandards+). This ensures the content is not static but continually updated with
+practices, examples, and case studies. Neither PRINCE2 nor ISO offers this living
+knowledge base.
+
+Unique Aspects of Managing Successful Projects with
+PRINCE2® 7
+1. Core Philosophy and Structure
+●​ Five Integrated Elements [pg 64]​
+Unlike PMBOK or ISO, PRINCE2 organizes its guidance into five integrated elements:
+Principles, People, Practices, Processes, and Project Context. This is unique because
+“People” has now been elevated as a separate core element acknowledging that
+leadership, teamwork, communication, and organizational relationships are just as
+fundamental as processes and principles.​
+●​ Seven Defined Processes [pg 236]​
+PRINCE2 is unique for its clear step-by-step process model (e.g., “Starting up a
+project,” “Closing a project”). While PMBOK 7 moved away from prescriptive processes
+
+and ISO focuses on practices, PRINCE2 stands out for keeping a structured, linear
+process journey through the project lifecycle. This makes it especially appealing for
+organizations wanting strict control and repeatability.​
+
+2. Governance, Stakeholders, and Performance
+●​ Four Management Layers [pg 95]​
+PRINCE2 defines a governance structure with four layers: Commissioning, Directing,
+Managing, Delivering. This multilayered structure clarifies “who does what” at every level
+of authority. Neither PMBOK nor ISO provides governance in such a layered form.​
+●​ Stakeholder Representation (Business, User, Supplier) [pg 94]​
+Unlike PMBOK 7 (broad stakeholder focus) or ISO (sponsor/customer perspective),
+PRINCE2 assigns three formal stakeholder roles on its Project Board:​
+○​ Business (ensures project remains viable)​
+○​ User (ensures project meets end-user needs)​
+○​ Supplier (ensures technical delivery is possible).​
+This triad model of governance is unique to PRINCE2.​
+●​ Sustainability as a Performance Target [pg 26]​
+Uniquely, PRINCE2 treats sustainability as one of seven mandatory performance
+targets to manage, alongside cost, time, quality, benefits, risk, and scope. Neither
+PMBOK nor ISO elevate sustainability to this level of importance.​
+
+3. Practices and Management Products
+●​ Issues Practice (Change + Issue Management) [pg 187]​
+PRINCE2 combines change control and issue management into a single integrated
+practice called “Issues,” with a 5-step structured technique. This unification is
+unique—ISO and PMBOK treat them separately.​
+●​ Management Products [305]​
+PRINCE2 uniquely formalizes 16 required management products (documents such
+as the Business Case, Project Initiation Documentation). These products act as “control
+points” for governance and decision-making. The newest edition even adds a Digital
+and Data Management Approach, which provides structured guidance for how digital
+
+tools and data will be managed throughout the project.​
+
+4. Commercial Context
+●​ Customer-Supplier Context [pg 28]​
+Uniquely defines project context in terms of commercial customer-supplier relationship,
+providing specific guidance on adapting roles, plans, and practices when formal
+commercial agreement or contract exists. PMBOK and ISO acknowledge contracts, but
+PRINCE2 integrates this directly into its method.​
+
+Unique Aspects of ISO 21502:2020
+1. Core Structure and Lifecycle
+●​ Two-Part Structure [pg 26, 34]​
+ISO 21502 uniquely divides its guidance into two categories:​
+○​ Integrated project management practices (covering the entire lifecycle)​
+○​ Management practices for a project (specific functional areas).​
+This dual-structure makes it easier to separate lifecycle guidance from
+specialized practices, something PMBOK and PRINCE2 don’t do in the same
+way.​
+●​ Pre-Project and Post-Project Activities [pg 34]​
+ISO 21502 uniquely formalizes what happens before and after a project:​
+○​ Pre-project: ensuring justification, feasibility, and organizational readiness.​
+○​ Post-project: verifying sustainability of outcomes and benefits realization.​
+PRINCE2 has a closure stage, and PMBOK discusses benefits, but neither
+standard formalizes pre/post activities as explicit lifecycle stages.​
+
+2. Governance, Accountability, and Context
+●​ Dedicated Governance Framework [pg 17]​
+ISO 21502 provides a full governance framework that clarifies how projects should be
+authorized, directed, and controlled. It uniquely assigns clear accountability to the
+
+Project Sponsor for achieving objectives. While PRINCE2 and PMBOK mention
+sponsors, ISO makes sponsor accountability explicit and central.​
+●​ Customer-Supplier Perspective [pg 15]​
+Like PRINCE2, ISO 21502 recognizes customer-supplier relationships, but it does so
+differently: it emphasizes how governance and team structures should adapt when
+both parties are involved. This makes ISO 21502 broader and more adaptable across
+industries.​
+
+3. Specific Management Practices
+●​ Societal Change as a Management Practice [pg 49]​
+ISO 21502 is unique in explicitly including societal change (not just organizational
+change) as a management practice. This recognizes that some projects (government,
+infrastructure, public health) affect society at large and must consider long-term social
+impact. Neither PRINCE2 nor PMBOK frame change management this broadly.​
+
+4. Organizational Preparedness
+●​ Prerequisites for Formalizing Project Management [pg 24]​
+ISO 21502 uniquely guides organizations on what to consider before even formalizing
+project management practices. It covers organizational maturity, readiness for
+structured governance, and the ability to absorb change. This is absent in PMBOK and
+PRINCE2, which assume the project environment already exists.
+
+

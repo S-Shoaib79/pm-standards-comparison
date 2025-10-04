@@ -1,0 +1,322 @@
+Comparison of PM Standards: PMBOK 7 vs PRINCE2 vs ISO 21500/21502
+This document provides a structured comparison of three global project management
+standards:​
+- PMBOK® Guide — Seventh Edition​
+- Managing Successful Projects with PRINCE2® (7th Edition)​
+- ISO 21500:2021 and ISO 21502:2020 (treated as one standard)​
+​
+The comparison highlights similarities, differences, and unique elements across key project
+management topics.
+Comparison: PMBOK 7 vs PRINCE2 (7th ed) vs ISO 21500/21502
+(Treated as: PMBOK 7 | PRINCE2 7 | ISO = ISO 21500 + ISO 21502)
+
+Sources:
+- PMBOK® Guide — Seventh Edition (Principles + Performance Domains + Tailoring).
+fileciteturn1file0
+- Managing Successful Projects with PRINCE2® (7th ed). fileciteturn1file1
+- ISO 21500:2021 (Context & Concepts) and ISO 21502:2020 (Guidance on project
+management). fileciteturn1file5
+
+NOTE: Where useful I cite the exact clauses/topics referenced in the standards (section
+numbers as shown in each PDF). Use these citations to deep-link within your repo or viewer.
+
+-----------------------------------------------------------------------
+
+1) High-level approach / structure
+- PMBOK 7: Principles-based standard (12 principles) + eight Project Performance Domains;
+systems view and outcomes/value focus. Emphasizes tailoring and
+models/methods/artifacts. (page number 45 for principles , 86 for Domains)
+- PRINCE2: Method-based (integrated elements = Principles, Practices, Processes) with a
+product-focused planning approach, explicit roles (Project Board, Executive, Senior
+User/Supplier) and stage-based control. (Page 38 principles, page 68 practices, page
+232)
+
+- ISO (21500 /21502): ISO 21500 gives context/concepts; ISO 21502 provides guidance and
+detailed management practices (clauses 7.x cover planning, risk, scope, quality,
+procurement, etc.). ISO takes a high-level process/practice approach aligned to
+organizational governance. (Page 35 for 21502)
+
+Similarities (high level):
+- All three require explicit governance, role clarity, planning, risk and change management,
+stakeholder engagement, and alignment to organizational strategy.
+fileciteturn1file6turn1file1turn1file5
+
+Major difference (high level):
+- PMBOK 7 is principles + performance-domain oriented (outcomes-focused); PRINCE2 is a
+prescriptive method with defined practices/processes and named roles; ISO combines
+context (21500) with practice guidance (21502) and is intentionally neutral/adoptable by
+organizations. fileciteturn1file6turn1file13turn1file5
+
+-----------------------------------------------------------------------
+
+2) Governance & Roles
+- PMBOK 7: Describes organizational governance systems and functions associated with
+projects; encourages tailoring of governance to context. (pg 36,40)
+- PRINCE2: Strong governance model—explicit Project Board, project executive, clear
+accountabilities, manage-by-exception (tolerances) and directing-process. (pg 93)
+- ISO: Defines governance, governing body and project governance framework; aligns
+project governance with organizational strategy and oversight. (pg 17 for 21502, pg 13
+for 21500)
+
+Similarities:
+- Need for defined accountability, escalation routes, and oversight.
+fileciteturn1file6turn1file13turn1file5
+
+Differences / Unique:
+
+- PRINCE2 prescribes named roles and the manage-by-exception mechanism (tolerances).
+fileciteturn1file13
+- PMBOK 7 is less prescriptive about specific job titles and more about functions and
+behaviors (principles-driven). fileciteturn1file6
+- ISO frames governance at organizational level (alignment with strategy and integrated
+governance). fileciteturn1file5
+
+-----------------------------------------------------------------------
+
+3) Tailoring & Adaptation
+- PMBOK 7: Dedicated Tailoring section; tailoring driven by principles, organizational values
+and project context; recommends PMIstandards+ for context-specific practices. (pg 193)
+- PRINCE2: Explicit principle "Tailor to suit the project"; tailoring decisions captured in
+initiation docs and approved by Project Board; practical guidance on what/how to tailor (pg
+48, 66)
+
+- ISO: Emphasizes selecting approaches based on organizational/contextual considerations;
+ISO 21502 advises on how to adapt management practices to project context. (pg 26 for
+21502)
+
+Similarities:
+- All require tailoring to project size, complexity, delivery method, risk, and organizational
+environment. fileciteturn1file10turn1file1turn1file5
+
+Differences:
+- PRINCE2 expects formal tailoring decisions to be approved by governance (Project Board)
+and captured in initiation documentation. fileciteturn1file14
+- PMBOK focuses on tailoring guided by principles and provides a catalog of
+models/methods (less prescriptive about approval steps). fileciteturn1file10
+- ISO focuses on organizational selection criteria and alignment; less prescriptive about
+specific approval gates (left to organizational practice). fileciteturn1file5
+
+-----------------------------------------------------------------------
+
+4) Stakeholder Engagement
+- PMBOK 7: Stakeholder Performance Domain — identification, analysis, engagement
+strategies and continuous alignment. (pg 89,52, 87)
+- PRINCE2: Emphasizes people and stakeholder groups; communications practice; roles
+such as Senior User to represent stakeholders. (pg 43)
+- ISO: Stakeholder management is a management practice (ISO 21502 clause 7.12) —
+identify, engage and manage stakeholder expectations. (pg 47 book 21502)
+
+Similarities:
+- Systematic identification, ongoing engagement, and use of stakeholder analysis to inform
+decisions. fileciteturn1file10turn1file13turn1file5
+
+Differences:
+- PRINCE2 assigns stakeholder representation into formal roles (Senior User/Supplier) and
+links to project assurance; PMBOK treats stakeholder engagement as a cross-cutting
+performance domain; ISO connects stakeholders to organizational governance and strategy.
+fileciteturn1file13turn1file10turn1file5
+
+-----------------------------------------------------------------------
+
+5) Risk Management
+- PMBOK 7: Treats risk within the Uncertainty Performance Domain and promotes
+optimizing risk responses; references broader PMI risk materials and a principles-based
+approach. (pg 243)
+- PRINCE2: Dedicated Risk practice—risk management approach, risk register, risk budget,
+owners and action owners; explicit techniques and management products. (pg 168,
+- ISO (21502): Risk management practice (7.8) — identify, assess, treat and control risks;
+consistent with ISO risk terminology and processes. (pg 42 book 21502)
+Similarities:
+- All require identification, assessment (probability & impact), assignment of owners,
+planned responses, monitoring and communication.
+fileciteturn1file6turn1file9turn1file5
+
+Differences / Unique:
+- PRINCE2 explicitly uses "threats" and "opportunities" language and prescribes
+management products like Risk Register and Risk Management Approach (with templates
+and content guidance). fileciteturn1file9
+- PMBOK 7 frames risk within a broader "uncertainty" domain and favors optimizing
+responses across the performance system rather than fixed processes.
+fileciteturn1file6
+- ISO provides structured steps similar to PRINCE2 but positions them as guidance aligned
+with ISO risk principles and often referenced to ISO 31000 practice.
+fileciteturn1file5turn1file13
+
+-----------------------------------------------------------------------
+
+6) Planning (scope/schedule/cost)
+- PMBOK 7: Planning Performance Domain — planning variables, communication,
+procurement, changes, metrics and alignment; supports multiple delivery cadences and life
+cycles. (pg 124)
+- PRINCE2: Plans practice — product-based planning, relationship between
+project/stage/team plans; stage boundaries and manage-by-stages. (pg 118)
+- ISO: Includes planning practice (7.2) plus dedicated clauses for schedule (7.6) and cost
+(7.7). (pg 30 21502)
+Similarities:
+- Progressive elaboration, baseline and control, and alignment of plans with the business
+case. fileciteturn1file6turn1file13turn1file5
+
+Differences:
+- PRINCE2 mandates product-based planning and uses stage plans + work packages to
+control delivery. fileciteturn1file13
+- PMBOK supports a range of planning styles (predictive → adaptive) and emphasizes
+tailoring plans to delivery cadence. fileciteturn1file6
+- ISO offers prescriptive clause-level guidance for schedule and cost processes (7.6 / 7.7)
+oriented for organizational adoption. fileciteturn1file5
+
+-----------------------------------------------------------------------
+
+7) Scope & Requirements / Product focus
+- PMBOK 7: Focus on outcomes and deliverables inside performance domains; scope is
+controlled within planning and project work. (pg 53)
+- PRINCE2: Very product-focused (product descriptions drive scope, quality, acceptance).
+Product Breakdown Structure and Product Flow Diagrams are core techniques. (26)
+- ISO: Scope management as a discrete practice (7.4) — define, control, confirm scope
+delivery. fileciteturn1file5 (pg 38 for 21502, pg 7 for 21500)
+
+Similarities:
+- All require formal definition, control and confirmation of scope/deliverables.
+fileciteturn1file6turn1file3turn1file5
+
+Differences:
+- PRINCE2’s explicit "product" artifacts are unique in their centrality to planning and
+acceptance; PMBOK is more outcome/value oriented; ISO lays out standard processes for
+scope management. fileciteturn1file3turn1file6turn1file5
+
+-----------------------------------------------------------------------
+
+8) Quality Management
+- PMBOK 7: Principle to "Build quality into processes and deliverables" and Delivery
+Performance Domain includes quality topics. fileciteturn1file6 (pg 242)
+- PRINCE2: Dedicated Quality practice with product quality lifecycle and quality register /
+review techniques. fileciteturn1file13 (pg 149)
+- ISO: Quality management practice (7.11) — plan, assure, control quality.
+fileciteturn1file5 (pg 45 for 21502)
+
+Similarities:
+- Plan → assure → control cycles; integrate quality into project lifecycle rather than as a
+separate afterthought. fileciteturn1file6turn1file13turn1file5
+
+Differences / Unique:
+- PRINCE2 emphasises product quality checks and product-based acceptance criteria;
+PMBOK gives a broader set of models/methods to choose from; ISO maps quality activities
+to a standard process model. fileciteturn1file13turn1file6turn1file5
+
+-----------------------------------------------------------------------
+
+9) Change Control & Issues
+- PMBOK 7: Addresses change across planning and project work; tailoring determines
+specific control mechanisms. fileciteturn1file6 (pg 227)
+- PRINCE2: Issues & change control practice — change proposals, issue registers, formal
+process for assessing/deciding on changes with clear responsibilities.
+fileciteturn1file13 (pg 186,270)
+- ISO: Change control guidance (7.10) — establish framework, identify and assess change
+requests, plan implementation and closure. fileciteturn1file5 (pg 30,43 for 21502)
+
+Similarities:
+- Formal request/assessment/approval/implementation/closure lifecycle for changes;
+linkage to business case and plan adjustments.
+fileciteturn1file6turn1file13turn1file5
+
+Differences:
+- PRINCE2 provides detailed roles and templates for issues/change handling; PMBOK leaves
+the specific mechanism to tailoring and the project’s chosen approach; ISO provides
+clause-level steps to adopt. fileciteturn1file13turn1file6turn1file5
+
+-----------------------------------------------------------------------
+
+10) Benefits & Business Case
+- PMBOK 7: Focus on value delivery and outcomes (system for value delivery); business-case
+thinking embedded in principles. fileciteturn1file6 (pg 279)
+
+- PRINCE2: Business Case practice is central; evolves through life cycle and is the basis for
+continued justification of the project. fileciteturn1file13 (pg 31, 74)
+- ISO: Benefits management practice (7.3) — identify, analyse, monitor, maintain benefits in
+alignment with strategy. fileciteturn1file5 (pg 17,36 for 21502, pg 7,16 for 2100)
+
+Similarities:
+- Business case / benefits must be defined, monitored and used to justify/terminate
+projects. fileciteturn1file6turn1file13turn1file5
+
+Differences:
+- PRINCE2's lifecycle explicitly ties business case updates to stage boundaries and
+approvals; PMBOK treats benefits as part of the overall value-delivery system; ISO provides
+structured benefit management activities.
+fileciteturn1file13turn1file6turn1file5
+
+-----------------------------------------------------------------------
+
+11) Communications & Reporting
+- PMBOK 7: Communication integrated across Planning & Project Work domains;
+emphasizes adapting to cadence and stakeholders. fileciteturn1file6 (pg 137)
+- PRINCE2: Communications integrated into Organizing and Plans practices; includes
+standard management products (highlight reports, checkpoint reports).
+fileciteturn1file13 (pg 61)
+- ISO: Communication management practice (7.13) — plan, distribute, monitor impact.
+fileciteturn1file5 (pg 48,50 for 21502)
+
+Similarities:
+- Plan communications, select formats/cadence, monitor impact.
+fileciteturn1file6turn1file13turn1file5
+
+Differences:
+
+- PRINCE2 offers a set of named report types and templates; PMBOK provides models and
+tailoring guidance; ISO provides standard process steps for planning and reporting.
+fileciteturn1file13turn1file6turn1file5
+
+-----------------------------------------------------------------------
+
+12) Procurement & Contracts
+- PMBOK 7: Procurement appears as part of Planning performance domain and Project
+Work considerations. fileciteturn1file6 (pg 138,247)
+- PRINCE2: Supplier side is formalized (Senior Supplier role); procurement aspects
+integrated into organizing, plans and quality practices. fileciteturn1file13 (pg
+109,28)
+- ISO: Procurement management practice (7.17) — plan procurement, evaluate/select
+suppliers, administer and close contracts. fileciteturn1file5 (pg 51,52 for 21502)
+
+Similarities:
+- Plan → select → administer → close lifecycle; alignment with project objectives.
+fileciteturn1file6turn1file13turn1file5
+
+Differences:
+- PRINCE2’s governance/role model assigns formal supplier representation and assurance
+roles; PMBOK focuses on procurement processes within the project context; ISO prescribes
+clause-level procurement steps. fileciteturn1file13turn1file6turn1file5
+
+-----------------------------------------------------------------------
+
+13) Lessons Learned & Continuous Improvement
+- PMBOK 7: Learning throughout the project; measurement and feedback (Measurement
+domain) and PMIstandards+ for ongoing practices. fileciteturn1file6 (pg 142,279)
+- PRINCE2: Principle "Learn from experience" and explicit techniques to capture lessons and
+feed them into tailoring and future projects. fileciteturn1file13 (pg 41)
+- ISO: Lessons learned appears as a practice (7.18) — identify, disseminate lessons.
+fileciteturn1file5 (pg 52 for 21502)
+
+Similarities:
+- Capture, disseminate and apply lessons to improve future projects and tailoring choices.
+fileciteturn1file6turn1file13turn1file5
+
+-----------------------------------------------------------------------
+
+14) Measurement, Performance & Uncertainty
+- PMBOK 7: Dedicated Measurement domain and Uncertainty domain (includes risk,
+complexity, ambiguity). Emphasizes outcomes-based measures. fileciteturn1file6 (pg
+160,86,208)
+- PRINCE2: Progress practice with tolerance reporting, highlight/exception reports and
+metrics for stage control. fileciteturn1file13 (pg 25)
+- ISO: Reporting (7.15) and guidance for monitoring project performance and reporting
+outputs. fileciteturn1file5 (pg 30 for 21502)
+
+Similarities:
+- Define what to measure, use measures for decision-making and governance, handle
+uncertainty explicitly. fileciteturn1file6turn1file13turn1file5
+
+Differences:
+- PMBOK provides a performance-domain view and wider set of measures; PRINCE2
+prescribes management products/reports and tolerances for exception handling; ISO maps
+reporting to standardized processes. fileciteturn1file6turn1file13turn1file5
+
+
