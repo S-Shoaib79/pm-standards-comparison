@@ -234,6 +234,72 @@
     }
   ],
   "comparisons": {
+    "structure": {
+      "pmbok": {
+        "title": "Principles-based Standard",
+        "description": "PMBOK 7: Principles-based standard (12 principles) + eight Project Performance Domains; systems view and outcomes/value focus. Emphasizes tailoring and models/methods/artifacts.",
+        "page": [45, 86],
+        "keyPoints": [
+          "12 fundamental principles guide project management",
+          "Eight interactive Project Performance Domains",
+          "Systems view of value delivery",
+          "Outcomes and value-focused approach",
+          "Flexible models, methods, and artifacts catalog",
+          "Tailoring guidance integrated throughout"
+        ]
+      },
+      "prince2": {
+        "title": "Method-based Approach",
+        "description": "Method-based (integrated elements = Principles, Practices, Processes) with a product-focused planning approach, explicit roles (Project Board, Executive, Senior User/Supplier) and stage-based control.",
+        "page": [38, 68, 232],
+        "keyPoints": [
+          "Five integrated elements: Principles, People, Practices, Processes, Context",
+          "Seven defined processes from start to close",
+          "Product-focused planning approach",
+          "Explicit roles and responsibilities (Project Board structure)",
+          "Stage-based control and authorization",
+          "Prescriptive method with clear structure"
+        ]
+      },
+      "iso": {
+        "standard": "iso21502",
+        "title": "High-level Process/Practice Approach",
+        "description": "ISO 21500 gives context/concepts; ISO 21502 provides guidance and detailed management practices (clauses 7.x cover planning, risk, scope, quality, procurement, etc.). ISO takes a high-level process/practice approach aligned to organizational governance.",
+        "page": 35,
+        "keyPoints": [
+          "ISO 21500 provides context and concepts",
+          "ISO 21502 provides detailed management practices",
+          "Clause-based structure (7.x practices)",
+          "High-level, universally applicable guidance",
+          "Aligned to organizational governance",
+          "Neutral and internationally agreed approach"
+        ]
+      },
+      "analysis": {
+        "similarities": [
+          "All three require explicit governance, role clarity, planning, risk and change management",
+          "Stakeholder engagement emphasized across all standards",
+          "Alignment to organizational strategy required",
+          "Lifecycle approach to project management",
+          "Quality and performance management integrated"
+        ],
+        "differences": [
+          "PMBOK 7 is principles + performance-domain oriented (outcomes-focused)",
+          "PRINCE2 is a prescriptive method with defined practices/processes and named roles",
+          "ISO combines context (21500) with practice guidance (21502) and is intentionally neutral/adoptable",
+          "PMBOK emphasizes tailoring and flexibility most",
+          "PRINCE2 provides most structured process model",
+          "ISO offers most generic, internationally applicable framework"
+        ],
+        "recommendations": [
+          "Use PMBOK for flexible, principle-based guidance adaptable to any methodology",
+          "Adopt PRINCE2 for structured, repeatable projects requiring clear governance",
+          "Apply ISO for international standardization and organizational consistency",
+          "Consider hybrid approaches combining strengths of each",
+          "Match framework choice to organizational culture and project context"
+        ]
+      }
+    },
     "risk": {
       "pmbok": {
         "title": "Risk Management - Uncertainty Performance Domain",
