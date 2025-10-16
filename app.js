@@ -841,9 +841,10 @@ function generatePhasesHTML(processData) {
                         ${activity.frequency ? `<span class="frequency-badge">${activity.frequency}</span>` : ''}
                     </div>
                     <p class="activity-description">${activity.description}</p>
+                    ${activity.deliverables ? `
                     <div class="activity-deliverables">
                         <strong>Deliverables:</strong> ${activity.deliverables.join(', ')}
-                    </div>
+                    </div>` : ''}
                     <div class="activity-refs">
                         <strong>References:</strong>
                         ${activity.references.map(ref => 
@@ -1108,9 +1109,10 @@ function displayTailoredProcess() {
                         ${activity.frequency ? `<span class="frequency-badge">🔄 ${activity.frequency}</span>` : ''}
                     </div>
                     <p class="activity-description">${activity.description}</p>
+                    ${activity.deliverables ? `
                     <div class="activity-deliverables">
                         <strong>Deliverables:</strong> ${activity.deliverables.join(', ')}
-                    </div>
+                    </div>` : ''}
                     <div class="activity-refs">
                         <strong>References:</strong>
                         ${activity.references.map(ref => 
