@@ -275,16 +275,12 @@ function updateBookmarkButton(isBookmarked) {
 }
 
 window.goToBookmarkPage = function(page) {
-    const viewer = document.getElementById('pdfViewer');
-    const currentSrc = viewer.src;
-    const baseUrl = currentSrc.split('#')[0];
+    // Use the same goToPage function for consistency
+    goToPage(page);
     
-    // Page is already the actual PDF page number, use it directly
-    viewer.src = `${baseUrl}#page=${page}`;
-    currentPage = page;
-    updatePageNumber(page);
-    updateBookmarkButton(isPageBookmarked(currentStandard, page));
-    saveLastReadPage(currentStandard, page);
+    // Close the bookmarks sidebar after navigation
+    const sidebar = document.getElementById('bookmarksSidebar');
+    sidebar.classList.remove('active');
 };
 
 window.deleteBookmark = function(standard, page) {
@@ -1448,14 +1444,24 @@ function closeModal() {
 function goToPage(page) {
     const viewer = document.getElementById('pdfViewer');
     const currentSrc = viewer.src;
-    const baseUrl = currentSrc.split('#')[0];
     
-    // Page is already the actual PDF page number, use it directly
-    viewer.src = `${baseUrl}#page=${page}`;
-    currentPage = page;
-    updatePageNumber(page);
-    updateBookmarkButton(isPageBookmarked(currentStandard, page));
-    saveLastReadPage(currentStandard, page);
+    // Extract the base URL without any hash/fragment
+    let baseUrl = currentSrc.split('#')[0];
+    
+    // Also remove any existing page parameter from the URL
+    baseUrl = baseUrl.split('?')[0];
+    
+    // Force reload by clearing src first, then setting new page
+    viewer.src = '';
+    
+    // Small delay to ensure the browser registers the change
+    setTimeout(() => {
+        viewer.src = `${baseUrl}#page=${page}`;
+        currentPage = page;
+        updatePageNumber(page);
+        updateBookmarkButton(isPageBookmarked(currentStandard, page));
+        saveLastReadPage(currentStandard, page);
+    }, 10);
 }
 
 function updatePageNumber(page) {
