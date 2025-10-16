@@ -11,10 +11,10 @@ const PDF_FILES = {
 // PDF page offsets: Add this number to reference page to get actual PDF page
 // To find offset: Open PDF, find where "Page 1" of content appears, subtract 1 from PDF page number
 const PDF_PAGE_OFFSETS = {
-    pmbok: 0,      // PMBOK content page 1 is at PDF page 30
-    prince2: 0,    // PRINCE2 content page 1 is at PDF page 20
-    iso21500: 0,    // ISO 21500 pages already correctly mapped
-    iso21502: 0     // ISO 21502 pages already correctly mapped
+    pmbok: 29,      // PMBOK content page 1 is at PDF page 30 (30 - 1 = 29)
+    prince2: 19,    // PRINCE2 content page 1 is at PDF page 20 (20 - 1 = 19)
+    iso21500: 7,    // ISO 21500 content starts at PDF page 8 (8 - 1 = 7)
+    iso21502: 7     // ISO 21502 content starts at PDF page 8 (8 - 1 = 7)
 };
 
 // Data structure for standards content
