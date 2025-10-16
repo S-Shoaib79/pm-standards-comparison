@@ -2228,6 +2228,1429 @@
           ]
         }
       ]
+    },
+    "innovativeProductDevelopment": {
+      "title": "Innovative Product Development Project",
+      "context": {
+        "description": "R&D-heavy, uncertain outcomes, ~1 year duration",
+        "characteristics": [
+          "High uncertainty in requirements and technical approach",
+          "Innovation-driven with exploratory phases",
+          "Medium team size (8-15 members) with diverse expertise",
+          "Iterative discovery and pivots expected",
+          "Significant R&D investment and experimental work",
+          "Stakeholder education needed on innovation process"
+        ],
+        "tailoringRationale": "This hybrid adaptive process balances structure with flexibility to accommodate uncertainty. It emphasizes iterative learning, fail-fast experimentation, strong stakeholder communication, and staged gates to reassess viability and direction throughout the project lifecycle."
+      },
+      "phases": [
+        {
+          "name": "Discovery & Ideation",
+          "duration": "6-8 weeks",
+          "objective": "Explore problem space, validate concepts, and establish project vision",
+          "keyActivities": [
+            {
+              "activity": "Problem Space Research",
+              "description": "Conduct market research, user studies, and competitive analysis to understand the opportunity and constraints",
+              "deliverables": ["Research Report", "User Personas", "Market Analysis"],
+              "effort": "40 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 31, "note": "PMBOK 7 - Performance Domain: Planning" },
+                { "standard": "iso21502", "page": 18, "note": "ISO 21502 - Project initiation" }
+              ]
+            },
+            {
+              "activity": "Concept Development",
+              "description": "Generate multiple concepts, create prototypes, and evaluate feasibility of different approaches",
+              "deliverables": ["Concept Portfolio", "Low-fidelity Prototypes", "Feasibility Assessment"],
+              "effort": "60 hours",
+              "frequency": "Iterative",
+              "references": [
+                { "standard": "prince2", "page": 89, "note": "PRINCE2 - Business Case development" },
+                { "standard": "iso21500", "page": 25, "note": "ISO 21500 - Innovation considerations" }
+              ]
+            },
+            {
+              "activity": "Vision & Roadmap Definition",
+              "description": "Define product vision, success criteria, and high-level roadmap with flexibility for pivots",
+              "deliverables": ["Product Vision", "Success Metrics", "Phase-gate Roadmap"],
+              "effort": "30 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 56, "note": "PMBOK 7 - Project delivery metrics" },
+                { "standard": "prince2", "page": 103, "note": "PRINCE2 - Project Brief" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 1: Concept Approval",
+            "criteria": [
+              "Clear problem statement validated",
+              "At least 2 viable concepts identified",
+              "Initial feasibility confirmed",
+              "Stakeholder alignment on vision",
+              "Budget and resources committed for next phase"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage gates" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Decision-making" }
+            ]
+          }
+        },
+        {
+          "name": "Exploration & Prototyping",
+          "duration": "12-16 weeks",
+          "objective": "Build and test prototypes, validate assumptions, and refine approach",
+          "keyActivities": [
+            {
+              "activity": "Rapid Prototyping",
+              "description": "Develop functional prototypes for top concepts, focusing on learning rather than perfection",
+              "deliverables": ["Working Prototypes", "Test Results", "Learning Log"],
+              "effort": "120 hours",
+              "frequency": "Iterative (2-week sprints)",
+              "references": [
+                { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Iterative delivery" },
+                { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Adaptive approaches" }
+              ]
+            },
+            {
+              "activity": "User Validation",
+              "description": "Conduct usability testing, gather feedback, and measure against success criteria",
+              "deliverables": ["User Feedback Reports", "Validation Metrics", "Pivot Recommendations"],
+              "effort": "40 hours",
+              "frequency": "Every 2 weeks",
+              "references": [
+                { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement" },
+                { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality management" }
+              ]
+            },
+            {
+              "activity": "Technical Feasibility Assessment",
+              "description": "Evaluate technical risks, scalability, and implementation requirements for selected approach",
+              "deliverables": ["Technical Assessment", "Risk Register", "Architecture Options"],
+              "effort": "50 hours",
+              "frequency": "Mid-phase",
+              "references": [
+                { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk management" },
+                { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk management" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 2: Development Go/No-Go",
+            "criteria": [
+              "Concept validated with target users",
+              "Technical feasibility confirmed",
+              "Key risks identified and mitigated",
+              "Business case updated and viable",
+              "Team capability and resources confirmed"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage boundaries" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Go/no-go decisions" }
+            ]
+          }
+        },
+        {
+          "name": "Development & Iteration",
+          "duration": "20-24 weeks",
+          "objective": "Build production-ready solution with continuous refinement",
+          "keyActivities": [
+            {
+              "activity": "Agile Development",
+              "description": "Implement features iteratively with regular demos and retrospectives",
+              "deliverables": ["Feature Increments", "Sprint Reports", "Demo Recordings"],
+              "effort": "200 hours",
+              "frequency": "Continuous (2-week sprints)",
+              "references": [
+                { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Agile delivery" },
+                { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Iterative lifecycle" }
+              ]
+            },
+            {
+              "activity": "Quality Assurance & Testing",
+              "description": "Conduct comprehensive testing including functional, integration, and user acceptance testing",
+              "deliverables": ["Test Plans", "Bug Reports", "Quality Metrics"],
+              "effort": "80 hours",
+              "frequency": "Continuous",
+              "references": [
+                { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality theme" },
+                { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality management" }
+              ]
+            },
+            {
+              "activity": "Documentation & Knowledge Transfer",
+              "description": "Create user documentation, technical guides, and training materials",
+              "deliverables": ["User Manual", "Technical Documentation", "Training Materials"],
+              "effort": "40 hours",
+              "frequency": "End of phase",
+              "references": [
+                { "standard": "pmbok", "page": 198, "note": "PMBOK 7 - Knowledge management" },
+                { "standard": "iso21500", "page": 52, "note": "ISO 21500 - Information management" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 3: Launch Readiness",
+            "criteria": [
+              "All critical features completed",
+              "Quality standards met",
+              "User acceptance confirmed",
+              "Launch plan approved",
+              "Support infrastructure in place"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - End stage assessment" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Delivery decisions" }
+            ]
+          }
+        },
+        {
+          "name": "Pilot & Refinement",
+          "duration": "6-8 weeks",
+          "objective": "Deploy to limited audience, gather feedback, and refine before full launch",
+          "keyActivities": [
+            {
+              "activity": "Pilot Deployment",
+              "description": "Release to controlled user group, monitor performance, and gather feedback",
+              "deliverables": ["Pilot Release", "Monitoring Dashboard", "Feedback Analysis"],
+              "effort": "60 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 167, "note": "PMBOK 7 - Deployment strategies" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Transition planning" }
+              ]
+            },
+            {
+              "activity": "Issue Resolution",
+              "description": "Address bugs, usability issues, and feedback from pilot users",
+              "deliverables": ["Issue Log", "Resolution Report", "Updated Release"],
+              "effort": "40 hours",
+              "frequency": "Continuous",
+              "references": [
+                { "standard": "prince2", "page": 203, "note": "PRINCE2 - Change control" },
+                { "standard": "pmbok", "page": 134, "note": "PMBOK 7 - Problem resolution" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 4: Full Launch Approval",
+            "criteria": [
+              "Pilot metrics meet success criteria",
+              "Major issues resolved",
+              "Scalability confirmed",
+              "Marketing and launch plan ready",
+              "Support team trained"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Final gate" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Launch authorization" }
+            ]
+          }
+        },
+        {
+          "name": "Launch & Transition",
+          "duration": "4 weeks",
+          "objective": "Full product launch and transition to operations",
+          "keyActivities": [
+            {
+              "activity": "Full Launch",
+              "description": "Execute launch plan, deploy to all users, and monitor adoption",
+              "deliverables": ["Production Release", "Launch Report", "Adoption Metrics"],
+              "effort": "50 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 167, "note": "PMBOK 7 - Deployment execution" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Transition activities" }
+              ]
+            },
+            {
+              "activity": "Lessons Learned",
+              "description": "Capture insights, document what worked/didn't, and recommend improvements",
+              "deliverables": ["Lessons Learned Report", "Best Practices", "Improvement Recommendations"],
+              "effort": "20 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 198, "note": "PMBOK 7 - Lessons learned" },
+                { "standard": "prince2", "page": 215, "note": "PRINCE2 - Lessons management" },
+                { "standard": "iso21502", "page": 115, "note": "ISO 21502 - Organizational learning" }
+              ]
+            },
+            {
+              "activity": "Handover to Operations",
+              "description": "Transfer product to operational team with documentation and training",
+              "deliverables": ["Handover Package", "Training Sessions", "Support Runbook"],
+              "effort": "30 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Project closure" },
+                { "standard": "prince2", "page": 230, "note": "PRINCE2 - Closing a project" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Project Closure",
+            "criteria": [
+              "Product successfully launched",
+              "Operations team capable of support",
+              "Documentation complete",
+              "Stakeholders satisfied",
+              "Lessons learned captured"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 230, "note": "PRINCE2 - Project closure" },
+              { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Project close" }
+            ]
+          }
+        }
+      ],
+      "roles": [
+        {
+          "role": "Product Owner",
+          "description": "Sets product vision, prioritizes features, and makes strategic decisions",
+          "responsibilities": [
+            "Define and communicate product vision",
+            "Prioritize backlog and features",
+            "Make go/no-go decisions at gates",
+            "Stakeholder communication and alignment",
+            "Budget and resource allocation"
+          ],
+          "commitment": "50% time (flexible based on phase)",
+          "references": [
+            { "standard": "pmbok", "page": 67, "note": "PMBOK 7 - Product owner role" },
+            { "standard": "prince2", "page": 52, "note": "PRINCE2 - Executive responsibilities" }
+          ]
+        },
+        {
+          "role": "Innovation Lead",
+          "description": "Drives research, experimentation, and ensures innovative approaches",
+          "responsibilities": [
+            "Lead discovery and exploration phases",
+            "Facilitate brainstorming and ideation",
+            "Evaluate concepts and prototypes",
+            "Manage intellectual property considerations",
+            "Champion innovation culture"
+          ],
+          "commitment": "100% time (early phases), 50% (later phases)",
+          "references": [
+            { "standard": "pmbok", "page": 78, "note": "PMBOK 7 - Project leadership" },
+            { "standard": "iso21502", "page": 34, "note": "ISO 21502 - Project manager role" }
+          ]
+        },
+        {
+          "role": "Development Team Lead",
+          "description": "Manages technical implementation and development team",
+          "responsibilities": [
+            "Technical architecture decisions",
+            "Sprint planning and execution",
+            "Code quality and technical standards",
+            "Team coordination and coaching",
+            "Risk identification and mitigation"
+          ],
+          "commitment": "100% time (development phases)",
+          "references": [
+            { "standard": "pmbok", "page": 89, "note": "PMBOK 7 - Team performance" },
+            { "standard": "prince2", "page": 78, "note": "PRINCE2 - Team manager" }
+          ]
+        },
+        {
+          "role": "UX/Design Lead",
+          "description": "Ensures user-centered design and validates usability",
+          "responsibilities": [
+            "User research and validation",
+            "Prototype design and testing",
+            "Usability evaluation",
+            "Design system creation",
+            "User feedback synthesis"
+          ],
+          "commitment": "75% time",
+          "references": [
+            { "standard": "pmbok", "page": 101, "note": "PMBOK 7 - Stakeholder focus" },
+            { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Stakeholder engagement" }
+          ]
+        },
+        {
+          "role": "Quality Assurance Lead",
+          "description": "Defines quality standards and ensures product meets requirements",
+          "responsibilities": [
+            "Test strategy development",
+            "Quality metrics definition",
+            "Testing execution and coordination",
+            "Defect management",
+            "Quality reports and recommendations"
+          ],
+          "commitment": "50% time (ramps up in development phase)",
+          "references": [
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality theme" },
+            { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality management" }
+          ]
+        },
+        {
+          "role": "Scrum Master/Facilitator",
+          "description": "Facilitates agile processes and removes impediments",
+          "responsibilities": [
+            "Facilitate scrum ceremonies",
+            "Remove team blockers",
+            "Track and report progress",
+            "Coach team on agile practices",
+            "Continuous improvement facilitation"
+          ],
+          "commitment": "50% time",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Agile practices" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Adaptive approaches" }
+          ]
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "artifact": "Product Vision Document",
+          "description": "Defines the product's purpose, target users, value proposition, and success criteria",
+          "owner": "Product Owner",
+          "references": [
+            { "standard": "pmbok", "page": 56, "note": "PMBOK 7 - Vision and goals" },
+            { "standard": "prince2", "page": 103, "note": "PRINCE2 - Project Brief" }
+          ]
+        },
+        {
+          "artifact": "Research & Validation Report",
+          "description": "Synthesizes user research, market analysis, and validation results",
+          "owner": "Innovation Lead",
+          "references": [
+            { "standard": "pmbok", "page": 31, "note": "PMBOK 7 - Planning basis" },
+            { "standard": "iso21502", "page": 18, "note": "ISO 21502 - Project justification" }
+          ]
+        },
+        {
+          "artifact": "Prototype Portfolio",
+          "description": "Collection of prototypes, test results, and learnings from experiments",
+          "owner": "Innovation Lead / UX Lead",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Iterative artifacts" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Incremental delivery" }
+          ]
+        },
+        {
+          "artifact": "Technical Architecture Document",
+          "description": "Describes system architecture, technology stack, and technical decisions",
+          "owner": "Development Team Lead",
+          "references": [
+            { "standard": "pmbok", "page": 112, "note": "PMBOK 7 - Technical documentation" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical planning" }
+          ]
+        },
+        {
+          "artifact": "Sprint Backlog & Reports",
+          "description": "Prioritized list of work items and regular progress reports",
+          "owner": "Scrum Master",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Backlog management" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Work planning" }
+          ]
+        },
+        {
+          "artifact": "Risk & Issue Register",
+          "description": "Tracks identified risks, issues, and mitigation strategies",
+          "owner": "Innovation Lead",
+          "references": [
+            { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk register" },
+            { "standard": "prince2", "page": 156, "note": "PRINCE2 - Risk theme" },
+            { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk management" }
+          ]
+        },
+        {
+          "artifact": "Test Results & Quality Metrics",
+          "description": "Documents test execution, defects, and quality measurements",
+          "owner": "QA Lead",
+          "references": [
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality records" },
+            { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality documentation" }
+          ]
+        },
+        {
+          "artifact": "Lessons Learned Repository",
+          "description": "Captures insights, successes, challenges, and recommendations for future projects",
+          "owner": "Product Owner",
+          "references": [
+            { "standard": "pmbok", "page": 198, "note": "PMBOK 7 - Knowledge capture" },
+            { "standard": "prince2", "page": 215, "note": "PRINCE2 - Lessons log" },
+            { "standard": "iso21502", "page": 115, "note": "ISO 21502 - Lessons learned" }
+          ]
+        }
+      ],
+      "tailoringDecisions": [
+        {
+          "decision": "Phase-gate approval process with pivot flexibility",
+          "rationale": "Innovation projects require validation points but must allow for direction changes based on learning. Gates ensure investment discipline while permitting strategic pivots.",
+          "tradeoffs": "More governance than pure agile, but less rigid than traditional stage-gates. Balances oversight with adaptability.",
+          "references": [
+            { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage boundaries adapted" },
+            { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Adaptive governance" }
+          ]
+        },
+        {
+          "decision": "Extended discovery and prototyping phases",
+          "rationale": "Innovation requires significant upfront exploration. Investing 40% of timeline in discovery/prototyping reduces risk of building the wrong solution.",
+          "tradeoffs": "Longer time to production but higher confidence in product-market fit. Reduces waste from building unwanted features.",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Iterative discovery" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Exploratory lifecycles" }
+          ]
+        },
+        {
+          "decision": "User validation at every phase",
+          "rationale": "Continuous user feedback prevents drift from market needs. Regular validation reduces risk of building something users don't want.",
+          "tradeoffs": "Requires more stakeholder time and coordination, but dramatically improves success probability.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement" },
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality validation" }
+          ]
+        },
+        {
+          "decision": "Hybrid agile-stage gate approach",
+          "rationale": "Combines agile flexibility within phases with stage-gate decision points. Provides structure for governance while maintaining development agility.",
+          "tradeoffs": "More complex than pure agile or waterfall. Requires team comfort with both methodologies.",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Hybrid approaches" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Adaptive methods" }
+          ]
+        },
+        {
+          "decision": "Dedicated innovation lead role",
+          "rationale": "Innovation projects need someone championing creative thinking and managing uncertainty. This role ensures focus on innovation throughout the lifecycle.",
+          "tradeoffs": "Additional role increases cost, but critical for maintaining innovation focus and managing ambiguity.",
+          "references": [
+            { "standard": "pmbok", "page": 78, "note": "PMBOK 7 - Leadership in uncertainty" },
+            { "standard": "iso21502", "page": 34, "note": "ISO 21502 - Project leadership" }
+          ]
+        },
+        {
+          "decision": "Pilot phase before full launch",
+          "rationale": "Controlled rollout allows real-world validation and refinement before full commitment. Reduces risk of large-scale failures.",
+          "tradeoffs": "Delays full launch by 6-8 weeks, but significantly reduces deployment risk and improves quality.",
+          "references": [
+            { "standard": "pmbok", "page": 167, "note": "PMBOK 7 - Incremental delivery" },
+            { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Phased transition" }
+          ]
+        },
+        {
+          "decision": "Lightweight documentation with emphasis on prototypes",
+          "rationale": "Innovation is better communicated through working prototypes than extensive documents. Focus on tangible artifacts over written specifications.",
+          "tradeoffs": "Less formal documentation may challenge audit requirements, but enables faster iteration and clearer communication.",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Working software focus" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Adaptive documentation" }
+          ]
+        },
+        {
+          "decision": "Cross-functional team with diverse expertise",
+          "rationale": "Innovation benefits from diverse perspectives. Team includes R&D, design, development, and business expertise for holistic problem-solving.",
+          "tradeoffs": "Larger team increases coordination complexity, but diversity enhances innovation and reduces blind spots.",
+          "references": [
+            { "standard": "pmbok", "page": 89, "note": "PMBOK 7 - Team diversity" },
+            { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Team composition" }
+          ]
+        }
+      ],
+      "successFactors": [
+        {
+          "factor": "Stakeholder buy-in for experimentation",
+          "importance": "Critical",
+          "mitigation": "Set clear expectations that innovation involves failed experiments. Celebrate learning, not just successes. Regular transparent communication about progress and pivots.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder expectations" },
+            { "standard": "prince2", "page": 134, "note": "PRINCE2 - Managing expectations" }
+          ]
+        },
+        {
+          "factor": "Tolerance for ambiguity and change",
+          "importance": "Critical",
+          "mitigation": "Build psychological safety in team. Use retrospectives to process change. Communicate that uncertainty is expected and managed, not eliminated.",
+          "references": [
+            { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Managing uncertainty" },
+            { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk tolerance" }
+          ]
+        },
+        {
+          "factor": "Strong product vision despite pivots",
+          "importance": "High",
+          "mitigation": "Maintain clear 'true north' vision while allowing tactical pivots. Regularly revisit and communicate vision. Ensure pivots align with core purpose.",
+          "references": [
+            { "standard": "pmbok", "page": 56, "note": "PMBOK 7 - Vision clarity" },
+            { "standard": "prince2", "page": 103, "note": "PRINCE2 - Project direction" }
+          ]
+        },
+        {
+          "factor": "Access to users for validation",
+          "importance": "High",
+          "mitigation": "Recruit user panel early. Budget time and incentives for user participation. Use remote tools to reduce friction. Make feedback sessions valuable for participants.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - User engagement" },
+            { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Stakeholder involvement" }
+          ]
+        },
+        {
+          "factor": "Technical capability to prototype rapidly",
+          "importance": "High",
+          "mitigation": "Use low-code tools, reusable components, and proven frameworks. Invest in prototyping infrastructure. Prioritize speed over perfection in early phases.",
+          "references": [
+            { "standard": "pmbok", "page": 143, "note": "PMBOK 7 - Rapid iteration capability" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical readiness" }
+          ]
+        },
+        {
+          "factor": "Effective knowledge capture and sharing",
+          "importance": "Medium-High",
+          "mitigation": "Use collaborative tools for real-time documentation. Hold regular knowledge-sharing sessions. Maintain searchable learning repository. Encourage blog-style documentation.",
+          "references": [
+            { "standard": "pmbok", "page": 198, "note": "PMBOK 7 - Knowledge management" },
+            { "standard": "prince2", "page": 215, "note": "PRINCE2 - Lessons capture" },
+            { "standard": "iso21502", "page": 115, "note": "ISO 21502 - Knowledge sharing" }
+          ]
+        }
+      ]
+    },
+    "largeGovernmentProject": {
+      "title": "Large Government Project",
+      "context": {
+        "description": "Civil, electrical, and IT components, 2-year duration",
+        "characteristics": [
+          "Multi-domain project (civil, electrical, IT infrastructure)",
+          "Large team size (30-50 members) across multiple vendors",
+          "Strict regulatory and compliance requirements",
+          "Complex stakeholder landscape (public, government, contractors)",
+          "Formal procurement and contracting processes",
+          "High visibility and public accountability"
+        ],
+        "tailoringRationale": "This comprehensive process emphasizes governance, compliance, risk management, and stakeholder coordination. It provides structured controls for managing complexity while maintaining flexibility for technical execution. Heavy documentation and formal approvals ensure accountability and traceability required in government projects."
+      },
+      "phases": [
+        {
+          "name": "Initiation & Approval",
+          "duration": "8-12 weeks",
+          "objective": "Secure project authorization, establish governance, and complete procurement",
+          "keyActivities": [
+            {
+              "activity": "Business Case Development",
+              "description": "Develop comprehensive business case including cost-benefit analysis, risk assessment, and strategic alignment",
+              "deliverables": ["Business Case", "Financial Model", "Strategic Alignment Report"],
+              "effort": "120 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "prince2", "page": 89, "note": "PRINCE2 - Business Case" },
+                { "standard": "iso21502", "page": 18, "note": "ISO 21502 - Project justification" }
+              ]
+            },
+            {
+              "activity": "Governance Framework Establishment",
+              "description": "Define project governance structure, decision-making authority, and reporting lines",
+              "deliverables": ["Governance Charter", "RACI Matrix", "Escalation Procedures"],
+              "effort": "60 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "prince2", "page": 45, "note": "PRINCE2 - Organization theme" },
+                { "standard": "pmbok", "page": 234, "note": "PMBOK 7 - Project governance" },
+                { "standard": "iso21500", "page": 15, "note": "ISO 21500 - Governance principles" }
+              ]
+            },
+            {
+              "activity": "Procurement Planning",
+              "description": "Develop procurement strategy, prepare RFPs, and establish vendor evaluation criteria",
+              "deliverables": ["Procurement Strategy", "RFP Documents", "Vendor Evaluation Framework"],
+              "effort": "100 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Procurement management" },
+                { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Procurement processes" }
+              ]
+            },
+            {
+              "activity": "Stakeholder Identification & Analysis",
+              "description": "Identify all stakeholders, assess their interests, and develop engagement strategy",
+              "deliverables": ["Stakeholder Register", "Power/Interest Grid", "Communication Plan"],
+              "effort": "40 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement" },
+                { "standard": "prince2", "page": 134, "note": "PRINCE2 - Communication management" },
+                { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Stakeholder management" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 1: Project Authorization",
+            "criteria": [
+              "Business case approved by governing body",
+              "Budget allocated and confirmed",
+              "Governance structure approved",
+              "Procurement strategy authorized",
+              "Legal and compliance review completed"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 107, "note": "PRINCE2 - Starting up a project" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Project authorization" }
+            ]
+          }
+        },
+        {
+          "name": "Planning & Design",
+          "duration": "16-20 weeks",
+          "objective": "Develop detailed plans, complete designs, and finalize contracts",
+          "keyActivities": [
+            {
+              "activity": "Integrated Project Planning",
+              "description": "Develop comprehensive plans covering scope, schedule, cost, quality, risk, and resources across all domains",
+              "deliverables": ["Project Management Plan", "Integrated Schedule", "Budget Baseline", "Resource Plan"],
+              "effort": "200 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 31, "note": "PMBOK 7 - Planning performance domain" },
+                { "standard": "prince2", "page": 120, "note": "PRINCE2 - Plans theme" },
+                { "standard": "iso21502", "page": 38, "note": "ISO 21502 - Project planning" }
+              ]
+            },
+            {
+              "activity": "Technical Design & Specifications",
+              "description": "Develop detailed technical designs for civil, electrical, and IT components with cross-domain integration",
+              "deliverables": ["Design Documents", "Technical Specifications", "Interface Control Documents"],
+              "effort": "300 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 112, "note": "PMBOK 7 - Design considerations" },
+                { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical management" }
+              ]
+            },
+            {
+              "activity": "Risk Assessment & Mitigation Planning",
+              "description": "Conduct comprehensive risk analysis across all domains and develop mitigation strategies",
+              "deliverables": ["Risk Register", "Risk Analysis Report", "Mitigation Plans", "Contingency Reserves"],
+              "effort": "80 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk management" },
+                { "standard": "prince2", "page": 156, "note": "PRINCE2 - Risk theme" },
+                { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk management process" }
+              ]
+            },
+            {
+              "activity": "Quality Management Planning",
+              "description": "Define quality standards, acceptance criteria, and quality assurance/control processes",
+              "deliverables": ["Quality Management Plan", "Quality Standards", "Inspection Procedures"],
+              "effort": "60 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality theme" },
+                { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Quality management" },
+                { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality management" }
+              ]
+            },
+            {
+              "activity": "Vendor Selection & Contracting",
+              "description": "Evaluate proposals, select vendors, and finalize contracts for all major components",
+              "deliverables": ["Vendor Evaluation Reports", "Contracts", "SLAs", "Performance Metrics"],
+              "effort": "100 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Contract management" },
+                { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Contracting" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 2: Execution Authorization",
+            "criteria": [
+              "All plans approved by governance board",
+              "Designs validated and approved",
+              "Contracts finalized with vendors",
+              "Risks acceptable and mitigated",
+              "Regulatory approvals obtained"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage boundary" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Phase gate approval" }
+            ]
+          }
+        },
+        {
+          "name": "Execution & Monitoring",
+          "duration": "60-70 weeks",
+          "objective": "Execute all work packages while maintaining control and compliance",
+          "keyActivities": [
+            {
+              "activity": "Work Package Execution",
+              "description": "Execute civil, electrical, and IT work packages according to plans and specifications",
+              "deliverables": ["Completed Work Packages", "Progress Reports", "Quality Records"],
+              "effort": "5000+ hours (distributed across team)",
+              "frequency": "Continuous",
+              "references": [
+                { "standard": "pmbok", "page": 145, "note": "PMBOK 7 - Project work" },
+                { "standard": "prince2", "page": 193, "note": "PRINCE2 - Managing product delivery" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Execution management" }
+              ]
+            },
+            {
+              "activity": "Integrated Progress Monitoring",
+              "description": "Track progress across all domains using earned value and other metrics",
+              "deliverables": ["Progress Dashboards", "EVM Reports", "Variance Analysis", "Forecasts"],
+              "effort": "40 hours per month",
+              "frequency": "Monthly",
+              "references": [
+                { "standard": "pmbok", "page": 156, "note": "PMBOK 7 - Performance measurement" },
+                { "standard": "prince2", "page": 203, "note": "PRINCE2 - Progress theme" },
+                { "standard": "iso21502", "page": 108, "note": "ISO 21502 - Progress monitoring" }
+              ]
+            },
+            {
+              "activity": "Change Control Management",
+              "description": "Evaluate and approve/reject change requests through formal change control board",
+              "deliverables": ["Change Requests", "Impact Assessments", "Change Log", "Updated Baselines"],
+              "effort": "20 hours per month",
+              "frequency": "Bi-weekly CCB meetings",
+              "references": [
+                { "standard": "prince2", "page": 203, "note": "PRINCE2 - Change theme" },
+                { "standard": "pmbok", "page": 134, "note": "PMBOK 7 - Change management" },
+                { "standard": "iso21502", "page": 118, "note": "ISO 21502 - Change control" }
+              ]
+            },
+            {
+              "activity": "Quality Assurance & Control",
+              "description": "Conduct inspections, audits, and testing to ensure quality standards are met",
+              "deliverables": ["Inspection Reports", "Test Results", "Non-conformance Reports", "Corrective Actions"],
+              "effort": "60 hours per month",
+              "frequency": "Continuous",
+              "references": [
+                { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality activities" },
+                { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Quality assurance" },
+                { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality control" }
+              ]
+            },
+            {
+              "activity": "Risk Monitoring & Response",
+              "description": "Monitor identified risks, track new risks, and execute response plans",
+              "deliverables": ["Risk Reports", "Risk Response Records", "Updated Risk Register"],
+              "effort": "20 hours per month",
+              "frequency": "Monthly",
+              "references": [
+                { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk monitoring" },
+                { "standard": "prince2", "page": 156, "note": "PRINCE2 - Risk management" },
+                { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk response" }
+              ]
+            },
+            {
+              "activity": "Vendor Performance Management",
+              "description": "Monitor vendor performance, manage contracts, and address issues",
+              "deliverables": ["Vendor Scorecards", "Contract Modifications", "Issue Resolution Records"],
+              "effort": "30 hours per month",
+              "frequency": "Monthly",
+              "references": [
+                { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Vendor management" },
+                { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Supplier management" }
+              ]
+            },
+            {
+              "activity": "Stakeholder Reporting & Communication",
+              "description": "Provide regular updates to stakeholders through formal reports and meetings",
+              "deliverables": ["Status Reports", "Executive Dashboards", "Public Communications", "Meeting Minutes"],
+              "effort": "30 hours per month",
+              "frequency": "Monthly (formal), Weekly (informal)",
+              "references": [
+                { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement" },
+                { "standard": "prince2", "page": 134, "note": "PRINCE2 - Communication" },
+                { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Stakeholder reporting" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 3: Completion Review",
+            "criteria": [
+              "All work packages completed and accepted",
+              "Quality standards met and documented",
+              "Budget and schedule variances within tolerance",
+              "All deliverables meet specifications",
+              "Stakeholder acceptance obtained"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - End stage assessment" },
+              { "standard": "pmbok", "page": 179, "note": "PMBOK 7 - Completion criteria" }
+            ]
+          }
+        },
+        {
+          "name": "Testing & Commissioning",
+          "duration": "12-16 weeks",
+          "objective": "Validate all systems, conduct integrated testing, and prepare for handover",
+          "keyActivities": [
+            {
+              "activity": "Integrated Systems Testing",
+              "description": "Test all systems together to verify integrated functionality across civil, electrical, and IT components",
+              "deliverables": ["Test Plans", "Test Results", "Defect Reports", "Test Certificates"],
+              "effort": "200 hours",
+              "frequency": "Phase-based",
+              "references": [
+                { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality validation" },
+                { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Validation activities" },
+                { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Testing processes" }
+              ]
+            },
+            {
+              "activity": "Acceptance Testing",
+              "description": "Conduct formal acceptance testing with client/stakeholders to demonstrate compliance with requirements",
+              "deliverables": ["Acceptance Test Procedures", "Test Execution Records", "Acceptance Certificates"],
+              "effort": "100 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "prince2", "page": 197, "note": "PRINCE2 - Product acceptance" },
+                { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Acceptance criteria" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Acceptance management" }
+              ]
+            },
+            {
+              "activity": "Commissioning & Handover Preparation",
+              "description": "Commission systems, prepare handover documentation, and train operational staff",
+              "deliverables": ["Commissioning Reports", "O&M Manuals", "Training Materials", "As-Built Drawings"],
+              "effort": "150 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 167, "note": "PMBOK 7 - Transition planning" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Project closure preparation" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Gate 4: Handover Authorization",
+            "criteria": [
+              "All tests passed successfully",
+              "Client acceptance obtained",
+              "Documentation complete and approved",
+              "Training completed",
+              "Warranty arrangements confirmed"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 230, "note": "PRINCE2 - Project closure authorization" },
+              { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Transition approval" }
+            ]
+          }
+        },
+        {
+          "name": "Closure & Transition",
+          "duration": "6-8 weeks",
+          "objective": "Complete handover, close contracts, and capture lessons learned",
+          "keyActivities": [
+            {
+              "activity": "Formal Handover",
+              "description": "Transfer ownership and responsibility to operations team with all documentation",
+              "deliverables": ["Handover Certificate", "Asset Register", "Warranty Documents", "Support Contacts"],
+              "effort": "40 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Project handover" },
+                { "standard": "prince2", "page": 230, "note": "PRINCE2 - Closing a project" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Project closure" }
+              ]
+            },
+            {
+              "activity": "Contract Closure",
+              "description": "Complete all contractual obligations, process final payments, and close contracts",
+              "deliverables": ["Contract Closure Reports", "Final Payments", "Performance Assessments", "Warranty Claims"],
+              "effort": "60 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Contract closeout" },
+                { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Procurement closure" }
+              ]
+            },
+            {
+              "activity": "Financial Reconciliation",
+              "description": "Complete final cost accounting, close financial accounts, and prepare final financial report",
+              "deliverables": ["Final Financial Report", "Budget Reconciliation", "Cost Performance Analysis"],
+              "effort": "40 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Financial closure" },
+                { "standard": "prince2", "page": 230, "note": "PRINCE2 - Financial management closure" }
+              ]
+            },
+            {
+              "activity": "Lessons Learned & Knowledge Transfer",
+              "description": "Conduct comprehensive lessons learned sessions and create knowledge repository for future projects",
+              "deliverables": ["Lessons Learned Report", "Best Practices Document", "Knowledge Base Updates"],
+              "effort": "30 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 198, "note": "PMBOK 7 - Lessons learned" },
+                { "standard": "prince2", "page": 215, "note": "PRINCE2 - Lessons management" },
+                { "standard": "iso21502", "page": 115, "note": "ISO 21502 - Organizational learning" }
+              ]
+            },
+            {
+              "activity": "Archive & Document Management",
+              "description": "Archive all project documentation per regulatory requirements and organizational policy",
+              "deliverables": ["Document Archive", "Archive Index", "Retention Schedule"],
+              "effort": "20 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Document archival" },
+                { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Information management closure" }
+              ]
+            },
+            {
+              "activity": "Post-Implementation Review",
+              "description": "Conduct formal review of project performance against objectives with governance board",
+              "deliverables": ["Post-Implementation Review Report", "Performance Metrics", "Recommendations"],
+              "effort": "30 hours",
+              "frequency": "Once",
+              "references": [
+                { "standard": "prince2", "page": 230, "note": "PRINCE2 - Project review" },
+                { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Project evaluation" },
+                { "standard": "iso21502", "page": 115, "note": "ISO 21502 - Post-project review" }
+              ]
+            }
+          ],
+          "decisionGate": {
+            "name": "Project Closure",
+            "criteria": [
+              "All deliverables formally accepted",
+              "Contracts closed and payments completed",
+              "Documentation archived",
+              "Lessons learned captured",
+              "Governance board approves closure"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 230, "note": "PRINCE2 - Project closure" },
+              { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Formal closure" },
+              { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Closure completion" }
+            ]
+          }
+        }
+      ],
+      "roles": [
+        {
+          "role": "Program Director",
+          "description": "Senior leader accountable for overall project success and strategic alignment",
+          "responsibilities": [
+            "Strategic direction and alignment",
+            "Executive stakeholder management",
+            "Budget approval and financial oversight",
+            "Major decision-making authority",
+            "Governance board interface"
+          ],
+          "commitment": "25% time (escalations and major decisions)",
+          "references": [
+            { "standard": "prince2", "page": 52, "note": "PRINCE2 - Executive role" },
+            { "standard": "pmbok", "page": 234, "note": "PMBOK 7 - Sponsorship" }
+          ]
+        },
+        {
+          "role": "Project Manager",
+          "description": "Day-to-day project leadership and coordination across all domains",
+          "responsibilities": [
+            "Overall project planning and coordination",
+            "Team leadership and management",
+            "Progress monitoring and reporting",
+            "Issue and risk management",
+            "Vendor coordination"
+          ],
+          "commitment": "100% time",
+          "references": [
+            { "standard": "pmbok", "page": 78, "note": "PMBOK 7 - Project manager role" },
+            { "standard": "prince2", "page": 63, "note": "PRINCE2 - Project manager" },
+            { "standard": "iso21502", "page": 34, "note": "ISO 21502 - PM responsibilities" }
+          ]
+        },
+        {
+          "role": "Civil Engineering Lead",
+          "description": "Responsible for all civil engineering work packages and deliverables",
+          "responsibilities": [
+            "Civil design and specifications",
+            "Construction planning and oversight",
+            "Quality control for civil works",
+            "Integration with electrical and IT",
+            "Regulatory compliance (civil)"
+          ],
+          "commitment": "100% time",
+          "references": [
+            { "standard": "pmbok", "page": 89, "note": "PMBOK 7 - Technical leadership" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical management" }
+          ]
+        },
+        {
+          "role": "Electrical Engineering Lead",
+          "description": "Responsible for all electrical engineering work packages and deliverables",
+          "responsibilities": [
+            "Electrical design and specifications",
+            "Power systems planning",
+            "Quality control for electrical works",
+            "Safety and compliance (electrical)",
+            "Integration with civil and IT"
+          ],
+          "commitment": "100% time",
+          "references": [
+            { "standard": "pmbok", "page": 89, "note": "PMBOK 7 - Technical leadership" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical roles" }
+          ]
+        },
+        {
+          "role": "IT Systems Lead",
+          "description": "Responsible for all IT infrastructure and systems deliverables",
+          "responsibilities": [
+            "IT architecture and design",
+            "Systems integration",
+            "Cybersecurity and compliance",
+            "IT testing and commissioning",
+            "Integration with civil and electrical"
+          ],
+          "commitment": "100% time",
+          "references": [
+            { "standard": "pmbok", "page": 89, "note": "PMBOK 7 - Technical delivery" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technology management" }
+          ]
+        },
+        {
+          "role": "Procurement Manager",
+          "description": "Manages all procurement activities and vendor relationships",
+          "responsibilities": [
+            "Procurement strategy execution",
+            "Vendor selection and contracting",
+            "Contract administration",
+            "Vendor performance management",
+            "Procurement compliance"
+          ],
+          "commitment": "75% time",
+          "references": [
+            { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Procurement management" },
+            { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Procurement role" }
+          ]
+        },
+        {
+          "role": "Quality Assurance Manager",
+          "description": "Ensures quality standards are met across all project domains",
+          "responsibilities": [
+            "Quality management system oversight",
+            "Inspection and audit planning",
+            "Non-conformance management",
+            "Quality reporting",
+            "Continuous improvement"
+          ],
+          "commitment": "75% time",
+          "references": [
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality assurance" },
+            { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Quality role" },
+            { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality management" }
+          ]
+        },
+        {
+          "role": "Risk & Compliance Manager",
+          "description": "Manages project risks and ensures regulatory compliance",
+          "responsibilities": [
+            "Risk identification and assessment",
+            "Risk mitigation planning",
+            "Regulatory compliance monitoring",
+            "Audit coordination",
+            "Risk reporting"
+          ],
+          "commitment": "75% time",
+          "references": [
+            { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk management role" },
+            { "standard": "prince2", "page": 156, "note": "PRINCE2 - Risk theme" },
+            { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk management" }
+          ]
+        },
+        {
+          "role": "Stakeholder Engagement Manager",
+          "description": "Manages relationships with all external and internal stakeholders",
+          "responsibilities": [
+            "Stakeholder communication",
+            "Public relations and media",
+            "Community engagement",
+            "Government liaison",
+            "Issue resolution"
+          ],
+          "commitment": "100% time",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder management" },
+            { "standard": "prince2", "page": 134, "note": "PRINCE2 - Communication" },
+            { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Stakeholder role" }
+          ]
+        },
+        {
+          "role": "PMO Coordinator",
+          "description": "Provides administrative and analytical support to project management",
+          "responsibilities": [
+            "Progress reporting and dashboards",
+            "Document control",
+            "Meeting coordination",
+            "Data analysis",
+            "Administrative support"
+          ],
+          "commitment": "100% time",
+          "references": [
+            { "standard": "pmbok", "page": 78, "note": "PMBOK 7 - PMO functions" },
+            { "standard": "iso21502", "page": 34, "note": "ISO 21502 - Project support" }
+          ]
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "artifact": "Project Charter",
+          "description": "Formal authorization document defining project scope, objectives, and authority",
+          "owner": "Program Director",
+          "references": [
+            { "standard": "pmbok", "page": 234, "note": "PMBOK 7 - Project charter" },
+            { "standard": "prince2", "page": 107, "note": "PRINCE2 - Project mandate" },
+            { "standard": "iso21502", "page": 18, "note": "ISO 21502 - Project authorization" }
+          ]
+        },
+        {
+          "artifact": "Integrated Project Management Plan",
+          "description": "Comprehensive plan covering all knowledge areas and subsidiary plans",
+          "owner": "Project Manager",
+          "references": [
+            { "standard": "pmbok", "page": 31, "note": "PMBOK 7 - Project management plan" },
+            { "standard": "prince2", "page": 120, "note": "PRINCE2 - Project initiation documentation" },
+            { "standard": "iso21502", "page": 38, "note": "ISO 21502 - Project plans" }
+          ]
+        },
+        {
+          "artifact": "Technical Design Documentation",
+          "description": "Detailed designs, specifications, and drawings for all project components",
+          "owner": "Engineering Leads (Civil/Electrical/IT)",
+          "references": [
+            { "standard": "pmbok", "page": 112, "note": "PMBOK 7 - Design artifacts" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical documentation" }
+          ]
+        },
+        {
+          "artifact": "Risk Register",
+          "description": "Comprehensive log of identified risks with analysis and response plans",
+          "owner": "Risk & Compliance Manager",
+          "references": [
+            { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk register" },
+            { "standard": "prince2", "page": 156, "note": "PRINCE2 - Risk register" },
+            { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk documentation" }
+          ]
+        },
+        {
+          "artifact": "Change Log",
+          "description": "Record of all change requests, decisions, and impacts on baselines",
+          "owner": "Project Manager",
+          "references": [
+            { "standard": "prince2", "page": 203, "note": "PRINCE2 - Change log" },
+            { "standard": "pmbok", "page": 134, "note": "PMBOK 7 - Change records" },
+            { "standard": "iso21502", "page": 118, "note": "ISO 21502 - Change documentation" }
+          ]
+        },
+        {
+          "artifact": "Quality Records",
+          "description": "Documentation of inspections, tests, audits, and non-conformances",
+          "owner": "Quality Assurance Manager",
+          "references": [
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality records" },
+            { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Quality documentation" },
+            { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality records" }
+          ]
+        },
+        {
+          "artifact": "Contract Documents",
+          "description": "Contracts, amendments, performance reports, and correspondence with vendors",
+          "owner": "Procurement Manager",
+          "references": [
+            { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Contract documentation" },
+            { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Procurement records" }
+          ]
+        },
+        {
+          "artifact": "Progress Reports & Dashboards",
+          "description": "Regular status reports, earned value metrics, and performance dashboards",
+          "owner": "PMO Coordinator",
+          "references": [
+            { "standard": "pmbok", "page": 156, "note": "PMBOK 7 - Progress reporting" },
+            { "standard": "prince2", "page": 203, "note": "PRINCE2 - Highlight reports" },
+            { "standard": "iso21502", "page": 108, "note": "ISO 21502 - Progress documentation" }
+          ]
+        },
+        {
+          "artifact": "Stakeholder Communication Records",
+          "description": "Meeting minutes, correspondence, and records of stakeholder interactions",
+          "owner": "Stakeholder Engagement Manager",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Communication records" },
+            { "standard": "prince2", "page": 134, "note": "PRINCE2 - Communication records" },
+            { "standard": "iso21502", "page": 56, "note": "ISO 21502 - Stakeholder records" }
+          ]
+        },
+        {
+          "artifact": "Lessons Learned Repository",
+          "description": "Compilation of lessons, best practices, and recommendations for future projects",
+          "owner": "Project Manager",
+          "references": [
+            { "standard": "pmbok", "page": 198, "note": "PMBOK 7 - Lessons learned" },
+            { "standard": "prince2", "page": 215, "note": "PRINCE2 - Lessons report" },
+            { "standard": "iso21502", "page": 115, "note": "ISO 21502 - Lessons documentation" }
+          ]
+        }
+      ],
+      "tailoringDecisions": [
+        {
+          "decision": "Formal stage-gate process with governance board approvals",
+          "rationale": "Government projects require accountability and oversight. Formal gates ensure proper authorization, budget control, and stakeholder alignment at major milestones.",
+          "tradeoffs": "Slower decision-making but higher accountability and transparency. Necessary for public sector governance.",
+          "references": [
+            { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage boundaries" },
+            { "standard": "pmbok", "page": 234, "note": "PMBOK 7 - Governance requirements" }
+          ]
+        },
+        {
+          "decision": "Comprehensive documentation and traceability",
+          "rationale": "Regulatory requirements and public accountability demand thorough documentation. Ensures audit readiness and long-term maintainability.",
+          "tradeoffs": "Higher overhead but essential for compliance, audits, and liability protection.",
+          "references": [
+            { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Documentation standards" },
+            { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Information management" }
+          ]
+        },
+        {
+          "decision": "Dedicated PMO with formal reporting structure",
+          "rationale": "Large, complex projects benefit from centralized project management support. PMO provides consistency, standard processes, and executive visibility.",
+          "tradeoffs": "Additional overhead but significantly improves coordination, reporting, and knowledge management.",
+          "references": [
+            { "standard": "pmbok", "page": 78, "note": "PMBOK 7 - PMO functions" },
+            { "standard": "iso21502", "page": 34, "note": "ISO 21502 - Project support office" }
+          ]
+        },
+        {
+          "decision": "Separate specialist leads for each major domain",
+          "rationale": "Civil, electrical, and IT require specialized expertise. Domain leads ensure technical quality while project manager coordinates integration.",
+          "tradeoffs": "Larger management team but necessary for technical competence and quality in complex multi-domain project.",
+          "references": [
+            { "standard": "pmbok", "page": 89, "note": "PMBOK 7 - Technical leadership" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Technical management" }
+          ]
+        },
+        {
+          "decision": "Formal procurement and contract management processes",
+          "rationale": "Government procurement requires compliance with regulations, competitive bidding, and formal contract management to ensure fairness and value for money.",
+          "tradeoffs": "Longer procurement cycles but ensures regulatory compliance and defensible vendor selection.",
+          "references": [
+            { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Procurement processes" },
+            { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Procurement management" }
+          ]
+        },
+        {
+          "decision": "Dedicated stakeholder engagement role",
+          "rationale": "High public visibility and diverse stakeholder groups require dedicated focus on communication, public relations, and issue management.",
+          "tradeoffs": "Additional role cost but critical for maintaining public support and managing expectations.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement importance" },
+            { "standard": "prince2", "page": 134, "note": "PRINCE2 - Communication management" }
+          ]
+        },
+        {
+          "decision": "Extensive testing and commissioning phase",
+          "rationale": "Public infrastructure requires thorough validation before handover. Extended testing phase ensures safety, reliability, and compliance.",
+          "tradeoffs": "Longer schedule but essential for public safety and long-term operational success.",
+          "references": [
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality validation" },
+            { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Validation processes" }
+          ]
+        },
+        {
+          "decision": "Earned value management for performance tracking",
+          "rationale": "Large budget and long duration require rigorous performance measurement. EVM provides early warning of cost and schedule issues.",
+          "tradeoffs": "Requires additional effort for measurement and reporting, but provides superior control and forecasting.",
+          "references": [
+            { "standard": "pmbok", "page": 156, "note": "PMBOK 7 - Earned value management" },
+            { "standard": "iso21502", "page": 108, "note": "ISO 21502 - Performance measurement" }
+          ]
+        },
+        {
+          "decision": "Formal change control board with defined thresholds",
+          "rationale": "Changes in government projects must be properly authorized and documented. CCB ensures changes are evaluated for impact and approved at appropriate level.",
+          "tradeoffs": "Slower response to changes but necessary for accountability and budget control.",
+          "references": [
+            { "standard": "prince2", "page": 203, "note": "PRINCE2 - Change authority" },
+            { "standard": "pmbok", "page": 134, "note": "PMBOK 7 - Change control" },
+            { "standard": "iso21502", "page": 118, "note": "ISO 21502 - Change management" }
+          ]
+        }
+      ],
+      "successFactors": [
+        {
+          "factor": "Strong governance and executive support",
+          "importance": "Critical",
+          "mitigation": "Ensure active governance board with clear authority. Regular executive engagement and communication. Escalation procedures for critical decisions. Maintain political support through transparency and results.",
+          "references": [
+            { "standard": "prince2", "page": 45, "note": "PRINCE2 - Continued business justification" },
+            { "standard": "pmbok", "page": 234, "note": "PMBOK 7 - Executive sponsorship" }
+          ]
+        },
+        {
+          "factor": "Effective multi-domain integration",
+          "importance": "Critical",
+          "mitigation": "Regular integration workshops. Clear interface control documents. Integration lead role. Early identification of dependencies. Collaborative planning across domains.",
+          "references": [
+            { "standard": "pmbok", "page": 31, "note": "PMBOK 7 - Integration management" },
+            { "standard": "iso21502", "page": 78, "note": "ISO 21502 - Multi-disciplinary coordination" }
+          ]
+        },
+        {
+          "factor": "Proactive stakeholder management",
+          "importance": "Critical",
+          "mitigation": "Dedicated stakeholder role. Regular communication and consultation. Transparent reporting. Early issue identification. Community engagement programs. Media relations plan.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement criticality" },
+            { "standard": "prince2", "page": 134, "note": "PRINCE2 - Stakeholder importance" }
+          ]
+        },
+        {
+          "factor": "Rigorous vendor management",
+          "importance": "High",
+          "mitigation": "Clear contracts with performance metrics. Regular vendor reviews. Strong contract management. Prompt issue resolution. Performance incentives and penalties. Alternative vendor plans.",
+          "references": [
+            { "standard": "pmbok", "page": 256, "note": "PMBOK 7 - Vendor performance" },
+            { "standard": "iso21502", "page": 134, "note": "ISO 21502 - Supplier management" }
+          ]
+        },
+        {
+          "factor": "Comprehensive risk management",
+          "importance": "High",
+          "mitigation": "Dedicated risk manager. Regular risk assessments. Adequate contingency reserves. Risk response plans executed proactively. Risk reporting to governance board. Risk workshops with stakeholders.",
+          "references": [
+            { "standard": "pmbok", "page": 123, "note": "PMBOK 7 - Risk management processes" },
+            { "standard": "prince2", "page": 156, "note": "PRINCE2 - Risk theme" },
+            { "standard": "iso21502", "page": 67, "note": "ISO 21502 - Risk management importance" }
+          ]
+        },
+        {
+          "factor": "Quality assurance and control",
+          "importance": "High",
+          "mitigation": "Independent QA function. Clear quality standards. Regular inspections and audits. Non-conformance tracking. Quality metrics reporting. Testing protocols rigorously followed.",
+          "references": [
+            { "standard": "prince2", "page": 178, "note": "PRINCE2 - Quality management" },
+            { "standard": "pmbok", "page": 189, "note": "PMBOK 7 - Quality processes" },
+            { "standard": "iso21502", "page": 89, "note": "ISO 21502 - Quality assurance" }
+          ]
+        },
+        {
+          "factor": "Change control discipline",
+          "importance": "Medium-High",
+          "mitigation": "Formal CCB with clear thresholds. Impact analysis for all changes. Baseline protection. Change budget reserves. Stakeholder approval for major changes. Scope creep prevention.",
+          "references": [
+            { "standard": "prince2", "page": 203, "note": "PRINCE2 - Change control procedures" },
+            { "standard": "pmbok", "page": 134, "note": "PMBOK 7 - Integrated change control" },
+            { "standard": "iso21502", "page": 118, "note": "ISO 21502 - Change procedures" }
+          ]
+        },
+        {
+          "factor": "Regulatory compliance and audit readiness",
+          "importance": "Medium-High",
+          "mitigation": "Compliance tracking system. Regular internal audits. Documentation standards enforced. Regulatory liaison. Pre-emptive compliance reviews. Lessons from past audits applied.",
+          "references": [
+            { "standard": "pmbok", "page": 211, "note": "PMBOK 7 - Compliance requirements" },
+            { "standard": "iso21502", "page": 98, "note": "ISO 21502 - Regulatory management" }
+          ]
+        }
+      ]
     }
   }
 }

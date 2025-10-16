@@ -2167,6 +2167,14 @@ body {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
 }
 
+.scenario-icon.innovation-icon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.scenario-icon.government-icon {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
 .scenario-icon.placeholder-icon {
     background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
 }

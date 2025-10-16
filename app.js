@@ -653,52 +653,97 @@ function displayTailoredProcessCards() {
         `;
     }
     
-    // Placeholder for future processes
-    html += `
-        <div class="process-scenario-card placeholder-card">
-            <div class="scenario-icon placeholder-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                </svg>
-            </div>
-            <div class="scenario-content">
-                <h3>Innovative Product Development</h3>
-                <p class="scenario-description">R&D-heavy, uncertain outcomes, ~1 year duration</p>
-                <div class="scenario-tags">
-                    <span class="tag">Duration: ~1 year</span>
-                    <span class="tag">R&D Focus</span>
-                    <span class="tag">Adaptive</span>
+    // Innovative Product Development Process Card
+    if (processes.innovativeProductDevelopment) {
+        const process = processes.innovativeProductDevelopment;
+        html += `
+            <div class="process-scenario-card" onclick="showProcessDetail('innovativeProductDevelopment')">
+                <div class="scenario-icon innovation-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+                <div class="scenario-content">
+                    <h3>${process.title}</h3>
+                    <p class="scenario-description">${process.context.description}</p>
+                    <div class="scenario-tags">
+                        <span class="tag">Duration: ~1 year</span>
+                        <span class="tag">Team: 8-15 members</span>
+                        <span class="tag">R&D Focus</span>
+                    </div>
+                    <div class="scenario-stats">
+                        <div class="stat">
+                            <strong>${process.phases.length}</strong>
+                            <span>Phases</span>
+                        </div>
+                        <div class="stat">
+                            <strong>${process.roles.length}</strong>
+                            <span>Key Roles</span>
+                        </div>
+                        <div class="stat">
+                            <strong>${process.keyArtifacts.length}</strong>
+                            <span>Artifacts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="view-details-btn">View Details →</span>
                 </div>
             </div>
-            <div class="scenario-footer placeholder-footer">
-                <span>Coming Soon</span>
-            </div>
-        </div>
-        
-        <div class="process-scenario-card placeholder-card">
-            <div class="scenario-icon placeholder-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                </svg>
-            </div>
-            <div class="scenario-content">
-                <h3>Large Government Project</h3>
-                <p class="scenario-description">Civil, electrical, IT components, 2-year duration</p>
-                <div class="scenario-tags">
-                    <span class="tag">Duration: 2 years</span>
-                    <span class="tag">Multi-component</span>
-                    <span class="tag">Compliance Heavy</span>
+        `;
+    }
+    
+    // Large Government Project Process Card
+    if (processes.largeGovernmentProject) {
+        const process = processes.largeGovernmentProject;
+        html += `
+            <div class="process-scenario-card" onclick="showProcessDetail('largeGovernmentProject')">
+                <div class="scenario-icon government-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="10"></rect>
+                        <path d="M12 2l9 4v2H3V6l9-4z"></path>
+                        <line x1="7" y1="15" x2="7" y2="18"></line>
+                        <line x1="12" y1="15" x2="12" y2="18"></line>
+                        <line x1="17" y1="15" x2="17" y2="18"></line>
+                    </svg>
+                </div>
+                <div class="scenario-content">
+                    <h3>${process.title}</h3>
+                    <p class="scenario-description">${process.context.description}</p>
+                    <div class="scenario-tags">
+                        <span class="tag">Duration: 2 years</span>
+                        <span class="tag">Team: 30-50 members</span>
+                        <span class="tag">Multi-domain</span>
+                    </div>
+                    <div class="scenario-stats">
+                        <div class="stat">
+                            <strong>${process.phases.length}</strong>
+                            <span>Phases</span>
+                        </div>
+                        <div class="stat">
+                            <strong>${process.roles.length}</strong>
+                            <span>Key Roles</span>
+                        </div>
+                        <div class="stat">
+                            <strong>${process.keyArtifacts.length}</strong>
+                            <span>Artifacts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="view-details-btn">View Details →</span>
                 </div>
             </div>
-            <div class="scenario-footer placeholder-footer">
-                <span>Coming Soon</span>
-            </div>
-        </div>
-    `;
+        `;
+    }
     
     container.innerHTML = html;
 }
