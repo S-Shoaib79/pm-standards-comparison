@@ -1486,5 +1486,748 @@
         "page": 24
       }
     ]
+  },
+  "tailoredProcesses": {
+    "customSoftwareDevelopment": {
+      "title": "Custom Software Development Project",
+      "context": {
+        "description": "Well-defined requirements, <6 months duration, <7 team members",
+        "characteristics": [
+          "Clear, documented requirements from stakeholders",
+          "Fixed timeline with aggressive delivery schedule",
+          "Small, cross-functional team (development, testing, design)",
+          "Agile/iterative delivery preferred for rapid feedback",
+          "Moderate technical complexity with known technologies",
+          "Limited budget requiring lean processes"
+        ],
+        "tailoringRationale": "This lightweight process is optimized for speed and flexibility while maintaining essential governance. It combines agile practices with structured milestones, minimizes documentation overhead, and empowers the small team with clear decision-making authority."
+      },
+      "phases": [
+        {
+          "name": "Initiation & Planning",
+          "duration": "1-2 weeks",
+          "objective": "Establish project foundation, clarify requirements, and create initial roadmap",
+          "keyActivities": [
+            {
+              "activity": "Define project vision and success criteria",
+              "description": "Establish clear project objectives aligned with business value. Define measurable success criteria and acceptance thresholds.",
+              "references": [
+                { "standard": "pmbok", "page": 45, "note": "PMBOK 7 - Stewardship Principle: Focus on value delivery" },
+                { "standard": "prince2", "page": 31, "note": "PRINCE2 - Business Case: Investment appraisal and justification" },
+                { "standard": "iso21502", "page": 17, "note": "ISO 21502 - Benefits Management Practice: Identify and analyze benefits" }
+              ],
+              "deliverables": ["Project Charter", "Success Criteria Document"],
+              "effort": "8-16 hours"
+            },
+            {
+              "activity": "Identify and analyze key stakeholders",
+              "description": "Identify all stakeholders including product owner, end users, technical leads. Perform power/interest analysis and plan engagement approach.",
+              "references": [
+                { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder Performance Domain: Identification and engagement" },
+                { "standard": "prince2", "page": 43, "note": "PRINCE2 - People Element: Stakeholder representation (Business, User, Supplier)" },
+                { "standard": "iso21502", "page": 47, "note": "ISO 21502 - Stakeholder Management Practice (7.12): Systematic identification" }
+              ],
+              "deliverables": ["Stakeholder Register", "Communication Plan"],
+              "effort": "4-8 hours"
+            },
+            {
+              "activity": "Assemble project team and define roles",
+              "description": "Assign core team members with clear roles (Product Owner, Scrum Master/PM, Developers, QA). Establish team working agreements and communication protocols.",
+              "references": [
+                { "standard": "pmbok", "page": 94, "note": "PMBOK 7 - Team Performance Domain: Team culture and collaboration" },
+                { "standard": "prince2", "page": 93, "note": "PRINCE2 - Organization Theme: Defined roles and responsibilities" },
+                { "standard": "iso21502", "page": 15, "note": "ISO 21502 - Organizational Roles: Team structure and accountability" }
+              ],
+              "deliverables": ["Team Charter", "RACI Matrix", "Working Agreements"],
+              "effort": "4-6 hours"
+            },
+            {
+              "activity": "Refine and prioritize requirements",
+              "description": "Review existing requirements documentation. Create user stories with acceptance criteria. Prioritize backlog using MoSCoW or similar technique.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery Performance Domain: Requirements management and scope" },
+                { "standard": "prince2", "page": 26, "note": "PRINCE2 - Product-Based Planning: Product descriptions with quality criteria" },
+                { "standard": "iso21502", "page": 38, "note": "ISO 21502 - Scope Management Practice (7.4): Define and control scope" }
+              ],
+              "deliverables": ["Product Backlog", "User Stories", "Definition of Done"],
+              "effort": "16-24 hours"
+            },
+            {
+              "activity": "Select development approach and tools",
+              "description": "Choose agile framework (Scrum, Kanban, or hybrid). Select development tools, version control, CI/CD pipeline, and collaboration platforms.",
+              "references": [
+                { "standard": "pmbok", "page": 107, "note": "PMBOK 7 - Development Approach Domain: Adaptive and hybrid approaches" },
+                { "standard": "pmbok", "page": 193, "note": "PMBOK 7 - Tailoring: Context-specific selection of methods" },
+                { "standard": "prince2", "page": 48, "note": "PRINCE2 - Tailoring Principle: Adapt to project environment" }
+              ],
+              "deliverables": ["Development Approach Document", "Tooling Setup"],
+              "effort": "8-12 hours"
+            },
+            {
+              "activity": "Create release roadmap and sprint plan",
+              "description": "Define release milestones aligned with business priorities. Plan first 2-3 sprints in detail. Establish sprint cadence (typically 1-2 weeks for small projects).",
+              "references": [
+                { "standard": "pmbok", "page": 124, "note": "PMBOK 7 - Planning Performance Domain: Iterative planning and scheduling" },
+                { "standard": "prince2", "page": 118, "note": "PRINCE2 - Plans Practice: Stage plans and work packages" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Schedule Management (7.6): Activity sequencing and scheduling" }
+              ],
+              "deliverables": ["Release Roadmap", "Sprint 0/1 Plan", "Project Schedule"],
+              "effort": "12-16 hours"
+            },
+            {
+              "activity": "Identify initial risks and mitigation strategies",
+              "description": "Conduct risk brainstorming session. Identify top 5-10 risks (technical, schedule, resource). Define mitigation actions and risk owners.",
+              "references": [
+                { "standard": "pmbok", "page": 243, "note": "PMBOK 7 - Uncertainty Domain: Risk identification and response strategies" },
+                { "standard": "prince2", "page": 168, "note": "PRINCE2 - Risk Practice: Risk register and management approach" },
+                { "standard": "iso21502", "page": 42, "note": "ISO 21502 - Risk Management Practice (7.8): Identify, assess, and treat risks" }
+              ],
+              "deliverables": ["Risk Register", "Risk Response Plan"],
+              "effort": "6-8 hours"
+            },
+            {
+              "activity": "Establish quality standards and testing approach",
+              "description": "Define code quality standards, testing strategy (unit, integration, UAT), and acceptance criteria. Plan for continuous integration and automated testing.",
+              "references": [
+                { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality Principle: Build quality into processes" },
+                { "standard": "prince2", "page": 149, "note": "PRINCE2 - Quality Practice: Quality management strategy and reviews" },
+                { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Quality Management Practice (7.11): Plan, assure, control" }
+              ],
+              "deliverables": ["Quality Management Plan", "Testing Strategy", "Code Standards"],
+              "effort": "8-12 hours"
+            }
+          ],
+          "decisionGate": {
+            "name": "Project Kickoff Approval",
+            "criteria": [
+              "Project charter approved by sponsor",
+              "Team assembled and committed",
+              "Initial backlog prioritized and ready",
+              "Development environment set up",
+              "Risk mitigation plans in place"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Managing by Stages: Stage boundary authorization" },
+              { "standard": "iso21502", "page": 17, "note": "ISO 21502 - Governance Framework: Project authorization" }
+            ]
+          }
+        },
+        {
+          "name": "Iterative Development (Sprints)",
+          "duration": "3-4 months (6-8 sprints of 2 weeks each)",
+          "objective": "Deliver working software incrementally with continuous stakeholder feedback",
+          "keyActivities": [
+            {
+              "activity": "Sprint planning and story refinement",
+              "description": "At the start of each sprint: Select stories from backlog, estimate effort, commit to sprint goal. Refine upcoming stories continuously.",
+              "references": [
+                { "standard": "pmbok", "page": 124, "note": "PMBOK 7 - Planning Domain: Progressive elaboration and adaptive planning" },
+                { "standard": "pmbok", "page": 107, "note": "PMBOK 7 - Development Approach: Iterative incremental delivery" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Planning Practice (7.2): Iterative planning approach" }
+              ],
+              "deliverables": ["Sprint Backlog", "Sprint Goal", "Task Breakdown"],
+              "effort": "2-4 hours per sprint",
+              "frequency": "Every sprint (6-8 times)"
+            },
+            {
+              "activity": "Daily standup meetings",
+              "description": "15-minute daily sync: What was done yesterday, what will be done today, any blockers. Keep team aligned and address impediments quickly.",
+              "references": [
+                { "standard": "pmbok", "page": 137, "note": "PMBOK 7 - Communication: Adaptive communication cadence" },
+                { "standard": "prince2", "page": 61, "note": "PRINCE2 - Communication: Checkpoint reports and progress tracking" },
+                { "standard": "iso21502", "page": 48, "note": "ISO 21502 - Communication Practice (7.13): Regular information distribution" }
+              ],
+              "deliverables": ["Updated Task Board", "Blocker List"],
+              "effort": "15 minutes daily",
+              "frequency": "Daily (60-80 meetings total)"
+            },
+            {
+              "activity": "Develop features and write code",
+              "description": "Implement user stories following coding standards. Write unit tests (aim for >80% coverage). Conduct peer code reviews. Commit to version control frequently.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery Domain: Producing deliverables to meet requirements" },
+                { "standard": "prince2", "page": 26, "note": "PRINCE2 - Product Focus: Creating specialist products" },
+                { "standard": "iso21502", "page": 38, "note": "ISO 21502 - Scope Delivery: Executing defined work" }
+              ],
+              "deliverables": ["Working Software", "Unit Tests", "Code Commits"],
+              "effort": "400-600 hours total",
+              "frequency": "Continuous throughout sprints"
+            },
+            {
+              "activity": "Continuous integration and automated testing",
+              "description": "Automated builds triggered on every commit. Run automated test suites (unit, integration, regression). Monitor build status and fix breaks immediately.",
+              "references": [
+                { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality: Continuous quality monitoring" },
+                { "standard": "prince2", "page": 149, "note": "PRINCE2 - Quality Reviews: Product quality checks" },
+                { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Quality Control: Ongoing quality verification" }
+              ],
+              "deliverables": ["Build Reports", "Test Results", "Code Coverage Reports"],
+              "effort": "Automated (2-4 hours setup + monitoring)",
+              "frequency": "Continuous"
+            },
+            {
+              "activity": "Sprint review and demo",
+              "description": "End of sprint: Demo completed features to stakeholders. Gather feedback on implemented functionality. Update backlog based on feedback.",
+              "references": [
+                { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder Domain: Continuous stakeholder engagement" },
+                { "standard": "pmbok", "page": 160, "note": "PMBOK 7 - Measurement Domain: Demonstrating progress" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Reporting (7.15): Performance reporting" }
+              ],
+              "deliverables": ["Sprint Demo", "Stakeholder Feedback", "Updated Backlog"],
+              "effort": "1-2 hours per sprint",
+              "frequency": "Every sprint (6-8 times)"
+            },
+            {
+              "activity": "Sprint retrospective",
+              "description": "Team reflects on what went well, what didn't, and what to improve. Identify 1-3 actionable improvements for next sprint. Foster continuous learning.",
+              "references": [
+                { "standard": "pmbok", "page": 142, "note": "PMBOK 7 - Continuous Learning: Measurement and feedback" },
+                { "standard": "pmbok", "page": 279, "note": "PMBOK 7 - Learning throughout project lifecycle" },
+                { "standard": "prince2", "page": 41, "note": "PRINCE2 - Learn from Experience Principle: Capture and apply lessons" },
+                { "standard": "iso21502", "page": 52, "note": "ISO 21502 - Lessons Learned Practice (7.18): Identify and disseminate" }
+              ],
+              "deliverables": ["Retrospective Notes", "Action Items", "Process Improvements"],
+              "effort": "1 hour per sprint",
+              "frequency": "Every sprint (6-8 times)"
+            },
+            {
+              "activity": "Monitor risks and address issues",
+              "description": "Review risk register weekly. Update probability/impact as needed. Escalate new high-priority risks. Track and resolve impediments blocking progress.",
+              "references": [
+                { "standard": "pmbok", "page": 243, "note": "PMBOK 7 - Uncertainty Domain: Continuous risk monitoring" },
+                { "standard": "prince2", "page": 168, "note": "PRINCE2 - Risk Practice: Regular risk reviews" },
+                { "standard": "iso21502", "page": 42, "note": "ISO 21502 - Risk Monitoring: Ongoing risk assessment" }
+              ],
+              "deliverables": ["Updated Risk Register", "Issue Log", "Escalations"],
+              "effort": "2-3 hours per sprint",
+              "frequency": "Weekly reviews"
+            },
+            {
+              "activity": "Manage scope changes and backlog",
+              "description": "Evaluate change requests against project constraints. Product Owner prioritizes new requests in backlog. Communicate impact of changes to stakeholders.",
+              "references": [
+                { "standard": "pmbok", "page": 227, "note": "PMBOK 7 - Change Management: Adaptive change control" },
+                { "standard": "prince2", "page": 186, "note": "PRINCE2 - Issues & Change Practice: Change proposals and assessment" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Change Control (7.10): Identify and assess changes" }
+              ],
+              "deliverables": ["Change Requests", "Impact Analysis", "Updated Backlog"],
+              "effort": "Variable (2-8 hours per sprint)",
+              "frequency": "As needed"
+            },
+            {
+              "activity": "Track progress and velocity",
+              "description": "Update burndown/burnup charts daily. Calculate team velocity after each sprint. Forecast completion dates based on trends. Report status to stakeholders.",
+              "references": [
+                { "standard": "pmbok", "page": 160, "note": "PMBOK 7 - Measurement Domain: Tracking progress with metrics" },
+                { "standard": "prince2", "page": 25, "note": "PRINCE2 - Progress Practice: Tolerance-based monitoring" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Performance Monitoring: Progress tracking" }
+              ],
+              "deliverables": ["Burndown Charts", "Velocity Reports", "Status Updates"],
+              "effort": "1-2 hours per sprint",
+              "frequency": "Daily updates, weekly reporting"
+            }
+          ],
+          "decisionGate": {
+            "name": "Mid-Project Review (after Sprint 3-4)",
+            "criteria": [
+              "Velocity is stable and predictable",
+              "Core features demonstrated and accepted",
+              "No critical risks threatening delivery",
+              "Stakeholder satisfaction is positive",
+              "Team is functioning effectively"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage Boundaries: Mid-stage assessment" },
+              { "standard": "pmbok", "page": 160, "note": "PMBOK 7 - Measurement: Performance assessment" }
+            ]
+          }
+        },
+        {
+          "name": "Testing & Hardening",
+          "duration": "2-3 weeks",
+          "objective": "Ensure software quality, stability, and readiness for production deployment",
+          "keyActivities": [
+            {
+              "activity": "Execute comprehensive integration testing",
+              "description": "Test end-to-end workflows across all modules. Verify data flows and system integrations. Test edge cases and error handling scenarios.",
+              "references": [
+                { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality: Comprehensive quality control" },
+                { "standard": "prince2", "page": 149, "note": "PRINCE2 - Quality Practice: Quality inspection and testing" },
+                { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Quality Control: Deliverable verification" }
+              ],
+              "deliverables": ["Test Cases", "Test Results", "Defect Reports"],
+              "effort": "60-80 hours"
+            },
+            {
+              "activity": "Conduct user acceptance testing (UAT)",
+              "description": "Real users test software in realistic scenarios. Validate that acceptance criteria are met. Gather user feedback on usability and functionality.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery Domain: Verification of deliverables" },
+                { "standard": "prince2", "page": 26, "note": "PRINCE2 - Product Descriptions: Acceptance criteria validation" },
+                { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Deliverable verification and acceptance" }
+              ],
+              "deliverables": ["UAT Test Plan", "User Feedback", "Acceptance Sign-offs"],
+              "effort": "40-60 hours"
+            },
+            {
+              "activity": "Perform security and performance testing",
+              "description": "Run security scans for vulnerabilities (OWASP Top 10). Conduct load testing to verify performance requirements. Address security findings.",
+              "references": [
+                { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality: Non-functional requirements verification" },
+                { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Quality Assurance: Compliance verification" }
+              ],
+              "deliverables": ["Security Scan Results", "Performance Test Reports", "Remediation Plan"],
+              "effort": "20-30 hours"
+            },
+            {
+              "activity": "Fix defects and stabilize code",
+              "description": "Prioritize and fix critical and high-priority bugs. Conduct regression testing after fixes. Freeze features and focus on stability.",
+              "references": [
+                { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality: Defect resolution and verification" },
+                { "standard": "prince2", "page": 186, "note": "PRINCE2 - Issues Practice: Issue resolution and closure" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Quality Control: Corrective actions" }
+              ],
+              "deliverables": ["Bug Fixes", "Regression Test Results", "Stable Build"],
+              "effort": "60-100 hours"
+            },
+            {
+              "activity": "Prepare deployment and rollback procedures",
+              "description": "Document deployment steps and runbook. Create rollback plan in case of issues. Prepare production environment and access.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery: Deployment planning" },
+                { "standard": "prince2", "page": 118, "note": "PRINCE2 - Plans: Exception and contingency planning" },
+                { "standard": "iso21502", "page": 42, "note": "ISO 21502 - Risk Treatment: Contingency planning" }
+              ],
+              "deliverables": ["Deployment Plan", "Runbook", "Rollback Procedures"],
+              "effort": "16-24 hours"
+            },
+            {
+              "activity": "Create user documentation and training materials",
+              "description": "Write user guides, FAQs, and help documentation. Prepare training materials for end users. Plan training sessions if needed.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery Domain: Supporting documentation" },
+                { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Knowledge transfer and documentation" }
+              ],
+              "deliverables": ["User Guide", "Training Materials", "Help Documentation"],
+              "effort": "30-40 hours"
+            }
+          ],
+          "decisionGate": {
+            "name": "Go/No-Go Deployment Decision",
+            "criteria": [
+              "All critical and high defects resolved",
+              "UAT sign-off received from key users",
+              "Security and performance requirements met",
+              "Deployment procedures tested and validated",
+              "Rollback plan ready and tested",
+              "Support team trained and ready"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 145, "note": "PRINCE2 - Stage Boundaries: Final stage authorization" },
+              { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery: Readiness assessment" }
+            ]
+          }
+        },
+        {
+          "name": "Deployment & Transition",
+          "duration": "1 week",
+          "objective": "Successfully deploy software to production and transition to operations",
+          "keyActivities": [
+            {
+              "activity": "Execute production deployment",
+              "description": "Deploy software to production environment following runbook. Monitor deployment process closely. Verify all components are functioning correctly.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery Domain: Final deliverable handover" },
+                { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing a Project: Product handover" }
+              ],
+              "deliverables": ["Production Deployment", "Deployment Verification Report"],
+              "effort": "16-24 hours"
+            },
+            {
+              "activity": "Monitor post-deployment stability",
+              "description": "Closely monitor production for first 48-72 hours. Track errors, performance metrics, and user feedback. Address any critical issues immediately.",
+              "references": [
+                { "standard": "pmbok", "page": 160, "note": "PMBOK 7 - Measurement: Post-deployment monitoring" },
+                { "standard": "iso21502", "page": 30, "note": "ISO 21502 - Performance Monitoring: Ongoing verification" }
+              ],
+              "deliverables": ["Monitoring Reports", "Issue Log", "Hot-fix Releases (if needed)"],
+              "effort": "Continuous for 3 days"
+            },
+            {
+              "activity": "Conduct user training sessions",
+              "description": "Train end users on new software features. Provide hands-on practice and Q&A sessions. Distribute user guides and quick reference materials.",
+              "references": [
+                { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder Domain: User enablement" },
+                { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Knowledge transfer activities" }
+              ],
+              "deliverables": ["Training Sessions", "User Feedback", "Training Attendance Records"],
+              "effort": "8-16 hours"
+            },
+            {
+              "activity": "Transition to operations and support team",
+              "description": "Hand over system documentation to operations. Conduct knowledge transfer sessions. Establish support processes and escalation paths.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery: Operational handover" },
+                { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing: Transition to operations" },
+                { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Administrative closure and handover" }
+              ],
+              "deliverables": ["Operations Handover Document", "Support Procedures", "Escalation Matrix"],
+              "effort": "12-16 hours"
+            },
+            {
+              "activity": "Verify benefits realization metrics",
+              "description": "Establish baseline metrics for benefits tracking. Set up dashboards to monitor KPIs. Plan for post-project benefits review in 3-6 months.",
+              "references": [
+                { "standard": "pmbok", "page": 279, "note": "PMBOK 7 - Value Delivery: Benefits realization" },
+                { "standard": "prince2", "page": 74, "note": "PRINCE2 - Business Case: Benefits measurement" },
+                { "standard": "iso21502", "page": 36, "note": "ISO 21502 - Benefits Management: Monitor and maintain benefits" }
+              ],
+              "deliverables": ["Benefits Baseline Report", "KPI Dashboard", "Post-Project Review Plan"],
+              "effort": "8-12 hours"
+            }
+          ],
+          "decisionGate": {
+            "name": "Operational Acceptance",
+            "criteria": [
+              "Production system is stable",
+              "No critical defects outstanding",
+              "Operations team has accepted handover",
+              "Users are trained and productive",
+              "Benefits tracking is in place"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing: Operational acceptance confirmation" },
+              { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Formal acceptance" }
+            ]
+          }
+        },
+        {
+          "name": "Closure & Lessons Learned",
+          "duration": "1 week",
+          "objective": "Formally close project, document lessons learned, and celebrate success",
+          "keyActivities": [
+            {
+              "activity": "Conduct final project retrospective",
+              "description": "Full team retrospective on entire project. Document what worked well, what didn't, and recommendations for future projects. Capture lessons learned.",
+              "references": [
+                { "standard": "pmbok", "page": 142, "note": "PMBOK 7 - Continuous Learning: Final lessons capture" },
+                { "standard": "pmbok", "page": 279, "note": "PMBOK 7 - Knowledge sharing and organizational learning" },
+                { "standard": "prince2", "page": 41, "note": "PRINCE2 - Learn from Experience: Lessons Report" },
+                { "standard": "iso21502", "page": 52, "note": "ISO 21502 - Lessons Learned (7.18): Disseminate to organization" }
+              ],
+              "deliverables": ["Project Retrospective Report", "Lessons Learned Document"],
+              "effort": "4-6 hours"
+            },
+            {
+              "activity": "Complete final project documentation",
+              "description": "Archive all project artifacts. Update documentation to reflect as-built state. Ensure all code is documented and repositories are organized.",
+              "references": [
+                { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing: End Project Report" },
+                { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Administrative closure activities" }
+              ],
+              "deliverables": ["Project Archive", "As-Built Documentation", "Code Repository"],
+              "effort": "12-16 hours"
+            },
+            {
+              "activity": "Obtain formal project acceptance",
+              "description": "Get sign-off from project sponsor and key stakeholders. Verify all deliverables have been accepted. Confirm business case has been achieved.",
+              "references": [
+                { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Delivery: Formal acceptance of deliverables" },
+                { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing: Product acceptance records" },
+                { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Deliverable verification and acceptance" }
+              ],
+              "deliverables": ["Acceptance Certificate", "Sign-off Documents"],
+              "effort": "4-6 hours"
+            },
+            {
+              "activity": "Release project team resources",
+              "description": "Formally release team members from project. Conduct performance feedback sessions. Recognize individual and team contributions.",
+              "references": [
+                { "standard": "pmbok", "page": 94, "note": "PMBOK 7 - Team Domain: Team recognition and transition" },
+                { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing: Release resources" }
+              ],
+              "deliverables": ["Resource Release Notices", "Performance Reviews", "Recognition Awards"],
+              "effort": "6-8 hours"
+            },
+            {
+              "activity": "Close contracts and financial accounts",
+              "description": "Close any vendor contracts or procurement agreements. Final financial reconciliation and budget variance analysis. Archive financial records.",
+              "references": [
+                { "standard": "pmbok", "page": 247, "note": "PMBOK 7 - Procurement: Contract closure" },
+                { "standard": "prince2", "page": 109, "note": "PRINCE2 - Supplier Management: Contract closure" },
+                { "standard": "iso21502", "page": 52, "note": "ISO 21502 - Procurement (7.17): Contract closure procedures" }
+              ],
+              "deliverables": ["Contract Closure Documents", "Final Budget Report"],
+              "effort": "4-6 hours"
+            },
+            {
+              "activity": "Celebrate project success",
+              "description": "Hold project celebration event with team and stakeholders. Share success stories and key achievements. Thank contributors and recognize efforts.",
+              "references": [
+                { "standard": "pmbok", "page": 94, "note": "PMBOK 7 - Team Domain: Team celebration and recognition" },
+                { "standard": "pmbok", "page": 279, "note": "PMBOK 7 - Value delivery and stakeholder satisfaction" }
+              ],
+              "deliverables": ["Celebration Event", "Project Success Story"],
+              "effort": "2-4 hours"
+            }
+          ],
+          "decisionGate": {
+            "name": "Project Closure Approval",
+            "criteria": [
+              "All deliverables formally accepted",
+              "All contracts and finances closed",
+              "Team resources released",
+              "Documentation archived",
+              "Lessons learned captured and shared",
+              "Benefits realization plan in place"
+            ],
+            "references": [
+              { "standard": "prince2", "page": 297, "note": "PRINCE2 - Closing: Project Board approval to close" },
+              { "standard": "iso21502", "page": 88, "note": "ISO 21502 - Closure: Formal project conclusion" }
+            ]
+          }
+        }
+      ],
+      "roles": [
+        {
+          "role": "Project Sponsor",
+          "description": "Senior stakeholder who authorizes the project and provides strategic direction",
+          "responsibilities": ["Approve project charter", "Provide resources", "Make key decisions", "Review progress at gates"],
+          "commitment": "2-4 hours/week",
+          "references": [
+            { "standard": "prince2", "page": 93, "note": "PRINCE2 - Executive role on Project Board" },
+            { "standard": "iso21502", "page": 17, "note": "ISO 21502 - Project Sponsor accountability" }
+          ]
+        },
+        {
+          "role": "Product Owner",
+          "description": "Represents business and users, defines requirements, prioritizes backlog",
+          "responsibilities": ["Define vision and requirements", "Prioritize backlog", "Accept completed work", "Make scope decisions"],
+          "commitment": "15-20 hours/week",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement and requirements" },
+            { "standard": "prince2", "page": 94, "note": "PRINCE2 - Senior User representation" }
+          ]
+        },
+        {
+          "role": "Project Manager / Scrum Master",
+          "description": "Facilitates team processes, removes impediments, tracks progress",
+          "responsibilities": ["Plan and track work", "Facilitate ceremonies", "Remove blockers", "Report status", "Manage risks"],
+          "commitment": "20-30 hours/week",
+          "references": [
+            { "standard": "pmbok", "page": 94, "note": "PMBOK 7 - Team leadership and facilitation" },
+            { "standard": "prince2", "page": 93, "note": "PRINCE2 - Project Manager role" },
+            { "standard": "iso21502", "page": 15, "note": "ISO 21502 - Project Manager responsibilities" }
+          ]
+        },
+        {
+          "role": "Development Team (3-5 developers)",
+          "description": "Cross-functional team that designs, develops, and tests the software",
+          "responsibilities": ["Implement features", "Write tests", "Code reviews", "Estimate work", "Self-organize"],
+          "commitment": "Full-time (40 hours/week each)",
+          "references": [
+            { "standard": "pmbok", "page": 94, "note": "PMBOK 7 - Team Performance Domain: High-performing teams" },
+            { "standard": "prince2", "page": 93, "note": "PRINCE2 - Team Manager and delivery team" }
+          ]
+        },
+        {
+          "role": "QA/Test Lead",
+          "description": "Ensures quality through testing strategy and execution",
+          "responsibilities": ["Define test strategy", "Execute tests", "Track defects", "Verify quality standards"],
+          "commitment": "20-30 hours/week",
+          "references": [
+            { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality management responsibilities" },
+            { "standard": "prince2", "page": 149, "note": "PRINCE2 - Quality assurance role" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Quality assurance activities" }
+          ]
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "artifact": "Project Charter",
+          "description": "Authorizes the project and defines scope, objectives, and success criteria",
+          "owner": "Project Sponsor",
+          "references": [
+            { "standard": "pmbok", "page": 45, "note": "PMBOK 7 - Project authorization" },
+            { "standard": "prince2", "page": 31, "note": "PRINCE2 - Project Brief and Business Case" }
+          ]
+        },
+        {
+          "artifact": "Product Backlog",
+          "description": "Prioritized list of features, user stories, and requirements",
+          "owner": "Product Owner",
+          "references": [
+            { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Requirements and scope definition" },
+            { "standard": "iso21502", "page": 38, "note": "ISO 21502 - Scope definition" }
+          ]
+        },
+        {
+          "artifact": "Sprint Backlog",
+          "description": "Subset of backlog items committed to for current sprint",
+          "owner": "Development Team",
+          "references": [
+            { "standard": "pmbok", "page": 124, "note": "PMBOK 7 - Iterative planning" }
+          ]
+        },
+        {
+          "artifact": "Definition of Done",
+          "description": "Criteria that must be met for work to be considered complete",
+          "owner": "Team (collective)",
+          "references": [
+            { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality criteria" },
+            { "standard": "prince2", "page": 26, "note": "PRINCE2 - Acceptance criteria in Product Descriptions" }
+          ]
+        },
+        {
+          "artifact": "Risk Register",
+          "description": "Log of identified risks with probability, impact, and mitigation plans",
+          "owner": "Project Manager",
+          "references": [
+            { "standard": "pmbok", "page": 243, "note": "PMBOK 7 - Risk documentation" },
+            { "standard": "prince2", "page": 168, "note": "PRINCE2 - Risk Register" },
+            { "standard": "iso21502", "page": 42, "note": "ISO 21502 - Risk documentation" }
+          ]
+        },
+        {
+          "artifact": "Burndown/Burnup Chart",
+          "description": "Visual representation of work remaining or completed over time",
+          "owner": "Project Manager / Scrum Master",
+          "references": [
+            { "standard": "pmbok", "page": 160, "note": "PMBOK 7 - Progress visualization" },
+            { "standard": "prince2", "page": 25, "note": "PRINCE2 - Progress tracking" }
+          ]
+        },
+        {
+          "artifact": "Working Software",
+          "description": "Potentially shippable increment of software at end of each sprint",
+          "owner": "Development Team",
+          "references": [
+            { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Deliverable creation" },
+            { "standard": "prince2", "page": 26, "note": "PRINCE2 - Product delivery" }
+          ]
+        },
+        {
+          "artifact": "Test Results and Quality Reports",
+          "description": "Documentation of testing activities, results, and quality metrics",
+          "owner": "QA/Test Lead",
+          "references": [
+            { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality measurement" },
+            { "standard": "prince2", "page": 149, "note": "PRINCE2 - Quality records" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Quality documentation" }
+          ]
+        },
+        {
+          "artifact": "Retrospective Notes and Lessons Learned",
+          "description": "Captured learnings, improvements, and recommendations for future projects",
+          "owner": "Entire Team",
+          "references": [
+            { "standard": "pmbok", "page": 142, "note": "PMBOK 7 - Continuous learning" },
+            { "standard": "prince2", "page": 41, "note": "PRINCE2 - Lessons Log and Report" },
+            { "standard": "iso21502", "page": 52, "note": "ISO 21502 - Lessons Learned documentation" }
+          ]
+        }
+      ],
+      "tailoringDecisions": [
+        {
+          "decision": "Lightweight documentation",
+          "rationale": "Small team size and short timeline require minimal documentation overhead. Focus on working software over comprehensive documentation.",
+          "tradeoffs": "May require more knowledge transfer effort at handover, but speeds up delivery significantly.",
+          "references": [
+            { "standard": "pmbok", "page": 193, "note": "PMBOK 7 - Tailoring for small projects" },
+            { "standard": "prince2", "page": 48, "note": "PRINCE2 - Tailoring documentation to project size" }
+          ]
+        },
+        {
+          "decision": "Short 2-week sprints",
+          "rationale": "Aggressive timeline requires frequent feedback cycles. Two-week sprints provide rapid stakeholder input without excessive overhead.",
+          "tradeoffs": "More frequent ceremonies and planning, but reduces risk of building wrong features.",
+          "references": [
+            { "standard": "pmbok", "page": 107, "note": "PMBOK 7 - Adaptive delivery cadence" }
+          ]
+        },
+        {
+          "decision": "Simplified governance",
+          "rationale": "Small team with well-defined requirements doesn't need heavy governance. Product Owner and Sponsor provide sufficient oversight.",
+          "tradeoffs": "Less formal controls, but appropriate for project risk level and enables faster decisions.",
+          "references": [
+            { "standard": "pmbok", "page": 193, "note": "PMBOK 7 - Tailoring governance to context" },
+            { "standard": "prince2", "page": 66, "note": "PRINCE2 - Tailoring governance layers" }
+          ]
+        },
+        {
+          "decision": "Continuous integration and automated testing",
+          "rationale": "Essential for maintaining quality with rapid development pace and small team. Automation reduces manual testing burden.",
+          "tradeoffs": "Initial setup time investment, but pays off quickly through faster feedback and reduced defects.",
+          "references": [
+            { "standard": "pmbok", "page": 242, "note": "PMBOK 7 - Quality automation" },
+            { "standard": "iso21502", "page": 45, "note": "ISO 21502 - Automated quality controls" }
+          ]
+        },
+        {
+          "decision": "Combined PM/Scrum Master role",
+          "rationale": "Team size doesn't justify separate roles. One person can effectively facilitate and manage with part-time commitment.",
+          "tradeoffs": "Potential conflict between servant leadership and traditional PM responsibilities, managed through clear expectations.",
+          "references": [
+            { "standard": "pmbok", "page": 193, "note": "PMBOK 7 - Tailoring roles to project size" },
+            { "standard": "prince2", "page": 93, "note": "PRINCE2 - Combining roles appropriately" }
+          ]
+        }
+      ],
+      "successFactors": [
+        {
+          "factor": "Clear and stable requirements",
+          "importance": "Critical",
+          "mitigation": "Conduct thorough requirements review in initiation. Product Owner available for quick clarification.",
+          "references": [
+            { "standard": "pmbok", "page": 150, "note": "PMBOK 7 - Requirements clarity" },
+            { "standard": "iso21502", "page": 38, "note": "ISO 21502 - Scope definition" }
+          ]
+        },
+        {
+          "factor": "Engaged and available Product Owner",
+          "importance": "Critical",
+          "mitigation": "Secure 15-20 hour/week commitment upfront. Establish communication protocols and decision-making authority.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Stakeholder engagement" },
+            { "standard": "prince2", "page": 94, "note": "PRINCE2 - Senior User availability" }
+          ]
+        },
+        {
+          "factor": "Skilled and experienced development team",
+          "importance": "High",
+          "mitigation": "Select team members with relevant technology experience. Provide training if needed in early sprints.",
+          "references": [
+            { "standard": "pmbok", "page": 94, "note": "PMBOK 7 - Team capabilities" }
+          ]
+        },
+        {
+          "factor": "Effective daily communication",
+          "importance": "High",
+          "mitigation": "Non-negotiable daily standups. Use collaboration tools (Slack, Teams) for asynchronous communication.",
+          "references": [
+            { "standard": "pmbok", "page": 137, "note": "PMBOK 7 - Communication frequency" },
+            { "standard": "iso21502", "page": 48, "note": "ISO 21502 - Regular communication" }
+          ]
+        },
+        {
+          "factor": "Rapid decision-making",
+          "importance": "High",
+          "mitigation": "Empower Product Owner to make scope decisions. Establish escalation path to Sponsor for strategic issues.",
+          "references": [
+            { "standard": "prince2", "page": 93, "note": "PRINCE2 - Delegated authority" },
+            { "standard": "iso21502", "page": 17, "note": "ISO 21502 - Decision-making processes" }
+          ]
+        },
+        {
+          "factor": "Continuous stakeholder feedback",
+          "importance": "Medium-High",
+          "mitigation": "Mandatory sprint reviews with demo. Interim feedback on prototypes encouraged.",
+          "references": [
+            { "standard": "pmbok", "page": 87, "note": "PMBOK 7 - Continuous engagement" },
+            { "standard": "pmbok", "page": 160, "note": "PMBOK 7 - Demonstrating progress" }
+          ]
+        }
+      ]
+    }
   }
 }

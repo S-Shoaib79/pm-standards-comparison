@@ -453,6 +453,9 @@ function setupProcessGenerator() {
     generateBtn.addEventListener('click', () => {
         generateTailoredProcess();
     });
+    
+    // Display the Custom Software Development tailored process
+    displayTailoredProcess();
 }
 
 function generateTailoredProcess() {
@@ -467,6 +470,237 @@ function generateTailoredProcess() {
     outputContainer.style.display = 'block';
     outputContainer.innerHTML = process;
     outputContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function displayTailoredProcess() {
+    const processData = standardsData.tailoredProcesses?.customSoftwareDevelopment;
+    if (!processData) return;
+    
+    const container = document.getElementById('processOutput');
+    container.style.display = 'block';
+    
+    let html = `
+        <div class="tailored-process-container">
+            <div class="process-header">
+                <h3>🎯 ${processData.title}</h3>
+                <div class="process-context">
+                    <p><strong>Context:</strong> ${processData.context.description}</p>
+                    <div class="context-characteristics">
+                        <strong>Characteristics:</strong>
+                        <ul>
+                            ${processData.context.characteristics.map(char => `<li>${char}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="tailoring-rationale">
+                        <strong>Tailoring Rationale:</strong>
+                        <p>${processData.context.tailoringRationale}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-phases">
+                <h3>📋 Project Phases</h3>
+    `;
+    
+    // Display each phase
+    processData.phases.forEach((phase, index) => {
+        html += `
+            <div class="process-phase">
+                <div class="phase-header">
+                    <h4>Phase ${index + 1}: ${phase.name}</h4>
+                    <span class="phase-duration">⏱ Duration: ${phase.duration}</span>
+                </div>
+                <p class="phase-objective"><strong>Objective:</strong> ${phase.objective}</p>
+                
+                <div class="phase-activities">
+                    <strong>Key Activities:</strong>
+                    <ul class="activities-list">
+        `;
+        
+        phase.keyActivities.forEach(activity => {
+            html += `
+                <li class="activity-item">
+                    <div class="activity-header">
+                        <strong>${activity.activity}</strong>
+                        ${activity.effort ? `<span class="effort-badge">⏱ ${activity.effort}</span>` : ''}
+                        ${activity.frequency ? `<span class="frequency-badge">🔄 ${activity.frequency}</span>` : ''}
+                    </div>
+                    <p class="activity-description">${activity.description}</p>
+                    <div class="activity-deliverables">
+                        <strong>Deliverables:</strong> ${activity.deliverables.join(', ')}
+                    </div>
+                    <div class="activity-refs">
+                        <strong>References:</strong>
+                        ${activity.references.map(ref => 
+                            `<button class="ref-badge detailed" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                                📖 ${getStandardName(ref.standard)} p.${ref.page}
+                            </button>`
+                        ).join('')}
+                    </div>
+                </li>
+            `;
+        });
+        
+        html += `
+                    </ul>
+                </div>
+        `;
+        
+        // Add decision gate if exists
+        if (phase.decisionGate) {
+            html += `
+                <div class="decision-gate">
+                    <h5>🚦 ${phase.decisionGate.name}</h5>
+                    <div class="gate-criteria">
+                        <strong>Criteria:</strong>
+                        <ul>
+                            ${phase.decisionGate.criteria.map(criteria => `<li>${criteria}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="gate-refs">
+                        ${phase.decisionGate.references.map(ref => 
+                            `<button class="ref-badge" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                                📖 ${getStandardName(ref.standard)} p.${ref.page}
+                            </button>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        html += `
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+            
+            <div class="process-roles">
+                <h3>👥 Project Roles</h3>
+                <div class="roles-grid">
+    `;
+    
+    processData.roles.forEach(role => {
+        html += `
+            <div class="role-card">
+                <h4>${role.role}</h4>
+                <p class="role-description">${role.description}</p>
+                <div class="role-responsibilities">
+                    <strong>Responsibilities:</strong>
+                    <ul>
+                        ${role.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                    </ul>
+                </div>
+                <p class="role-commitment"><strong>Time Commitment:</strong> ${role.commitment}</p>
+                <div class="role-refs">
+                    ${role.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            📖 ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+                </div>
+            </div>
+            
+            <div class="process-artifacts">
+                <h3>📄 Key Artifacts</h3>
+                <div class="artifacts-grid">
+    `;
+    
+    processData.keyArtifacts.forEach(artifact => {
+        html += `
+            <div class="artifact-card">
+                <h4>${artifact.artifact}</h4>
+                <p>${artifact.description}</p>
+                <p class="artifact-owner"><strong>Owner:</strong> ${artifact.owner}</p>
+                <div class="artifact-refs">
+                    ${artifact.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            📖 ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+                </div>
+            </div>
+            
+            <div class="tailoring-decisions">
+                <h3>⚙️ Tailoring Decisions</h3>
+                <div class="decisions-list">
+    `;
+    
+    processData.tailoringDecisions.forEach(decision => {
+        html += `
+            <div class="decision-card">
+                <h4>${decision.decision}</h4>
+                <p><strong>Rationale:</strong> ${decision.rationale}</p>
+                <p><strong>Tradeoffs:</strong> ${decision.tradeoffs}</p>
+                <div class="decision-refs">
+                    ${decision.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            📖 ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+                </div>
+            </div>
+            
+            <div class="success-factors">
+                <h3>⭐ Critical Success Factors</h3>
+                <div class="factors-list">
+    `;
+    
+    processData.successFactors.forEach(factor => {
+        const importanceClass = factor.importance.toLowerCase().replace(/\s+/g, '-');
+        html += `
+            <div class="factor-card">
+                <div class="factor-header">
+                    <h4>${factor.factor}</h4>
+                    <span class="importance-badge ${importanceClass}">${factor.importance}</span>
+                </div>
+                <p><strong>Mitigation:</strong> ${factor.mitigation}</p>
+                <div class="factor-refs">
+                    ${factor.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            📖 ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+                </div>
+            </div>
+            
+            <div class="process-footer">
+                <button class="btn-primary" onclick="exportTailoredProcess()">📥 Export Process</button>
+                <button class="btn-secondary" onclick="printProcess()">🖨️ Print</button>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
+
+function exportTailoredProcess() {
+    alert('Export feature - would generate PDF/Word document of the tailored process');
 }
 
 function buildProcess(type, size, maturity, focusAreas) {
