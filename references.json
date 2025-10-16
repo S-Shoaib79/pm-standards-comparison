@@ -2062,168 +2062,574 @@
   "tailoredProcesses": {
     "customSoftwareDevelopment": {
       "title": "Custom Software Development Project",
-      "description": "Well-defined requirements, <6 months duration, <7 team members",
-      "stages": [
+      "context": {
+        "description": "Well-defined requirements, <6 months duration, <7 team members",
+        "characteristics": [
+          "Clear, documented requirements from stakeholders",
+          "Fixed timeline with aggressive delivery schedule (< 6 months)",
+          "Small, cross-functional team (5-7 members: PM, developers, QA, client rep)",
+          "Agile/iterative delivery preferred for rapid feedback",
+          "Moderate technical complexity with known technologies"
+        ],
+        "tailoringRationale": "This lightweight process combines governance clarity of PRINCE2 with PMBOK's flexibility and ISO 21502's feasibility validation, ensuring alignment before execution while maintaining agility."
+      },
+      "phases": [
         {
           "name": "1. Initiation Stage",
           "duration": "Approx. 2–3 Weeks",
-          "purpose": "The initiation phase establishes the project foundation and governance. The small team structure (5–7 members) encourages agility and faster communication, aligning with PMBOK's tailoring to context and system thinking (pg. 64).",
+          "objective": "Establish project foundation and governance",
           "keyActivities": [
-            "Appointment of core roles (Project Manager, Developer, Client Representative, QA Lead).",
-            "Definition of project objectives and success criteria aligned with organizational value delivery (PMBOK pg. 40).",
-            "Formalization of a Business Case and feasibility confirmation (ISO 21502 pg. 17).",
-            "Establishment of governance roles following PRINCE2's layered model (Business, User, Supplier) to ensure accountability and direction (PRINCE2 pg. 43)."
+            {
+              "activity": "Appointment of core roles",
+              "description": "Appointment of core roles (Project Manager, Developer, Client Representative, QA Lead).",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 64,
+                  "note": "PMBOK - Tailoring to context and system thinking"
+                },
+                {
+                  "standard": "prince2",
+                  "page": 43,
+                  "note": "PRINCE2 - Governance roles (Business, User, Supplier)"
+                }
+              ]
+            },
+            {
+              "activity": "Definition of project objectives",
+              "description": "Definition of project objectives and success criteria aligned with organizational value delivery.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 40,
+                  "note": "PMBOK - Organizational value delivery"
+                }
+              ]
+            },
+            {
+              "activity": "Formalization of Business Case",
+              "description": "Formalization of a Business Case and feasibility confirmation.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 17,
+                  "note": "ISO 21502 - Feasibility validation"
+                }
+              ]
+            },
+            {
+              "activity": "Establishment of governance roles",
+              "description": "Establishment of governance roles following PRINCE2's layered model (Business, User, Supplier) to ensure accountability and direction.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 43,
+                  "note": "PRINCE2 - Layered governance model"
+                }
+              ]
+            }
           ],
-          "justification": "This stage combines the governance clarity of PRINCE2 with PMBOK's flexibility. ISO 21502 reinforces both by formalizing sponsor accountability and feasibility validation, ensuring alignment before execution.",
           "deliverables": [
             "Project Charter / Business Case",
             "Defined Governance Structure",
             "Stakeholder Register",
             "Initial Risk and Feasibility Report"
           ],
-          "references": [
-            {
-              "standard": "pmbok",
-              "page": [
-                64,
-                40
-              ]
-            },
-            {
-              "standard": "iso21502",
-              "page": 17
-            },
-            {
-              "standard": "prince2",
-              "page": 43
-            }
-          ]
+          "decisionGate": {
+            "name": "Initiation Complete",
+            "criteria": [
+              "Business case approved",
+              "Team assigned",
+              "Initial risks identified"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 43,
+                "note": "PRINCE2 governance approval"
+              }
+            ]
+          }
         },
         {
           "name": "2. Planning Stage",
           "duration": "Approx. 4–5 Weeks",
-          "purpose": "The planning phase emphasizes adaptive and iterative planning, ensuring flexibility and continuous alignment with evolving requirements.",
+          "objective": "Adaptive and iterative planning ensuring flexibility",
           "keyActivities": [
-            "Refinement of scope and deliverables using a rolling Product Backlog (PMBOK pg. 241).",
-            "Definition of iteration cycles/timeboxes producing incremental software value (ISO 21502 pg. 36).",
-            "Establishment of the Definition of Done (DoD) to embed quality expectations (PMBOK pg. 150).",
-            "Development of the Project Initiation Documentation (PID) to define baselines for time, cost, and quality (PRINCE2 pg. 174)."
+            {
+              "activity": "Refinement of scope and deliverables",
+              "description": "Refinement of scope and deliverables using a rolling Product Backlog.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 241,
+                  "note": "PMBOK - Rolling Product Backlog"
+                }
+              ]
+            },
+            {
+              "activity": "Definition of iteration cycles",
+              "description": "Definition of iteration cycles/timeboxes producing incremental software value.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 36,
+                  "note": "ISO 21502 - Iterative lifecycle guidance"
+                }
+              ]
+            },
+            {
+              "activity": "Establishment of Definition of Done",
+              "description": "Establishment of the Definition of Done (DoD) to embed quality expectations.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 150,
+                  "note": "PMBOK - Quality expectations"
+                }
+              ]
+            },
+            {
+              "activity": "Development of PID",
+              "description": "Development of the Project Initiation Documentation (PID) to define baselines for time, cost, and quality.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 174,
+                  "note": "PRINCE2 - Project Initiation Documentation"
+                }
+              ]
+            }
           ],
-          "justification": "This phase fuses PMBOK's adaptability, PRINCE2's structured documentation, and ISO 21502's iterative lifecycle guidance. Together, they maintain control while allowing agility in planning and execution.",
           "deliverables": [
             "Product Backlog and Iteration Plan",
             "Definition of Done (DoD)",
             "Risk Register and Quality Plan",
             "Project Initiation Documentation (PID)"
           ],
-          "references": [
-            {
-              "standard": "pmbok",
-              "page": [
-                241,
-                150
-              ]
-            },
-            {
-              "standard": "iso21502",
-              "page": 36
-            },
-            {
-              "standard": "prince2",
-              "page": 174
-            }
-          ]
+          "decisionGate": {
+            "name": "Planning Approved",
+            "criteria": [
+              "Backlog prioritized",
+              "PID baselined",
+              "Quality plan established"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 174,
+                "note": "PRINCE2 - PID approval"
+              }
+            ]
+          }
         },
         {
           "name": "3. Execution Stage",
           "duration": "Approx. 10–12 Weeks",
-          "purpose": "This phase focuses on delivering working software through short, time-boxed iterations, promoting continuous value delivery.",
+          "objective": "Deliver working software through time-boxed iterations",
           "keyActivities": [
-            "Development and testing of functional increments from prioritized backlog items.",
-            "Application of PRINCE2's 'Manage by Exception' principle—time and cost fixed, scope flexible (PRINCE2 pg. 44).",
-            "Ongoing validation and verification to ensure quality (ISO 21502 pg. 46).",
-            "Maintenance of collaborative culture and stakeholder engagement (PMBOK Team Performance Domain, pg. 94)."
+            {
+              "activity": "Development and testing",
+              "description": "Development and testing of functional increments from prioritized backlog items.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 94,
+                  "note": "PMBOK - Team Performance Domain"
+                }
+              ]
+            },
+            {
+              "activity": "Manage by Exception",
+              "description": "Application of PRINCE2's 'Manage by Exception' principle—time and cost fixed, scope flexible.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 44,
+                  "note": "PRINCE2 - Manage by Exception"
+                }
+              ]
+            },
+            {
+              "activity": "Ongoing validation",
+              "description": "Ongoing validation and verification to ensure quality.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 46,
+                  "note": "ISO 21502 - Quality validation"
+                }
+              ]
+            },
+            {
+              "activity": "Collaborative culture",
+              "description": "Maintenance of collaborative culture and stakeholder engagement.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 94,
+                  "note": "PMBOK - Team Performance Domain"
+                }
+              ]
+            }
           ],
-          "justification": "Execution combines PMBOK's performance focus, PRINCE2's governance control, and ISO 21502's progress monitoring. This ensures early value realization, traceability, and continuous improvement.",
           "deliverables": [
             "Completed Iteration Increments",
             "Sprint Review Reports",
             "Updated Product Backlog",
             "Quality Verification Logs"
           ],
-          "references": [
-            {
-              "standard": "prince2",
-              "page": 44
-            },
-            {
-              "standard": "iso21502",
-              "page": 46
-            },
-            {
-              "standard": "pmbok",
-              "page": 94
-            }
-          ]
+          "decisionGate": {
+            "name": "Iteration Reviews",
+            "criteria": [
+              "Increments tested",
+              "Quality verified",
+              "Stakeholder feedback incorporated"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 44,
+                "note": "PRINCE2 - Exception management"
+              }
+            ]
+          }
         },
         {
           "name": "4. Monitoring and Control Stage",
           "duration": "Approx. 4 Weeks – Parallel to Execution",
-          "purpose": "Monitoring runs in parallel with execution to maintain transparency, adaptability, and prompt issue resolution.",
+          "objective": "Maintain transparency and adaptability",
           "keyActivities": [
-            "Visualization of progress via Kanban or Task Boards (PMBOK pg. 174).",
-            "Management of issues and change requests through PRINCE2's Issue and Change Practice (pg. 53).",
-            "Integration of feedback loops and retrospectives for adaptive planning (PMBOK Uncertainty Domain, pg. 318)."
+            {
+              "activity": "Visualization of progress",
+              "description": "Visualization of progress via Kanban or Task Boards.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 174,
+                  "note": "PMBOK - Progress visualization"
+                }
+              ]
+            },
+            {
+              "activity": "Management of issues and changes",
+              "description": "Management of issues and change requests through PRINCE2's Issue and Change Practice.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 53,
+                  "note": "PRINCE2 - Issue and Change Practice"
+                }
+              ]
+            },
+            {
+              "activity": "Feedback loops and retrospectives",
+              "description": "Integration of feedback loops and retrospectives for adaptive planning.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 318,
+                  "note": "PMBOK - Uncertainty Domain"
+                }
+              ]
+            }
           ],
-          "justification": "This phase balances adaptive control with formal governance. PMBOK supports flexibility through measurement and uncertainty handling, while PRINCE2 and ISO 21502 ensure structured accountability and monitoring.",
           "deliverables": [
             "Kanban / Progress Reports",
             "Issue and Change Logs",
             "Retrospective Summaries",
             "Updated Risk and Quality Registers"
           ],
-          "references": [
-            {
-              "standard": "pmbok",
-              "page": [
-                174,
-                318
-              ]
-            },
-            {
-              "standard": "prince2",
-              "page": 53
-            }
-          ]
+          "decisionGate": {
+            "name": "Control Review",
+            "criteria": [
+              "Issues resolved",
+              "Changes approved",
+              "Progress on track"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 53,
+                "note": "PRINCE2 - Change control"
+              }
+            ]
+          }
         },
         {
           "name": "5. Closure Stage",
           "duration": "Approx. 2 Weeks",
-          "purpose": "The closure phase confirms acceptance, captures lessons, and evaluates benefits realization.",
+          "objective": "Confirm acceptance and capture lessons",
           "keyActivities": [
-            "Performance review against the original Business Case and PID (PRINCE2 pg. 227).",
-            "Capture and dissemination of lessons learned (ISO 21500 pg. 13).",
-            "Post-project evaluation for sustainability and long-term outcomes (ISO 21502 pg. 235)."
+            {
+              "activity": "Performance review",
+              "description": "Performance review against the original Business Case and PID.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 227,
+                  "note": "PRINCE2 - Performance review"
+                }
+              ]
+            },
+            {
+              "activity": "Capture lessons learned",
+              "description": "Capture and dissemination of lessons learned.",
+              "references": [
+                {
+                  "standard": "iso21500",
+                  "page": 13,
+                  "note": "ISO 21500 - Lessons learned"
+                }
+              ]
+            },
+            {
+              "activity": "Post-project evaluation",
+              "description": "Post-project evaluation for sustainability and long-term outcomes.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 235,
+                  "note": "ISO 21502 - Sustainability focus"
+                }
+              ]
+            }
           ],
-          "justification": "This stage aligns PRINCE2's performance review, PMBOK's continuous improvement, and ISO's sustainability focus—ensuring that completion leads to learning and lasting value.",
           "deliverables": [
             "Final Product Handover Document",
             "Lessons Learned Report",
             "Project Performance Report",
             "Benefits Realization Summary"
           ],
+          "decisionGate": {
+            "name": "Project Closure",
+            "criteria": [
+              "Product accepted",
+              "Lessons captured",
+              "Benefits evaluated"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 227,
+                "note": "PRINCE2 - Closure approval"
+              }
+            ]
+          }
+        }
+      ],
+      "roles": [
+        {
+          "role": "Project Manager",
+          "description": "Leads project execution, coordinates team, manages stakeholders",
+          "responsibilities": [
+            "Day-to-day management",
+            "Risk and issue management",
+            "Stakeholder communication"
+          ],
+          "commitment": "Full-time",
           "references": [
             {
-              "standard": "prince2",
-              "page": 227
+              "standard": "pmbok",
+              "page": 94,
+              "note": "PMBOK - Project leadership"
             },
             {
-              "standard": "iso21500",
-              "page": 13
+              "standard": "prince2",
+              "page": 43,
+              "note": "PRINCE2 - PM role definition"
+            }
+          ]
+        },
+        {
+          "role": "Developer",
+          "description": "Designs, codes, and implements software solutions",
+          "responsibilities": [
+            "Feature development",
+            "Code reviews",
+            "Technical documentation"
+          ],
+          "commitment": "Full-time",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 94,
+              "note": "PMBOK - Team Performance"
+            }
+          ]
+        },
+        {
+          "role": "QA Lead",
+          "description": "Ensures quality standards and testing coverage",
+          "responsibilities": [
+            "Test planning",
+            "Quality verification",
+            "Defect tracking"
+          ],
+          "commitment": "Full-time or Part-time",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 150,
+              "note": "PMBOK - Quality management"
             },
             {
               "standard": "iso21502",
-              "page": 235
+              "page": 46,
+              "note": "ISO 21502 - Quality control"
+            }
+          ]
+        },
+        {
+          "role": "Client Representative",
+          "description": "Represents business needs and validates deliverables",
+          "responsibilities": [
+            "Requirements clarification",
+            "Acceptance testing",
+            "Feedback provision"
+          ],
+          "commitment": "Part-time",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 43,
+              "note": "PRINCE2 - User representation"
+            }
+          ]
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "artifact": "Project Charter / Business Case",
+          "description": "Documents project justification, objectives, and success criteria",
+          "owner": "Project Manager",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 40,
+              "note": "PMBOK - Project charter"
+            },
+            {
+              "standard": "iso21502",
+              "page": 17,
+              "note": "ISO 21502 - Business case"
+            }
+          ]
+        },
+        {
+          "artifact": "Product Backlog",
+          "description": "Prioritized list of features and requirements",
+          "owner": "Project Manager / Product Owner",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 241,
+              "note": "PMBOK - Backlog management"
+            }
+          ]
+        },
+        {
+          "artifact": "Project Initiation Documentation (PID)",
+          "description": "Comprehensive project baseline document",
+          "owner": "Project Manager",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 174,
+              "note": "PRINCE2 - PID"
+            }
+          ]
+        },
+        {
+          "artifact": "Sprint Review Reports",
+          "description": "Documents completed work and stakeholder feedback",
+          "owner": "Project Manager",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 94,
+              "note": "PMBOK - Progress reporting"
+            }
+          ]
+        }
+      ],
+      "tailoringDecisions": [
+        {
+          "decision": "Use lightweight governance",
+          "rationale": "Small team size allows for informal but clear governance structure",
+          "tradeoffs": "Less formal documentation, more reliance on team collaboration",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 64,
+              "note": "PMBOK - Context-based tailoring"
+            },
+            {
+              "standard": "prince2",
+              "page": 43,
+              "note": "PRINCE2 - Scaled governance"
+            }
+          ]
+        },
+        {
+          "decision": "Fixed timeboxes with flexible scope",
+          "rationale": "Ensures delivery momentum while adapting to changing requirements",
+          "tradeoffs": "May require scope negotiations with stakeholders",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 44,
+              "note": "PRINCE2 - Manage by Exception"
+            }
+          ]
+        },
+        {
+          "decision": "Rolling wave planning",
+          "rationale": "Allows progressive elaboration as requirements become clearer",
+          "tradeoffs": "Less predictability in long-term scope",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 241,
+              "note": "PMBOK - Progressive planning"
+            }
+          ]
+        }
+      ],
+      "successFactors": [
+        {
+          "factor": "Strong stakeholder engagement",
+          "importance": "Critical for requirement clarity and acceptance",
+          "mitigation": "Regular demos and feedback sessions",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 94,
+              "note": "PMBOK - Stakeholder engagement"
+            }
+          ]
+        },
+        {
+          "factor": "Team collaboration and communication",
+          "importance": "Essential for small team effectiveness",
+          "mitigation": "Daily standups and co-location when possible",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 94,
+              "note": "PMBOK - Team performance"
+            }
+          ]
+        },
+        {
+          "factor": "Iterative delivery and feedback",
+          "importance": "Ensures early value and course correction",
+          "mitigation": "Short iterations with regular reviews",
+          "references": [
+            {
+              "standard": "iso21502",
+              "page": 36,
+              "note": "ISO 21502 - Iterative approach"
             }
           ]
         }
@@ -2231,190 +2637,486 @@
     },
     "innovativeProductDevelopment": {
       "title": "Innovative Product Development Project",
-      "description": "R&D-heavy, uncertain outcomes, ~1 year duration",
+      "context": {
+        "description": "R&D-heavy, uncertain outcomes, ~1 year duration",
+        "characteristics": [
+          "High uncertainty and ambiguity in requirements",
+          "Research and experimentation required",
+          "Approximately 1-year timeline",
+          "Need for adaptive approach and iterative refinement",
+          "Stakeholder feedback critical for direction"
+        ],
+        "tailoringRationale": "High uncertainty requires strong initial governance before major investment decisions. Early business case development ensures continued viability, while tailoring the approach allows flexibility in managing evolving requirements."
+      },
       "phases": [
         {
           "name": "1. Initiation Phase (P1: Initiation & Vision)",
           "duration": "Approx. 1 Month",
-          "purpose": "The initiation phase focuses on establishing governance, early control, and defining the project's vision. Given the high uncertainty of R&D projects, early governance and justification are essential for setting direction and managing ambiguity.",
+          "objective": "Establish governance, early control, and project vision",
           "keyActivities": [
-            "Appoint Governance: Appoint the Project Executive and Project Manager (PRINCE2 pg 241, 96), and define the Project Management Team Structure. This establishes control and accountability early in the project lifecycle.",
-            "Initial Justification & Scope: Develop the Outline Business Case (PRINCE2 pg 77) and define a high-level scope through the Project Product Description (PRINCE2 A14 pg 40, 323), including acceptance criteria to frame early expectations.",
-            "Define Approach & Controls: Select a Hybrid/Adaptive Development Approach (PMBOK 2.3.3 pg 127) suited for research-driven environments. Establish initial Risk (ISO 21500 pg 7) and Quality Management Approaches to prepare for controlled experimentation."
-          ],
-          "justification": "High uncertainty (PMBOK 2.8) requires strong initial governance (PRINCE2 P2.5) before major investment decisions. Early business case development (ISO 21502 4.3.2) ensures continued viability, while tailoring the approach (ISO 21500 4.6) allows flexibility in managing evolving requirements.",
-          "decisionGate": "Decision Gate 1 – Authorize Initiation: The Project Board authorizes initiation funding and resource commitment (PRINCE2 pg 251), ensuring alignment before detailed planning.",
-          "references": [
             {
-              "standard": "prince2",
-              "page": [
-                241,
-                96,
-                77,
-                40,
-                323,
-                251
+              "activity": "Appoint Governance",
+              "description": "Appoint the Project Executive and Project Manager, and define the Project Management Team Structure. This establishes control and accountability early in the project lifecycle.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 241,
+                  "note": "PRINCE2 - Project Executive appointment"
+                },
+                {
+                  "standard": "prince2",
+                  "page": 96,
+                  "note": "PRINCE2 - PM and team structure"
+                }
               ]
             },
             {
-              "standard": "pmbok",
-              "page": [
-                127
+              "activity": "Initial Justification & Scope",
+              "description": "Develop the Outline Business Case and define a high-level scope through the Project Product Description, including acceptance criteria to frame early expectations.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 77,
+                  "note": "PRINCE2 - Outline Business Case"
+                },
+                {
+                  "standard": "prince2",
+                  "page": 40,
+                  "note": "PRINCE2 - Project Product Description"
+                },
+                {
+                  "standard": "prince2",
+                  "page": 323,
+                  "note": "PRINCE2 - Acceptance criteria"
+                }
               ]
             },
             {
-              "standard": "iso21500",
-              "page": 7
-            },
-            {
-              "standard": "iso21502",
-              "page": []
+              "activity": "Define Approach & Controls",
+              "description": "Select a Hybrid/Adaptive Development Approach suited for research-driven environments. Establish initial Risk and Quality Management Approaches to prepare for controlled experimentation.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 127,
+                  "note": "PMBOK 2.3.3 - Hybrid/Adaptive approach"
+                },
+                {
+                  "standard": "iso21500",
+                  "page": 7,
+                  "note": "ISO 21500 - Risk approach"
+                }
+              ]
             }
-          ]
+          ],
+          "deliverables": [
+            "Outline Business Case",
+            "Project Product Description",
+            "Risk Management Approach",
+            "Project Management Team Structure"
+          ],
+          "decisionGate": {
+            "name": "Decision Gate 1 – Authorize Initiation",
+            "criteria": [
+              "Project Board authorizes initiation funding and resource commitment, ensuring alignment before detailed planning"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 251,
+                "note": "PRINCE2 - Initiation authorization"
+              }
+            ]
+          }
         },
         {
           "name": "2. Planning Phase (P2: Detailed Iterative Planning)",
           "duration": "Approx. 2 Months",
-          "purpose": "This phase develops detailed yet adaptive plans, refining requirements as learning evolves through iteration.",
+          "objective": "Develop detailed yet adaptive plans",
           "keyActivities": [
-            "Rolling Wave Planning: Prepare detailed Stage Plans using Rolling Wave Planning (PMBOK pg 123). Refine R&D requirements into a Product Backlog and User Stories, progressively elaborated as uncertainty reduces (ISO 21502 7.2.2).",
-            "Risk Budget & Estimation: Estimate work using uncertainty-based estimation techniques and update the Full Business Case (PRINCE2 pg 240) to confirm continued viability and resource justification."
-          ],
-          "justification": "Planning must remain flexible and iterative. Rolling Wave Planning (ISO 21502 7.2.2) supports progressive detailing of scope, while updating the Business Case ensures financial and strategic feasibility as the project evolves.",
-          "decisionGate": "Decision Gate 2 – Authorize Next Stage: At the Stage Boundary Review, the Project Board evaluates the End Stage Report (PRINCE2 18.4.5) and confirms that the project remains desirable, viable, and achievable (PRINCE2 5).",
-          "references": [
             {
-              "standard": "pmbok",
-              "page": 123
+              "activity": "Rolling Wave Planning",
+              "description": "Prepare detailed Stage Plans using Rolling Wave Planning. Refine R&D requirements into a Product Backlog and User Stories, progressively elaborated as uncertainty reduces.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 123,
+                  "note": "PMBOK - Rolling Wave Planning"
+                }
+              ]
             },
             {
-              "standard": "iso21502",
-              "page": []
-            },
-            {
-              "standard": "prince2",
-              "page": [
-                240,
-                "18.4.5",
-                5
+              "activity": "Risk Budget & Estimation",
+              "description": "Estimate work using uncertainty-based estimation techniques and update the Full Business Case to confirm continued viability and resource justification.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 240,
+                  "note": "PRINCE2 - Full Business Case"
+                }
               ]
             }
-          ]
+          ],
+          "deliverables": [
+            "Stage Plans",
+            "Product Backlog",
+            "Full Business Case",
+            "Uncertainty-based estimates"
+          ],
+          "decisionGate": {
+            "name": "Decision Gate 2 – Authorize Next Stage",
+            "criteria": [
+              "Project Board evaluates the End Stage Report and confirms that the project remains desirable, viable, and achievable"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": "18.4.5",
+                "note": "PRINCE2 - End Stage Report"
+              },
+              {
+                "standard": "prince2",
+                "page": 5,
+                "note": "PRINCE2 - Desirable, viable, achievable"
+              }
+            ]
+          }
         },
         {
           "name": "3. Execution Phase (P2: Iterative Delivery)",
           "duration": "Approx. 4 Months",
-          "purpose": "Execution focuses on developing and validating product prototypes through short, time-boxed iterations that encourage experimentation and stakeholder feedback.",
+          "objective": "Develop and validate prototypes through iterations",
           "keyActivities": [
-            "Delivery in Sprints: Execute work in Timeboxes/Sprints (PRINCE2 285PDF), authorized as Work Packages. Deliver incremental outputs and a Minimum Viable Product (MVP) to test functionality and feasibility.",
-            "R&D Techniques: Apply Prototyping and Modeling (PMBOK 2.8.3 P272, P211, P264) to reduce technological uncertainty and complexity, enabling stakeholders to validate assumptions through tangible results."
-          ],
-          "justification": "Iterative delivery balances innovation with control. Timeboxing fixes time and cost while allowing scope flexibility (PMBOK S2.1), essential in R&D environments where requirements evolve through discovery and testing.",
-          "references": [
             {
-              "standard": "prince2",
-              "page": [
-                "285PDF"
+              "activity": "Delivery in Sprints",
+              "description": "Execute work in Timeboxes/Sprints, authorized as Work Packages. Deliver incremental outputs and a Minimum Viable Product (MVP) to test functionality and feasibility.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": "285PDF",
+                  "note": "PRINCE2 - Timeboxes/Sprints"
+                }
               ]
             },
             {
-              "standard": "pmbok",
-              "page": [
-                "2.8.3 P272",
-                "P211",
-                "P264",
-                "S2.1"
+              "activity": "R&D Techniques",
+              "description": "Apply Prototyping and Modeling to reduce technological uncertainty and complexity, enabling stakeholders to validate assumptions through tangible results.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": "2.8.3 P272",
+                  "note": "PMBOK - Prototyping techniques"
+                },
+                {
+                  "standard": "pmbok",
+                  "page": "P211",
+                  "note": "PMBOK - Modeling"
+                },
+                {
+                  "standard": "pmbok",
+                  "page": "P264",
+                  "note": "PMBOK - Advanced modeling"
+                }
               ]
             }
-          ]
+          ],
+          "deliverables": [
+            "MVP",
+            "Prototypes",
+            "Work Package outputs",
+            "Feasibility test results"
+          ],
+          "decisionGate": {
+            "name": "Sprint Reviews",
+            "criteria": [
+              "Iterative delivery balances innovation with control. Timeboxing fixes time and cost while allowing scope flexibility"
+            ],
+            "references": [
+              {
+                "standard": "pmbok",
+                "page": "S2.1",
+                "note": "PMBOK - Scope flexibility"
+              }
+            ]
+          }
         },
         {
           "name": "4. Monitoring & Control Phase (P2: Iterative M&C)",
           "duration": "Continuous",
-          "purpose": "Continuous monitoring ensures adaptability, transparency, and quality control during experimentation cycles.",
+          "objective": "Ensure adaptability and quality control",
           "keyActivities": [
-            "Progress Monitoring: Track progress using Kanban Boards and Checkpoint Reports (PRINCE2 A2 pg 209, 309). Apply Velocity Charts for performance measurement and adaptive planning.",
-            "Quality Control & Learning: Conduct ongoing Quality Control (ISO 21502 pg 46) and Iteration Reviews (PMBOK p. 171). Capture insights in the Lessons Log for continuous improvement."
-          ],
-          "justification": "Visual and adaptive controls (PRINCE2) enhance responsiveness, while PMBOK's quality and measurement principles ensure informed decision-making. ISO 21502 supports continuous improvement and learning throughout the lifecycle.",
-          "references": [
             {
-              "standard": "prince2",
-              "page": [
-                "A2 pg 209",
-                309
+              "activity": "Progress Monitoring",
+              "description": "Track progress using Kanban Boards and Checkpoint Reports. Apply Velocity Charts for performance measurement and adaptive planning.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": "A2 pg 209",
+                  "note": "PRINCE2 - Checkpoint Reports"
+                },
+                {
+                  "standard": "prince2",
+                  "page": 309,
+                  "note": "PRINCE2 - Progress monitoring"
+                }
               ]
             },
             {
-              "standard": "pmbok",
-              "page": 171
-            },
-            {
-              "standard": "iso21502",
-              "page": 46
+              "activity": "Quality Control & Learning",
+              "description": "Conduct ongoing Quality Control and Iteration Reviews. Capture insights in the Lessons Log for continuous improvement.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 46,
+                  "note": "ISO 21502 - Quality Control"
+                },
+                {
+                  "standard": "pmbok",
+                  "page": 171,
+                  "note": "PMBOK - Iteration Reviews"
+                }
+              ]
             }
-          ]
+          ],
+          "deliverables": [
+            "Kanban Boards",
+            "Checkpoint Reports",
+            "Velocity Charts",
+            "Lessons Log"
+          ],
+          "decisionGate": {
+            "name": "Continuous Control",
+            "criteria": [
+              "Visual and adaptive controls enhance responsiveness while ensuring informed decision-making"
+            ],
+            "references": [
+              {
+                "standard": "iso21502",
+                "page": 46,
+                "note": "ISO 21502 - Continuous improvement"
+              }
+            ]
+          }
         },
         {
           "name": "5. Refinement & Transition Phase (P3)",
           "duration": "Approx. 3 Months",
-          "purpose": "This phase finalizes the product for operational readiness and ensures benefits realization after handover.",
+          "objective": "Finalize product for operational readiness",
           "keyActivities": [
-            "Final Acceptance: Perform formal acceptance and quality control (PRINCE2 8.3.1 pg 154) against the defined acceptance criteria. Update the Project Plan and confirm readiness for delivery.",
-            "Transition Planning: Prepare transition to Business-as-Usual (BAU), updating the Benefits Management Approach (PRINCE2 pg 36) to define post-project reviews and sustain value realization. (ISO pg 36)"
-          ],
-          "justification": "PRINCE2's structured acceptance confirms quality standards (PMBOK 2.6), while ISO 21502 (6.8, 7.3) ensures proper handover planning and benefit tracking for long-term impact.",
-          "decisionGate": "Decision Gate 3 – Authorize Final Transition: The Project Board reviews End Stage Reports (PRINCE2 18.4.5) and approves transition to closure based on verified outcomes and sustained viability.",
-          "references": [
             {
-              "standard": "prince2",
-              "page": [
-                "8.3.1 pg 154",
-                36,
-                "18.4.5"
+              "activity": "Final Acceptance",
+              "description": "Perform formal acceptance and quality control against the defined acceptance criteria. Update the Project Plan and confirm readiness for delivery.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": "8.3.1 pg 154",
+                  "note": "PRINCE2 - Formal acceptance"
+                },
+                {
+                  "standard": "pmbok",
+                  "page": "2.6",
+                  "note": "PMBOK - Quality standards"
+                }
               ]
             },
             {
-              "standard": "pmbok",
-              "page": [
-                "2.6"
+              "activity": "Transition Planning",
+              "description": "Prepare transition to Business-as-Usual (BAU), updating the Benefits Management Approach to define post-project reviews and sustain value realization.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 36,
+                  "note": "PRINCE2 - Benefits Management Approach"
+                },
+                {
+                  "standard": "iso21502",
+                  "page": "6.8",
+                  "note": "ISO 21502 - Transition planning"
+                },
+                {
+                  "standard": "iso21502",
+                  "page": "7.3",
+                  "note": "ISO 21502 - Benefits tracking"
+                }
               ]
-            },
-            {
-              "standard": "iso21502",
-              "page": [
-                "6.8",
-                "7.3"
-              ]
-            },
-            {
-              "standard": "iso",
-              "page": 36
             }
-          ]
+          ],
+          "deliverables": [
+            "Acceptance Certificate",
+            "Updated Project Plan",
+            "Benefits Management Approach",
+            "Transition Plan"
+          ],
+          "decisionGate": {
+            "name": "Decision Gate 3 – Authorize Final Transition",
+            "criteria": [
+              "Project Board reviews End Stage Reports and approves transition to closure based on verified outcomes"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": "18.4.5",
+                "note": "PRINCE2 - End Stage approval"
+              }
+            ]
+          }
         },
         {
           "name": "6. Closure Phase (P4: Closure & Handover)",
           "duration": "Approx. 1 Month",
-          "purpose": "The closure phase formalizes project completion, consolidates learning, and releases resources.",
+          "objective": "Formalize completion and consolidate learning",
           "keyActivities": [
-            "Administrative Closure: Confirm all deliverables are completed (PMBOK Closing Process Group pg 345).",
-            "Learning Dissemination: Finalize the Lessons Report (PRINCE2 pg 314) and transfer organizational assets and documentation for future use."
+            {
+              "activity": "Administrative Closure",
+              "description": "Confirm all deliverables are completed.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 345,
+                  "note": "PMBOK - Closing Process Group"
+                }
+              ]
+            },
+            {
+              "activity": "Learning Dissemination",
+              "description": "Finalize the Lessons Report and transfer organizational assets and documentation for future use.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 314,
+                  "note": "PRINCE2 - Lessons Report"
+                },
+                {
+                  "standard": "iso21502",
+                  "page": 299,
+                  "note": "ISO 21502 - Knowledge institutionalization"
+                }
+              ]
+            }
           ],
-          "justification": "Formal closure ensures accountability and documentation integrity (PMBOK Closing Process Group). Capturing lessons learned (ISO 21502 pg 299) institutionalizes knowledge gained from innovation-driven work.",
-          "decisionGate": "Decision Gate 4 – Project Closure Confirmation: The Project Executive authorizes closure after evaluating performance against the baselined Project Initiation Documentation and verifying benefits realization.",
+          "deliverables": [
+            "Lessons Report",
+            "Project Closure Report",
+            "Organizational assets",
+            "Final documentation"
+          ],
+          "decisionGate": {
+            "name": "Decision Gate 4 – Project Closure Confirmation",
+            "criteria": [
+              "Project Executive authorizes closure after evaluating performance and verifying benefits realization"
+            ],
+            "references": [
+              {
+                "standard": "pmbok",
+                "page": 345,
+                "note": "PMBOK - Formal closure"
+              }
+            ]
+          }
+        }
+      ],
+      "roles": [
+        {
+          "role": "Project Executive",
+          "description": "Senior decision maker with budget authority",
+          "responsibilities": [
+            "Overall project accountability",
+            "Budget approval",
+            "Strategic alignment"
+          ],
+          "commitment": "Part-time oversight",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 96,
+              "note": "PRINCE2 - Executive role"
+            }
+          ]
+        },
+        {
+          "role": "Project Manager",
+          "description": "Day-to-day project leadership and coordination",
+          "responsibilities": [
+            "Team management",
+            "Risk management",
+            "Stakeholder communication"
+          ],
+          "commitment": "Full-time",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 96,
+              "note": "PRINCE2 - PM responsibilities"
+            }
+          ]
+        },
+        {
+          "role": "Research Lead",
+          "description": "Technical leadership for R&D activities",
+          "responsibilities": [
+            "Technical direction",
+            "Prototype development",
+            "Innovation management"
+          ],
+          "commitment": "Full-time",
           "references": [
             {
               "standard": "pmbok",
-              "page": 345
-            },
+              "page": 127,
+              "note": "PMBOK - Adaptive teams"
+            }
+          ]
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "artifact": "Outline Business Case",
+          "description": "Initial project justification",
+          "owner": "Project Executive",
+          "references": [
             {
               "standard": "prince2",
-              "page": 314
-            },
+              "page": 77,
+              "note": "PRINCE2 - Business case"
+            }
+          ]
+        },
+        {
+          "artifact": "MVP (Minimum Viable Product)",
+          "description": "First testable product iteration",
+          "owner": "Research Lead",
+          "references": [
             {
-              "standard": "iso21502",
-              "page": 299
+              "standard": "pmbok",
+              "page": "P264",
+              "note": "PMBOK - Prototyping"
+            }
+          ]
+        }
+      ],
+      "tailoringDecisions": [
+        {
+          "decision": "Hybrid/Adaptive approach",
+          "rationale": "R&D uncertainty requires flexibility while maintaining governance",
+          "tradeoffs": "Less predictability, more adaptability",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 127,
+              "note": "PMBOK - Hybrid approaches"
+            }
+          ]
+        }
+      ],
+      "successFactors": [
+        {
+          "factor": "Stakeholder patience with uncertainty",
+          "importance": "Critical for R&D projects",
+          "mitigation": "Regular communication of progress and learnings",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 251,
+              "note": "PRINCE2 - Stakeholder management"
             }
           ]
         }
@@ -2422,51 +3124,161 @@
     },
     "largeGovernmentProject": {
       "title": "Large Government Project",
-      "description": "Civil, electrical, and IT components, 2-year duration",
+      "context": {
+        "description": "Civil, electrical, and IT components, 2-year duration",
+        "characteristics": [
+          "Multi-discipline project (civil, electrical, IT)",
+          "2-year project timeline",
+          "High regulatory and compliance requirements",
+          "Formal governance and audit requirements",
+          "Multiple stakeholder groups",
+          "Significant budget and procurement complexity"
+        ],
+        "tailoringRationale": "PRINCE2's explicit governance roles are retained for accountability; PMBOK's principle-based initiation adds flexibility across civil, electrical, and IT domains; ISO guidance ensures alignment to statutory obligations."
+      },
       "phases": [
         {
           "name": "1. Initiation Phase",
           "duration": "4–6 weeks",
-          "purpose": "Establish governance structure, strategic alignment, and feasibility for a regulated public project.",
+          "objective": "Establish governance structure, strategic alignment, and feasibility",
           "keyActivities": [
-            "Identify project sponsors, steering committee, and key stakeholders (PMBOK Stakeholder Domain pg 87).",
-            "Develop a Project Brief / Business Case (ISO 21502 pg 17).",
-            "Appoint the Project Board (Executive, Senior User, Senior Supplier) for formal oversight.",
-            "Conduct initial feasibility, environmental, and regulatory assessments.",
-            "Draft the high-level budget, procurement approach, and risk register."
+            {
+              "activity": "Identify stakeholders",
+              "description": "Identify project sponsors, steering committee, and key stakeholders.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 87,
+                  "note": "PMBOK - Stakeholder Domain"
+                }
+              ]
+            },
+            {
+              "activity": "Develop Business Case",
+              "description": "Develop a Project Brief / Business Case.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 17,
+                  "note": "ISO 21502 - Business case development"
+                }
+              ]
+            },
+            {
+              "activity": "Appoint Project Board",
+              "description": "Appoint the Project Board (Executive, Senior User, Senior Supplier) for formal oversight.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 93,
+                  "note": "PRINCE2 - Project Board"
+                }
+              ]
+            },
+            {
+              "activity": "Feasibility assessments",
+              "description": "Conduct initial feasibility, environmental, and regulatory assessments.",
+              "references": [
+                {
+                  "standard": "iso21502",
+                  "page": 17,
+                  "note": "ISO 21502 - Feasibility"
+                }
+              ]
+            },
+            {
+              "activity": "Draft budget and procurement",
+              "description": "Draft the high-level budget, procurement approach, and risk register.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 138,
+                  "note": "PMBOK - Procurement planning"
+                }
+              ]
+            }
           ],
-          "roles": "Executive Sponsor, Project Manager, Project Board, Procurement Lead, Compliance Officer.",
           "deliverables": [
-            "Business Case (PMBOK Value Delivery System)",
+            "Business Case",
             "Project Charter / Brief",
             "Stakeholder Register",
             "Initial Risk and Feasibility Report"
           ],
-          "decisionGate": "Decision Gate 1: Business Case Approval by Project Board and Sponsor → proceed to Planning.",
-          "justification": "PRINCE2's explicit governance roles are retained for accountability; PMBOK's principle-based initiation adds flexibility across civil, electrical, and IT domains; ISO guidance ensures alignment to statutory obligations.",
-          "references": [
-            {
-              "standard": "pmbok",
-              "page": 87
-            },
-            {
-              "standard": "iso21502",
-              "page": 17
-            }
-          ]
+          "decisionGate": {
+            "name": "Decision Gate 1: Business Case Approval",
+            "criteria": [
+              "Business Case Approval by Project Board and Sponsor → proceed to Planning"
+            ],
+            "references": [
+              {
+                "standard": "iso21502",
+                "page": 17,
+                "note": "ISO 21502 - Approval process"
+              }
+            ]
+          }
         },
         {
           "name": "2. Planning Phase",
           "duration": "8–10 weeks",
-          "purpose": "Define scope, budget, schedule, and compliance controls before mobilization.",
+          "objective": "Define scope, budget, schedule, and compliance controls",
           "keyActivities": [
-            "Develop Product-Based Plans and Work Breakdown Structures (PRINCE2 Plans Practice pg 143).",
-            "Produce an integrated Master Schedule linking design, procurement, and construction.",
-            "Create Procurement Management Plan (PMBOK Procurement Domain pg 138).",
-            "Establish Risk and Quality Management Plans (PRINCE2 Quality Practice pg 147).",
-            "Prepare Communication and Reporting Framework for stakeholders."
+            {
+              "activity": "Develop plans and WBS",
+              "description": "Develop Product-Based Plans and Work Breakdown Structures.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 143,
+                  "note": "PRINCE2 - Plans Practice"
+                }
+              ]
+            },
+            {
+              "activity": "Create master schedule",
+              "description": "Produce an integrated Master Schedule linking design, procurement, and construction.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 138,
+                  "note": "PMBOK - Integrated planning"
+                }
+              ]
+            },
+            {
+              "activity": "Procurement planning",
+              "description": "Create Procurement Management Plan.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 138,
+                  "note": "PMBOK - Procurement Domain"
+                }
+              ]
+            },
+            {
+              "activity": "Risk and quality plans",
+              "description": "Establish Risk and Quality Management Plans.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 147,
+                  "note": "PRINCE2 - Quality Practice"
+                }
+              ]
+            },
+            {
+              "activity": "Communication framework",
+              "description": "Prepare Communication and Reporting Framework for stakeholders.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 87,
+                  "note": "PMBOK - Communication planning"
+                }
+              ]
+            }
           ],
-          "roles": "Project Manager (lead), Planning Engineer, Procurement Manager, Quality Manager, Finance Officer.",
           "deliverables": [
             "Project Initiation Document (PID)",
             "Master Schedule and Cost Baseline",
@@ -2474,34 +3286,86 @@
             "Procurement Strategy and Compliance Checklist",
             "Communication Plan"
           ],
-          "decisionGate": "Decision Gate 2: PID Approval & Baseline Sign-off by Project Board.",
-          "justification": "PRINCE2's formal PID adds rigor for government audits; PMBOK supports detailed domain integration (civil/electrical/IT); ISO's procurement clauses embed mandatory tender and compliance checks.",
-          "references": [
-            {
-              "standard": "prince2",
-              "page": [
-                143,
-                147
-              ]
-            },
-            {
-              "standard": "pmbok",
-              "page": 138
-            }
-          ]
+          "decisionGate": {
+            "name": "Decision Gate 2: PID Approval",
+            "criteria": [
+              "PID Approval & Baseline Sign-off by Project Board"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 143,
+                "note": "PRINCE2 - PID approval"
+              }
+            ]
+          }
         },
         {
           "name": "3. Execution Phase",
           "duration": "Year 1 – Year 2",
-          "purpose": "Deliver physical and digital outputs in controlled stages ensuring quality, safety, and contractual compliance.",
+          "objective": "Deliver outputs in controlled stages ensuring quality and compliance",
           "keyActivities": [
-            "Manage design, construction, and IT integration workstreams (PMBOK Delivery Performance Domain pg 150).",
-            "Conduct procurement and contract administration (ISO pg 51).",
-            "Perform quality inspections and system tests (PRINCE2 Quality Register; PMBOK Quality Domain).",
-            "Monitor site safety, environment, and compliance.",
-            "Manage stakeholder engagement and communication cycles."
+            {
+              "activity": "Manage workstreams",
+              "description": "Manage design, construction, and IT integration workstreams.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 150,
+                  "note": "PMBOK - Delivery Performance Domain"
+                }
+              ]
+            },
+            {
+              "activity": "Procurement and contracts",
+              "description": "Conduct procurement and contract administration.",
+              "references": [
+                {
+                  "standard": "iso",
+                  "page": 51,
+                  "note": "ISO - Procurement management"
+                }
+              ]
+            },
+            {
+              "activity": "Quality inspections",
+              "description": "Perform quality inspections and system tests.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 147,
+                  "note": "PRINCE2 - Quality Register"
+                },
+                {
+                  "standard": "pmbok",
+                  "page": 150,
+                  "note": "PMBOK - Quality Domain"
+                }
+              ]
+            },
+            {
+              "activity": "Safety and compliance",
+              "description": "Monitor site safety, environment, and compliance.",
+              "references": [
+                {
+                  "standard": "iso",
+                  "page": 51,
+                  "note": "ISO - Compliance monitoring"
+                }
+              ]
+            },
+            {
+              "activity": "Stakeholder engagement",
+              "description": "Manage stakeholder engagement and communication cycles.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 87,
+                  "note": "PMBOK - Stakeholder engagement"
+                }
+              ]
+            }
           ],
-          "roles": "Project Manager, Work Package Leads (Civil/Electrical/IT), Contract Administrators, Quality & Safety Engineers, Auditors.",
           "deliverables": [
             "Stage Plans & Progress Reports",
             "Approved Design Drawings / Test Reports",
@@ -2509,80 +3373,334 @@
             "Quality Inspection Records",
             "Monthly Performance Reports"
           ],
-          "decisionGate": "Decision Gate 3: Stage Completion & Board Review — deliverables accepted, next stage authorized.",
-          "justification": "PRINCE2's stage management suits multi-discipline oversight; PMBOK's performance domains guide integration and delivery quality; ISO's reporting and audit clauses satisfy public accountability.",
-          "references": [
-            {
-              "standard": "pmbok",
-              "page": 150
-            },
-            {
-              "standard": "iso",
-              "page": 51
-            }
-          ]
+          "decisionGate": {
+            "name": "Decision Gate 3: Stage Completion",
+            "criteria": [
+              "Stage Completion & Board Review — deliverables accepted, next stage authorized"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 143,
+                "note": "PRINCE2 - Stage authorization"
+              }
+            ]
+          }
         },
         {
           "name": "4. Monitoring & Control Phase",
           "duration": "Ongoing",
-          "purpose": "Track performance, manage risk, ensure compliance, and control change across project life cycle.",
+          "objective": "Track performance, manage risk, ensure compliance",
           "keyActivities": [
-            "Maintain dashboards for cost, schedule, and risk (PMBOK Measurement Domain pg 160).",
-            "Conduct periodic Stage Gate Reviews (PRINCE2 Controlling Stage Process).",
-            "Implement formal Change Control Board decisions (ISO pg 44).",
-            "Update risk register and compliance reports."
+            {
+              "activity": "Performance dashboards",
+              "description": "Maintain dashboards for cost, schedule, and risk.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 160,
+                  "note": "PMBOK - Measurement Domain"
+                }
+              ]
+            },
+            {
+              "activity": "Stage gate reviews",
+              "description": "Conduct periodic Stage Gate Reviews.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 143,
+                  "note": "PRINCE2 - Controlling Stage Process"
+                }
+              ]
+            },
+            {
+              "activity": "Change control",
+              "description": "Implement formal Change Control Board decisions.",
+              "references": [
+                {
+                  "standard": "iso",
+                  "page": 44,
+                  "note": "ISO - Change control"
+                }
+              ]
+            },
+            {
+              "activity": "Risk updates",
+              "description": "Update risk register and compliance reports.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 160,
+                  "note": "PMBOK - Risk monitoring"
+                }
+              ]
+            }
           ],
-          "roles": "Project Manager, Control Account Managers, Risk Manager, Project Board.",
           "deliverables": [
             "Performance Reports (EVM or Milestone Tracking)",
             "Updated Risk Register",
             "Change Requests and Decision Records",
             "Compliance Audit Reports"
           ],
-          "decisionGate": "Decision Gate 4: Change Control and Stage Approval — authorize modifications or proceed to next milestone.",
-          "justification": "PRINCE2's tolerances and issue registers provide traceability; PMBOK's quantitative controls support technical monitoring; ISO ensures audit documentation.",
-          "references": [
-            {
-              "standard": "pmbok",
-              "page": 160
-            },
-            {
-              "standard": "iso",
-              "page": 44
-            }
-          ]
+          "decisionGate": {
+            "name": "Decision Gate 4: Change Control",
+            "criteria": [
+              "Change Control and Stage Approval — authorize modifications or proceed to next milestone"
+            ],
+            "references": [
+              {
+                "standard": "iso",
+                "page": 44,
+                "note": "ISO - Change approval"
+              }
+            ]
+          }
         },
         {
           "name": "5. Closure Phase",
           "duration": "Final 2 months",
-          "purpose": "Formalize acceptance, transition to operations, and evaluate benefits realization.",
+          "objective": "Formalize acceptance, transition to operations",
           "keyActivities": [
-            "Verify deliverables and regulatory compliance (ISO pg 32).",
-            "Conduct post-implementation review and lessons learned (PMBOK Closing pg 227).",
-            "Confirm Business Case outcomes (PRINCE2 Benefits Management Practice pg 88).",
-            "Archive documentation and release contracts/resources."
+            {
+              "activity": "Verify deliverables",
+              "description": "Verify deliverables and regulatory compliance.",
+              "references": [
+                {
+                  "standard": "iso",
+                  "page": 32,
+                  "note": "ISO - Verification"
+                }
+              ]
+            },
+            {
+              "activity": "Post-implementation review",
+              "description": "Conduct post-implementation review and lessons learned.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 227,
+                  "note": "PMBOK - Closing"
+                }
+              ]
+            },
+            {
+              "activity": "Benefits confirmation",
+              "description": "Confirm Business Case outcomes.",
+              "references": [
+                {
+                  "standard": "prince2",
+                  "page": 88,
+                  "note": "PRINCE2 - Benefits Management Practice"
+                }
+              ]
+            },
+            {
+              "activity": "Administrative closure",
+              "description": "Archive documentation and release contracts/resources.",
+              "references": [
+                {
+                  "standard": "pmbok",
+                  "page": 227,
+                  "note": "PMBOK - Administrative closure"
+                }
+              ]
+            }
           ],
-          "roles": "Project Manager, Board, Audit Team, Operations Representatives.",
           "deliverables": [
             "Handover Report / Acceptance Certificate",
             "Benefits Realization Report",
             "Lessons Learned Register",
             "Project Closure Report"
           ],
-          "decisionGate": "Decision Gate 5: Final Acceptance & Benefits Sign-off by Project Board and Sponsor.",
-          "justification": "Closure structured around PRINCE2's benefit verification ensures accountability; PMBOK's lessons learned process supports organizational learning; ISO provides auditable closure records required by government agencies.",
+          "decisionGate": {
+            "name": "Decision Gate 5: Final Acceptance",
+            "criteria": [
+              "Final Acceptance & Benefits Sign-off by Project Board and Sponsor"
+            ],
+            "references": [
+              {
+                "standard": "prince2",
+                "page": 88,
+                "note": "PRINCE2 - Final acceptance"
+              }
+            ]
+          }
+        }
+      ],
+      "roles": [
+        {
+          "role": "Executive Sponsor",
+          "description": "Senior accountability and strategic oversight",
+          "responsibilities": [
+            "Budget approval",
+            "Strategic direction",
+            "Board representation"
+          ],
+          "commitment": "Part-time",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 93,
+              "note": "PRINCE2 - Executive role"
+            }
+          ]
+        },
+        {
+          "role": "Project Manager",
+          "description": "Overall project coordination and delivery",
+          "responsibilities": [
+            "Day-to-day management",
+            "Team coordination",
+            "Reporting"
+          ],
+          "commitment": "Full-time",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 87,
+              "note": "PMBOK - PM responsibilities"
+            }
+          ]
+        },
+        {
+          "role": "Work Package Leads (Civil/Electrical/IT)",
+          "description": "Technical leadership for each discipline",
+          "responsibilities": [
+            "Technical delivery",
+            "Team management",
+            "Quality assurance"
+          ],
+          "commitment": "Full-time",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 150,
+              "note": "PMBOK - Technical leadership"
+            }
+          ]
+        },
+        {
+          "role": "Procurement Manager",
+          "description": "Manages all procurement and contracts",
+          "responsibilities": [
+            "Vendor selection",
+            "Contract management",
+            "Compliance"
+          ],
+          "commitment": "Full-time",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 138,
+              "note": "PMBOK - Procurement management"
+            }
+          ]
+        },
+        {
+          "role": "Compliance Officer",
+          "description": "Ensures regulatory and statutory compliance",
+          "responsibilities": [
+            "Compliance monitoring",
+            "Audit support",
+            "Reporting"
+          ],
+          "commitment": "Part-time",
           "references": [
             {
               "standard": "iso",
-              "page": 32
-            },
-            {
-              "standard": "pmbok",
-              "page": 227
-            },
+              "page": 32,
+              "note": "ISO - Compliance management"
+            }
+          ]
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "artifact": "Project Initiation Document (PID)",
+          "description": "Comprehensive baseline for the project",
+          "owner": "Project Manager",
+          "references": [
             {
               "standard": "prince2",
-              "page": 88
+              "page": 143,
+              "note": "PRINCE2 - PID"
+            }
+          ]
+        },
+        {
+          "artifact": "Master Schedule",
+          "description": "Integrated schedule across all disciplines",
+          "owner": "Planning Engineer",
+          "references": [
+            {
+              "standard": "pmbok",
+              "page": 138,
+              "note": "PMBOK - Schedule management"
+            }
+          ]
+        },
+        {
+          "artifact": "Compliance Checklist",
+          "description": "Regulatory and statutory requirements tracker",
+          "owner": "Compliance Officer",
+          "references": [
+            {
+              "standard": "iso",
+              "page": 32,
+              "note": "ISO - Compliance tracking"
+            }
+          ]
+        }
+      ],
+      "tailoringDecisions": [
+        {
+          "decision": "Formal governance with Project Board",
+          "rationale": "Government projects require clear accountability and oversight",
+          "tradeoffs": "More formal documentation and approval processes",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 93,
+              "note": "PRINCE2 - Governance model"
+            }
+          ]
+        },
+        {
+          "decision": "Stage-based delivery with gates",
+          "rationale": "Allows for controlled progress and decision points",
+          "tradeoffs": "Less flexibility, more planning overhead",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 143,
+              "note": "PRINCE2 - Stage management"
+            }
+          ]
+        }
+      ],
+      "successFactors": [
+        {
+          "factor": "Strong governance and oversight",
+          "importance": "Critical for public accountability",
+          "mitigation": "Regular Project Board meetings and reporting",
+          "references": [
+            {
+              "standard": "prince2",
+              "page": 93,
+              "note": "PRINCE2 - Governance"
+            }
+          ]
+        },
+        {
+          "factor": "Compliance with regulations",
+          "importance": "Mandatory for government projects",
+          "mitigation": "Dedicated compliance officer and regular audits",
+          "references": [
+            {
+              "standard": "iso",
+              "page": 32,
+              "note": "ISO - Compliance management"
             }
           ]
         }
