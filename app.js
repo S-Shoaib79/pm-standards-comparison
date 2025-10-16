@@ -284,10 +284,16 @@ window.goToBookmarkPage = function(page) {
     const viewer = document.getElementById('pdfViewer');
     const currentSrc = viewer.src;
     const baseUrl = currentSrc.split('#')[0];
-    viewer.src = `${baseUrl}#page=${page}`;
+    
+    // Apply page offset to get actual PDF page number
+    const offset = PDF_PAGE_OFFSETS[currentStandard] || 0;
+    const actualPage = page + offset;
+    
+    viewer.src = `${baseUrl}#page=${actualPage}`;
     currentPage = page;
     updatePageNumber(page);
     updateBookmarkButton(isPageBookmarked(currentStandard, page));
+    saveLastReadPage(currentStandard, page);
 };
 
 window.deleteBookmark = function(standard, page) {
@@ -1008,7 +1014,12 @@ function goToPage(page) {
     const viewer = document.getElementById('pdfViewer');
     const currentSrc = viewer.src;
     const baseUrl = currentSrc.split('#')[0];
-    viewer.src = `${baseUrl}#page=${page}`;
+    
+    // Apply page offset to get actual PDF page number
+    const offset = PDF_PAGE_OFFSETS[currentStandard] || 0;
+    const actualPage = page + offset;
+    
+    viewer.src = `${baseUrl}#page=${actualPage}`;
     currentPage = page;
     updatePageNumber(page);
     updateBookmarkButton(isPageBookmarked(currentStandard, page));
