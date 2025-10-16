@@ -3321,9 +3321,9 @@
               "description": "Conduct procurement and contract administration.",
               "references": [
                 {
-                  "standard": "iso",
+                  "standard": "iso21502",
                   "page": 51,
-                  "note": "ISO - Procurement management"
+                  "note": "ISO 21502 - Procurement management"
                 }
               ]
             },
@@ -3348,9 +3348,9 @@
               "description": "Monitor site safety, environment, and compliance.",
               "references": [
                 {
-                  "standard": "iso",
+                  "standard": "iso21502",
                   "page": 51,
-                  "note": "ISO - Compliance monitoring"
+                  "note": "ISO 21502 - Compliance monitoring"
                 }
               ]
             },
@@ -3419,9 +3419,9 @@
               "description": "Implement formal Change Control Board decisions.",
               "references": [
                 {
-                  "standard": "iso",
+                  "standard": "iso21502",
                   "page": 44,
-                  "note": "ISO - Change control"
+                  "note": "ISO 21502 - Change control"
                 }
               ]
             },
@@ -3450,9 +3450,9 @@
             ],
             "references": [
               {
-                "standard": "iso",
+                "standard": "iso21502",
                 "page": 44,
-                "note": "ISO - Change approval"
+                "note": "ISO 21502 - Change approval"
               }
             ]
           }
@@ -3467,9 +3467,9 @@
               "description": "Verify deliverables and regulatory compliance.",
               "references": [
                 {
-                  "standard": "iso",
+                  "standard": "iso21502",
                   "page": 32,
-                  "note": "ISO - Verification"
+                  "note": "ISO 21502 - Verification"
                 }
               ]
             },
@@ -3608,9 +3608,9 @@
           "commitment": "Part-time",
           "references": [
             {
-              "standard": "iso",
+              "standard": "iso21502",
               "page": 32,
-              "note": "ISO - Compliance management"
+                  "note": "ISO 21502 - Compliance management"
             }
           ]
         }
@@ -3646,9 +3646,9 @@
           "owner": "Compliance Officer",
           "references": [
             {
-              "standard": "iso",
+              "standard": "iso21502",
               "page": 32,
-              "note": "ISO - Compliance tracking"
+                  "note": "ISO 21502 - Compliance tracking"
             }
           ]
         }
@@ -3698,9 +3698,9 @@
           "mitigation": "Dedicated compliance officer and regular audits",
           "references": [
             {
-              "standard": "iso",
+              "standard": "iso21502",
               "page": 32,
-              "note": "ISO - Compliance management"
+                  "note": "ISO 21502 - Compliance management"
             }
           ]
         }
