@@ -15,11 +15,12 @@
                 <p>PMBOK 7 • PRINCE2 • ISO 21500/21502</p>
             </div>
             <div class="nav-tabs">
-                <button class="tab-btn active" data-tab="repository">📚 Standards Repository</button>
-                <button class="tab-btn" data-tab="comparison">⚖️ Comparison Engine</button>
-                <button class="tab-btn" data-tab="uniqueness">⭐ Uniqueness Analysis</button>
-                <button class="tab-btn" data-tab="insights">💡 Insights Dashboard</button>
-                <button class="tab-btn" data-tab="process">🔧 Process Generator</button>
+                <button class="tab-btn active" data-tab="repository">Standards Repository</button>
+                <button class="tab-btn" data-tab="library">PDF Library</button>
+                <button class="tab-btn" data-tab="comparison">Comparison Engine</button>
+                <button class="tab-btn" data-tab="uniqueness">Uniqueness Analysis</button>
+                <button class="tab-btn" data-tab="insights">Insights Dashboard</button>
+                <button class="tab-btn" data-tab="process">Process Generator</button>
             </div>
         </nav>
 
@@ -42,6 +43,84 @@
 
                 <div id="repositoryContent" class="standards-grid">
                     <!-- Content loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- PDF Library Tab -->
+            <div id="library" class="tab-content">
+                <div class="content-header">
+                    <h2>PDF Library</h2>
+                    <p>Access all PM standards with bookmarking capability</p>
+                </div>
+
+                <div class="pdf-library-grid">
+                    <div class="pdf-book-card" data-standard="pmbok">
+                        <div class="book-cover pmbok-cover">
+                            <div class="book-title">PMBOK Guide</div>
+                            <div class="book-edition">7th Edition</div>
+                        </div>
+                        <div class="book-info">
+                            <h3>A Guide to the Project Management Body of Knowledge</h3>
+                            <p class="book-description">The standard for project management that provides guidelines for managing individual projects and defines project management related concepts.</p>
+                            <div class="book-meta">
+                                <span class="meta-item">PMI</span>
+                                <span class="meta-item">2021</span>
+                                <span class="meta-item bookmark-count" data-standard="pmbok">0 Bookmarks</span>
+                            </div>
+                            <button class="btn-primary open-book-btn" data-standard="pmbok">Open Book</button>
+                        </div>
+                    </div>
+
+                    <div class="pdf-book-card" data-standard="prince2">
+                        <div class="book-cover prince2-cover">
+                            <div class="book-title">PRINCE2</div>
+                            <div class="book-edition">7th Edition</div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Managing Successful Projects with PRINCE2</h3>
+                            <p class="book-description">A process-based method for effective project management, widely recognized and used in the private and public sectors internationally.</p>
+                            <div class="book-meta">
+                                <span class="meta-item">PeopleCert</span>
+                                <span class="meta-item">2023</span>
+                                <span class="meta-item bookmark-count" data-standard="prince2">0 Bookmarks</span>
+                            </div>
+                            <button class="btn-primary open-book-btn" data-standard="prince2">Open Book</button>
+                        </div>
+                    </div>
+
+                    <div class="pdf-book-card" data-standard="iso21500">
+                        <div class="book-cover iso-cover">
+                            <div class="book-title">ISO 21500</div>
+                            <div class="book-edition">2021</div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Project, Programme and Portfolio Management</h3>
+                            <p class="book-description">Context and concepts for project, programme and portfolio management. Provides high-level description of concepts and processes.</p>
+                            <div class="book-meta">
+                                <span class="meta-item">ISO</span>
+                                <span class="meta-item">2021</span>
+                                <span class="meta-item bookmark-count" data-standard="iso21500">0 Bookmarks</span>
+                            </div>
+                            <button class="btn-primary open-book-btn" data-standard="iso21500">Open Book</button>
+                        </div>
+                    </div>
+
+                    <div class="pdf-book-card" data-standard="iso21502">
+                        <div class="book-cover iso-cover">
+                            <div class="book-title">ISO 21502</div>
+                            <div class="book-edition">2020</div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Guidance on Project Management</h3>
+                            <p class="book-description">Provides guidance for project management and can be used by any type of organization, including public, private or community organizations.</p>
+                            <div class="book-meta">
+                                <span class="meta-item">ISO</span>
+                                <span class="meta-item">2020</span>
+                                <span class="meta-item bookmark-count" data-standard="iso21502">0 Bookmarks</span>
+                            </div>
+                            <button class="btn-primary open-book-btn" data-standard="iso21502">Open Book</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -275,12 +354,48 @@
 
         <!-- PDF Viewer Modal -->
         <div id="pdfModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 id="modalTitle">Standard Reference</h3>
-                    <button class="modal-close">&times;</button>
+            <div class="modal-content pdf-viewer-modal">
+                <div class="modal-header pdf-viewer-header">
+                    <div class="pdf-title-section">
+                        <h3 id="modalTitle">Standard Reference</h3>
+                        <span class="current-page-info">Page <input type="number" id="pageNumberInput" min="1" value="1"> of <span id="totalPages">-</span></span>
+                    </div>
+                    <div class="pdf-controls">
+                        <button class="pdf-control-btn" id="prevPageBtn" title="Previous Page">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="pdf-control-btn" id="bookmarkBtn" title="Bookmark this page">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </button>
+                        <button class="pdf-control-btn" id="showBookmarksBtn" title="View Bookmarks">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                            </svg>
+                        </button>
+                        <button class="pdf-control-btn" id="nextPageBtn" title="Next Page">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="modal-close pdf-close-btn">&times;</button>
+                    </div>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pdf-viewer-body">
+                    <div class="bookmarks-sidebar" id="bookmarksSidebar">
+                        <h4>Bookmarks</h4>
+                        <div class="bookmarks-list" id="bookmarksList">
+                            <p class="no-bookmarks">No bookmarks yet. Click the bookmark button to save pages.</p>
+                        </div>
+                    </div>
                     <iframe id="pdfViewer" width="100%" height="100%"></iframe>
                 </div>
             </div>

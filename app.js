@@ -38,11 +38,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 function initializeApp() {
     setupTabNavigation();
     setupRepositoryView();
+    setupPDFLibrary();
     setupComparisonEngine();
     setupUniquenessAnalysis();
     setupInsightsDashboard();
     setupProcessGenerator();
     setupPDFModal();
+    loadBookmarkCounts();
 }
 
 // Tab Navigation
@@ -148,6 +150,149 @@ function displayRepositoryContent(searchTerm = '', filter = 'all') {
 
     container.innerHTML = html;
 }
+
+// PDF Library Setup
+function setupPDFLibrary() {
+    const openBookButtons = document.querySelectorAll('.open-book-btn');
+    
+    openBookButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const standard = button.dataset.standard;
+            openBookFromLibrary(standard);
+        });
+    });
+}
+
+function openBookFromLibrary(standard) {
+    const lastPage = getLastReadPage(standard);
+    const page = lastPage || 1;
+    openPDF(standard, page);
+}
+
+// Bookmark Management
+let currentStandard = null;
+let currentPage = 1;
+
+function getBookmarks(standard) {
+    const bookmarks = localStorage.getItem(`bookmarks_${standard}`);
+    return bookmarks ? JSON.parse(bookmarks) : [];
+}
+
+function saveBookmark(standard, page, note = '') {
+    const bookmarks = getBookmarks(standard);
+    const existing = bookmarks.find(b => b.page === page);
+    
+    if (!existing) {
+        bookmarks.push({
+            page: page,
+            note: note,
+            timestamp: new Date().toISOString()
+        });
+        bookmarks.sort((a, b) => a.page - b.page);
+        localStorage.setItem(`bookmarks_${standard}`, JSON.stringify(bookmarks));
+        updateBookmarkButton(true);
+        loadBookmarks(standard);
+        loadBookmarkCounts();
+        return true;
+    }
+    return false;
+}
+
+function removeBookmark(standard, page) {
+    const bookmarks = getBookmarks(standard);
+    const filtered = bookmarks.filter(b => b.page !== page);
+    localStorage.setItem(`bookmarks_${standard}`, JSON.stringify(filtered));
+    updateBookmarkButton(false);
+    loadBookmarks(standard);
+    loadBookmarkCounts();
+}
+
+function isPageBookmarked(standard, page) {
+    const bookmarks = getBookmarks(standard);
+    return bookmarks.some(b => b.page === page);
+}
+
+function getLastReadPage(standard) {
+    const lastPage = localStorage.getItem(`lastPage_${standard}`);
+    return lastPage ? parseInt(lastPage) : null;
+}
+
+function saveLastReadPage(standard, page) {
+    localStorage.setItem(`lastPage_${standard}`, page.toString());
+}
+
+function loadBookmarks(standard) {
+    const bookmarks = getBookmarks(standard);
+    const bookmarksList = document.getElementById('bookmarksList');
+    
+    if (bookmarks.length === 0) {
+        bookmarksList.innerHTML = '<p class="no-bookmarks">No bookmarks yet. Click the bookmark button to save pages.</p>';
+        return;
+    }
+    
+    let html = '';
+    bookmarks.forEach(bookmark => {
+        html += `
+            <div class="bookmark-item" data-page="${bookmark.page}">
+                <div class="bookmark-page">Page ${bookmark.page}</div>
+                <div class="bookmark-actions">
+                    <button class="bookmark-go-btn" onclick="goToBookmarkPage(${bookmark.page})">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="bookmark-delete-btn" onclick="deleteBookmark('${standard}', ${bookmark.page})">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        `;
+    });
+    
+    bookmarksList.innerHTML = html;
+}
+
+function loadBookmarkCounts() {
+    const standards = ['pmbok', 'prince2', 'iso21500', 'iso21502'];
+    standards.forEach(standard => {
+        const bookmarks = getBookmarks(standard);
+        const countElement = document.querySelector(`.bookmark-count[data-standard="${standard}"]`);
+        if (countElement) {
+            const count = bookmarks.length;
+            countElement.textContent = `${count} Bookmark${count !== 1 ? 's' : ''}`;
+        }
+    });
+}
+
+function updateBookmarkButton(isBookmarked) {
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    if (bookmarkBtn) {
+        if (isBookmarked) {
+            bookmarkBtn.classList.add('bookmarked');
+            bookmarkBtn.title = 'Remove bookmark';
+        } else {
+            bookmarkBtn.classList.remove('bookmarked');
+            bookmarkBtn.title = 'Bookmark this page';
+        }
+    }
+}
+
+window.goToBookmarkPage = function(page) {
+    const viewer = document.getElementById('pdfViewer');
+    const currentSrc = viewer.src;
+    const baseUrl = currentSrc.split('#')[0];
+    viewer.src = `${baseUrl}#page=${page}`;
+    currentPage = page;
+    updatePageNumber(page);
+    updateBookmarkButton(isPageBookmarked(currentStandard, page));
+};
+
+window.deleteBookmark = function(standard, page) {
+    removeBookmark(standard, page);
+};
 
 // Comparison Engine Setup
 function setupComparisonEngine() {
@@ -789,18 +934,92 @@ function buildProcess(type, size, maturity, focusAreas) {
 function setupPDFModal() {
     const modal = document.getElementById('pdfModal');
     const closeBtn = modal.querySelector('.modal-close');
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    const showBookmarksBtn = document.getElementById('showBookmarksBtn');
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const nextPageBtn = document.getElementById('nextPageBtn');
+    const pageNumberInput = document.getElementById('pageNumberInput');
 
     closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        document.getElementById('pdfViewer').src = '';
+        closeModal();
     });
 
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.style.display = 'none';
-            document.getElementById('pdfViewer').src = '';
+            closeModal();
         }
     });
+
+    bookmarkBtn.addEventListener('click', () => {
+        if (!currentStandard) return;
+        
+        if (isPageBookmarked(currentStandard, currentPage)) {
+            removeBookmark(currentStandard, currentPage);
+        } else {
+            saveBookmark(currentStandard, currentPage);
+        }
+    });
+
+    showBookmarksBtn.addEventListener('click', () => {
+        const sidebar = document.getElementById('bookmarksSidebar');
+        sidebar.classList.toggle('active');
+    });
+
+    prevPageBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            goToPage(currentPage - 1);
+        }
+    });
+
+    nextPageBtn.addEventListener('click', () => {
+        goToPage(currentPage + 1);
+    });
+
+    pageNumberInput.addEventListener('change', (e) => {
+        const page = parseInt(e.target.value);
+        if (page && page > 0) {
+            goToPage(page);
+        }
+    });
+
+    pageNumberInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const page = parseInt(e.target.value);
+            if (page && page > 0) {
+                goToPage(page);
+            }
+        }
+    });
+}
+
+function closeModal() {
+    const modal = document.getElementById('pdfModal');
+    modal.style.display = 'none';
+    document.getElementById('pdfViewer').src = '';
+    const sidebar = document.getElementById('bookmarksSidebar');
+    sidebar.classList.remove('active');
+    
+    if (currentStandard && currentPage) {
+        saveLastReadPage(currentStandard, currentPage);
+    }
+}
+
+function goToPage(page) {
+    const viewer = document.getElementById('pdfViewer');
+    const currentSrc = viewer.src;
+    const baseUrl = currentSrc.split('#')[0];
+    viewer.src = `${baseUrl}#page=${page}`;
+    currentPage = page;
+    updatePageNumber(page);
+    updateBookmarkButton(isPageBookmarked(currentStandard, page));
+    saveLastReadPage(currentStandard, page);
+}
+
+function updatePageNumber(page) {
+    const pageNumberInput = document.getElementById('pageNumberInput');
+    if (pageNumberInput) {
+        pageNumberInput.value = page;
+    }
 }
 
 function openPDF(standard, page) {
@@ -818,9 +1037,22 @@ function openPDF(standard, page) {
     const offset = PDF_PAGE_OFFSETS[standard] || 0;
     const actualPage = page + offset;
 
-    title.textContent = `${getStandardName(standard)} - Page ${page} (PDF Page ${actualPage})`;
+    // Set current standard and page
+    currentStandard = standard;
+    currentPage = page;
+
+    // Update UI
+    title.textContent = `${getStandardName(standard)}`;
     viewer.src = `${encodeURIComponent(pdfFile)}#page=${actualPage}`;
+    updatePageNumber(page);
+    updateBookmarkButton(isPageBookmarked(standard, page));
+    loadBookmarks(standard);
+    
     modal.style.display = 'flex';
+    
+    // Hide bookmarks sidebar initially
+    const sidebar = document.getElementById('bookmarksSidebar');
+    sidebar.classList.remove('active');
 }
 
 // Helper Functions
