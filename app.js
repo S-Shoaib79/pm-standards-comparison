@@ -167,12 +167,12 @@ function setupPDFLibrary() {
 function openBookFromLibrary(standard) {
     const lastPage = getLastReadPage(standard);
     const page = lastPage || 1;
-    openPDF(standard, page);
+    openPDFAtActualPage(standard, page);
 }
 
 // Bookmark Management
 let currentStandard = null;
-let currentPage = 1;
+let currentPage = 1;  // This tracks the actual PDF page number being viewed
 
 function getBookmarks(standard) {
     const bookmarks = localStorage.getItem(`bookmarks_${standard}`);
@@ -286,11 +286,8 @@ window.goToBookmarkPage = function(page) {
     const currentSrc = viewer.src;
     const baseUrl = currentSrc.split('#')[0];
     
-    // Apply page offset to get actual PDF page number
-    const offset = PDF_PAGE_OFFSETS[currentStandard] || 0;
-    const actualPage = page + offset;
-    
-    viewer.src = `${baseUrl}#page=${actualPage}`;
+    // Page is already the actual PDF page number, use it directly
+    viewer.src = `${baseUrl}#page=${page}`;
     currentPage = page;
     updatePageNumber(page);
     updateBookmarkButton(isPageBookmarked(currentStandard, page));
@@ -1460,11 +1457,8 @@ function goToPage(page) {
     const currentSrc = viewer.src;
     const baseUrl = currentSrc.split('#')[0];
     
-    // Apply page offset to get actual PDF page number
-    const offset = PDF_PAGE_OFFSETS[currentStandard] || 0;
-    const actualPage = page + offset;
-    
-    viewer.src = `${baseUrl}#page=${actualPage}`;
+    // Page is already the actual PDF page number, use it directly
+    viewer.src = `${baseUrl}#page=${page}`;
     currentPage = page;
     updatePageNumber(page);
     updateBookmarkButton(isPageBookmarked(currentStandard, page));
@@ -1478,7 +1472,8 @@ function updatePageNumber(page) {
     }
 }
 
-function openPDF(standard, page) {
+// Open PDF at a logical page (for reference links) - applies offset
+function openPDF(standard, logicalPage) {
     const modal = document.getElementById('pdfModal');
     const viewer = document.getElementById('pdfViewer');
     const title = document.getElementById('modalTitle');
@@ -1489,19 +1484,49 @@ function openPDF(standard, page) {
         return;
     }
 
-    // Apply page offset to get actual PDF page number
+    // Apply page offset to convert logical page to actual PDF page
     const offset = PDF_PAGE_OFFSETS[standard] || 0;
-    const actualPage = page + offset;
+    const actualPage = logicalPage + offset;
 
-    // Set current standard and page
+    // Set current standard and actual PDF page
     currentStandard = standard;
-    currentPage = page;
+    currentPage = actualPage;  // Store the actual PDF page
 
     // Update UI
     title.textContent = `${getStandardName(standard)}`;
     viewer.src = `${encodeURIComponent(pdfFile)}#page=${actualPage}`;
-    updatePageNumber(page);
-    updateBookmarkButton(isPageBookmarked(standard, page));
+    updatePageNumber(actualPage);
+    updateBookmarkButton(isPageBookmarked(standard, actualPage));
+    loadBookmarks(standard);
+    
+    modal.style.display = 'flex';
+    
+    // Hide bookmarks sidebar initially
+    const sidebar = document.getElementById('bookmarksSidebar');
+    sidebar.classList.remove('active');
+}
+
+// Open PDF at actual PDF page (for bookmarks and library) - no offset
+function openPDFAtActualPage(standard, actualPage) {
+    const modal = document.getElementById('pdfModal');
+    const viewer = document.getElementById('pdfViewer');
+    const title = document.getElementById('modalTitle');
+
+    const pdfFile = PDF_FILES[standard];
+    if (!pdfFile) {
+        alert('PDF file not found for this standard.');
+        return;
+    }
+
+    // Use the actual PDF page directly without any offset
+    currentStandard = standard;
+    currentPage = actualPage;
+
+    // Update UI
+    title.textContent = `${getStandardName(standard)}`;
+    viewer.src = `${encodeURIComponent(pdfFile)}#page=${actualPage}`;
+    updatePageNumber(actualPage);
+    updateBookmarkButton(isPageBookmarked(standard, actualPage));
     loadBookmarks(standard);
     
     modal.style.display = 'flex';
