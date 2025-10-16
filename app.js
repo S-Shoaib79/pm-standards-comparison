@@ -8,14 +8,7 @@ const PDF_FILES = {
     iso21502: "ISO 21502-2020_ Project, programme and portfolio management - Guidance on project management.pdf"
 };
 
-// PDF page offsets: Add this number to reference page to get actual PDF page
-// To find offset: Open PDF, find where "Page 1" of content appears, subtract 1 from PDF page number
-const PDF_PAGE_OFFSETS = {
-    pmbok: 29,      // PMBOK content page 1 is at PDF page 30 (30 - 1 = 29)
-    prince2: 19,    // PRINCE2 content page 1 is at PDF page 20 (20 - 1 = 19)
-    iso21500: 7,    // ISO 21500 content starts at PDF page 8 (8 - 1 = 7)
-    iso21502: 7     // ISO 21502 content starts at PDF page 8 (8 - 1 = 7)
-};
+// No page offsets - all page numbers are used exactly as provided
 
 // Data structure for standards content
 let standardsData = {
@@ -167,7 +160,7 @@ function setupPDFLibrary() {
 function openBookFromLibrary(standard) {
     const lastPage = getLastReadPage(standard);
     const page = lastPage || 1;
-    openPDFAtActualPage(standard, page);
+    openPDF(standard, page);
 }
 
 // Bookmark Management
@@ -1472,8 +1465,8 @@ function updatePageNumber(page) {
     }
 }
 
-// Open PDF at a logical page (for reference links) - applies offset
-function openPDF(standard, logicalPage) {
+// Open PDF at exact page number (no offsets, no conversion)
+function openPDF(standard, page) {
     const modal = document.getElementById('pdfModal');
     const viewer = document.getElementById('pdfViewer');
     const title = document.getElementById('modalTitle');
@@ -1484,49 +1477,15 @@ function openPDF(standard, logicalPage) {
         return;
     }
 
-    // Apply page offset to convert logical page to actual PDF page
-    const offset = PDF_PAGE_OFFSETS[standard] || 0;
-    const actualPage = logicalPage + offset;
-
-    // Set current standard and actual PDF page
+    // Use exact page number - no conversion, no offsets
     currentStandard = standard;
-    currentPage = actualPage;  // Store the actual PDF page
+    currentPage = page;
 
     // Update UI
     title.textContent = `${getStandardName(standard)}`;
-    viewer.src = `${encodeURIComponent(pdfFile)}#page=${actualPage}`;
-    updatePageNumber(actualPage);
-    updateBookmarkButton(isPageBookmarked(standard, actualPage));
-    loadBookmarks(standard);
-    
-    modal.style.display = 'flex';
-    
-    // Hide bookmarks sidebar initially
-    const sidebar = document.getElementById('bookmarksSidebar');
-    sidebar.classList.remove('active');
-}
-
-// Open PDF at actual PDF page (for bookmarks and library) - no offset
-function openPDFAtActualPage(standard, actualPage) {
-    const modal = document.getElementById('pdfModal');
-    const viewer = document.getElementById('pdfViewer');
-    const title = document.getElementById('modalTitle');
-
-    const pdfFile = PDF_FILES[standard];
-    if (!pdfFile) {
-        alert('PDF file not found for this standard.');
-        return;
-    }
-
-    // Use the actual PDF page directly without any offset
-    currentStandard = standard;
-    currentPage = actualPage;
-
-    // Update UI
-    title.textContent = `${getStandardName(standard)}`;
-    viewer.src = `${encodeURIComponent(pdfFile)}#page=${actualPage}`;
-    updatePageNumber(actualPage);
-    updateBookmarkButton(isPageBookmarked(standard, actualPage));
+    viewer.src = `${encodeURIComponent(pdfFile)}#page=${page}`;
+    updatePageNumber(page);
+    updateBookmarkButton(isPageBookmarked(standard, page));
     loadBookmarks(standard);
     
     modal.style.display = 'flex';
