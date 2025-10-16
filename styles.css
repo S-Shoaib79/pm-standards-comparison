@@ -2123,6 +2123,189 @@ body {
     border-color: var(--danger);
 }
 
+/* Tailored Processes Grid Styles */
+.tailored-processes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.process-scenario-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.process-scenario-card:not(.placeholder-card):hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
+    border-color: var(--primary);
+}
+
+.process-scenario-card.placeholder-card {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.scenario-icon {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.scenario-icon.software-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.scenario-icon.placeholder-icon {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.scenario-content {
+    padding: 24px;
+    flex: 1;
+}
+
+.scenario-content h3 {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.scenario-description {
+    color: var(--text-gray);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.scenario-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.scenario-tags .tag {
+    font-size: 0.8em;
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.scenario-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.scenario-stats .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.scenario-stats .stat strong {
+    font-size: 1.5em;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.scenario-stats .stat span {
+    font-size: 0.8em;
+    color: var(--text-gray);
+}
+
+.scenario-footer {
+    padding: 16px 24px;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.scenario-footer.placeholder-footer {
+    justify-content: center;
+}
+
+.scenario-footer.placeholder-footer span {
+    color: var(--text-gray);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.view-details-btn {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: var(--transition);
+}
+
+.process-scenario-card:hover .view-details-btn {
+    transform: translateX(4px);
+}
+
+/* Process Detail View Styles */
+.process-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background: var(--bg-light);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(-4px);
+}
+
+.export-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.process-subtitle {
+    color: var(--text-gray);
+    font-size: 1.05em;
+    margin-top: 8px;
+    font-weight: 400;
+}
+
 @media print {
     .navbar,
     .search-panel,
@@ -2131,7 +2314,9 @@ body {
     .btn-link,
     .btn-primary,
     .btn-secondary,
-    .process-footer {
+    .process-footer,
+    .back-btn,
+    .export-actions {
         display: none;
     }
     

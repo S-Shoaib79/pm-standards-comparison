@@ -42,6 +42,7 @@ function initializeApp() {
     setupComparisonEngine();
     setupUniquenessAnalysis();
     setupInsightsDashboard();
+    setupTailoredProcesses();
     setupProcessGenerator();
     setupPDFModal();
     loadBookmarkCounts();
@@ -597,6 +598,408 @@ function displayCoverageMap() {
     container.innerHTML = html;
 }
 
+// Tailored Processes Setup
+function setupTailoredProcesses() {
+    displayTailoredProcessCards();
+}
+
+function displayTailoredProcessCards() {
+    const container = document.querySelector('.tailored-processes-grid');
+    if (!container) return;
+    
+    const processes = standardsData.tailoredProcesses;
+    if (!processes) return;
+    
+    let html = '';
+    
+    // Custom Software Development Process Card
+    if (processes.customSoftwareDevelopment) {
+        const process = processes.customSoftwareDevelopment;
+        html += `
+            <div class="process-scenario-card" onclick="showProcessDetail('customSoftwareDevelopment')">
+                <div class="scenario-icon software-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <div class="scenario-content">
+                    <h3>${process.title}</h3>
+                    <p class="scenario-description">${process.context.description}</p>
+                    <div class="scenario-tags">
+                        <span class="tag">Duration: &lt;6 months</span>
+                        <span class="tag">Team: &lt;7 members</span>
+                        <span class="tag">Agile Approach</span>
+                    </div>
+                    <div class="scenario-stats">
+                        <div class="stat">
+                            <strong>${process.phases.length}</strong>
+                            <span>Phases</span>
+                        </div>
+                        <div class="stat">
+                            <strong>${process.roles.length}</strong>
+                            <span>Key Roles</span>
+                        </div>
+                        <div class="stat">
+                            <strong>${process.keyArtifacts.length}</strong>
+                            <span>Artifacts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="view-details-btn">View Details →</span>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Placeholder for future processes
+    html += `
+        <div class="process-scenario-card placeholder-card">
+            <div class="scenario-icon placeholder-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+            </div>
+            <div class="scenario-content">
+                <h3>Innovative Product Development</h3>
+                <p class="scenario-description">R&D-heavy, uncertain outcomes, ~1 year duration</p>
+                <div class="scenario-tags">
+                    <span class="tag">Duration: ~1 year</span>
+                    <span class="tag">R&D Focus</span>
+                    <span class="tag">Adaptive</span>
+                </div>
+            </div>
+            <div class="scenario-footer placeholder-footer">
+                <span>Coming Soon</span>
+            </div>
+        </div>
+        
+        <div class="process-scenario-card placeholder-card">
+            <div class="scenario-icon placeholder-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+            </div>
+            <div class="scenario-content">
+                <h3>Large Government Project</h3>
+                <p class="scenario-description">Civil, electrical, IT components, 2-year duration</p>
+                <div class="scenario-tags">
+                    <span class="tag">Duration: 2 years</span>
+                    <span class="tag">Multi-component</span>
+                    <span class="tag">Compliance Heavy</span>
+                </div>
+            </div>
+            <div class="scenario-footer placeholder-footer">
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
+
+window.showProcessDetail = function(processKey) {
+    const processData = standardsData.tailoredProcesses?.[processKey];
+    if (!processData) return;
+    
+    // Hide the grid and show detail view
+    const grid = document.querySelector('.tailored-processes-grid');
+    const detailView = document.getElementById('processDetailView');
+    
+    grid.style.display = 'none';
+    detailView.style.display = 'block';
+    
+    // Generate detailed view HTML
+    detailView.innerHTML = generateProcessDetailHTML(processData);
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+};
+
+window.backToProcessList = function() {
+    const grid = document.querySelector('.tailored-processes-grid');
+    const detailView = document.getElementById('processDetailView');
+    
+    grid.style.display = 'grid';
+    detailView.style.display = 'none';
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+};
+
+function generateProcessDetailHTML(processData) {
+    let html = `
+        <div class="process-detail-header">
+            <button class="back-btn" onclick="backToProcessList()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Processes
+            </button>
+            <div class="export-actions">
+                <button class="btn-secondary" onclick="exportProcessToPDF('${processData.title}')">Export to PDF</button>
+            </div>
+        </div>
+        
+        <div class="tailored-process-container">
+            <div class="process-header">
+                <h3>${processData.title}</h3>
+                <p class="process-subtitle">A lightweight, evidence-based process tailored for your project needs</p>
+            </div>
+            
+            <div class="process-context">
+                <h4>Project Context</h4>
+                <p>${processData.context.description}</p>
+                
+                <div class="context-characteristics">
+                    <h5>Key Characteristics:</h5>
+                    <ul>
+                        ${processData.context.characteristics.map(char => `<li>${char}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="tailoring-rationale">
+                    <h5>Tailoring Rationale:</h5>
+                    <p>${processData.context.tailoringRationale}</p>
+                </div>
+            </div>
+            
+            ${generatePhasesHTML(processData)}
+            ${generateRolesHTML(processData)}
+            ${generateArtifactsHTML(processData)}
+            ${generateTailoringDecisionsHTML(processData)}
+            ${generateSuccessFactorsHTML(processData)}
+        </div>
+    `;
+    
+    return html;
+}
+
+function generatePhasesHTML(processData) {
+    let html = `
+        <div class="process-phases">
+            <h3>Project Phases</h3>
+    `;
+    
+    processData.phases.forEach((phase, index) => {
+        html += `
+            <div class="process-phase">
+                <div class="phase-header">
+                    <h4>Phase ${index + 1}: ${phase.name}</h4>
+                    <span class="phase-duration">Duration: ${phase.duration}</span>
+                </div>
+                <p class="phase-objective"><strong>Objective:</strong> ${phase.objective}</p>
+                
+                <div class="phase-activities">
+                    <strong>Key Activities:</strong>
+                    <ul class="activities-list">
+        `;
+        
+        phase.keyActivities.forEach(activity => {
+            html += `
+                <li class="activity-item">
+                    <div class="activity-header">
+                        <strong>${activity.activity}</strong>
+                        ${activity.effort ? `<span class="effort-badge">${activity.effort}</span>` : ''}
+                        ${activity.frequency ? `<span class="frequency-badge">${activity.frequency}</span>` : ''}
+                    </div>
+                    <p class="activity-description">${activity.description}</p>
+                    <div class="activity-deliverables">
+                        <strong>Deliverables:</strong> ${activity.deliverables.join(', ')}
+                    </div>
+                    <div class="activity-refs">
+                        <strong>References:</strong>
+                        ${activity.references.map(ref => 
+                            `<button class="ref-badge detailed" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                                ${getStandardName(ref.standard)} p.${ref.page}
+                            </button>`
+                        ).join('')}
+                    </div>
+                </li>
+            `;
+        });
+        
+        html += `
+                    </ul>
+                </div>
+        `;
+        
+        if (phase.decisionGate) {
+            html += `
+                <div class="decision-gate">
+                    <h5>${phase.decisionGate.name}</h5>
+                    <div class="gate-criteria">
+                        <strong>Criteria:</strong>
+                        <ul>
+                            ${phase.decisionGate.criteria.map(criteria => `<li>${criteria}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="gate-refs">
+                        ${phase.decisionGate.references.map(ref => 
+                            `<button class="ref-badge" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                                ${getStandardName(ref.standard)} p.${ref.page}
+                            </button>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        html += `
+            </div>
+        `;
+    });
+    
+    html += `
+        </div>
+    `;
+    
+    return html;
+}
+
+function generateRolesHTML(processData) {
+    let html = `
+        <div class="process-roles">
+            <h3>Project Roles</h3>
+            <div class="roles-grid">
+    `;
+    
+    processData.roles.forEach(role => {
+        html += `
+            <div class="role-card">
+                <h4>${role.role}</h4>
+                <p class="role-description">${role.description}</p>
+                <div class="role-responsibilities">
+                    <strong>Responsibilities:</strong>
+                    <ul>
+                        ${role.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                    </ul>
+                </div>
+                <p class="role-commitment"><strong>Time Commitment:</strong> ${role.commitment}</p>
+                <div class="role-refs">
+                    ${role.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
+function generateArtifactsHTML(processData) {
+    let html = `
+        <div class="process-artifacts">
+            <h3>Key Artifacts</h3>
+            <div class="artifacts-grid">
+    `;
+    
+    processData.keyArtifacts.forEach(artifact => {
+        html += `
+            <div class="artifact-card">
+                <h4>${artifact.artifact}</h4>
+                <p>${artifact.description}</p>
+                <p class="artifact-owner"><strong>Owner:</strong> ${artifact.owner}</p>
+                <div class="artifact-refs">
+                    ${artifact.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
+function generateTailoringDecisionsHTML(processData) {
+    let html = `
+        <div class="tailoring-decisions">
+            <h3>Tailoring Decisions</h3>
+            <div class="decisions-list">
+    `;
+    
+    processData.tailoringDecisions.forEach(decision => {
+        html += `
+            <div class="decision-card">
+                <h4>${decision.decision}</h4>
+                <p><strong>Rationale:</strong> ${decision.rationale}</p>
+                <p><strong>Tradeoffs:</strong> ${decision.tradeoffs}</p>
+                <div class="decision-refs">
+                    ${decision.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
+function generateSuccessFactorsHTML(processData) {
+    let html = `
+        <div class="success-factors">
+            <h3>Critical Success Factors</h3>
+            <div class="factors-list">
+    `;
+    
+    processData.successFactors.forEach(factor => {
+        const importanceClass = factor.importance.toLowerCase().replace(/\s+/g, '-');
+        html += `
+            <div class="factor-card">
+                <div class="factor-header">
+                    <h4>${factor.factor}</h4>
+                    <span class="importance-badge ${importanceClass}">${factor.importance}</span>
+                </div>
+                <p><strong>Mitigation:</strong> ${factor.mitigation}</p>
+                <div class="factor-refs">
+                    ${factor.references.map(ref => 
+                        `<button class="ref-badge small" onclick="openPDF('${ref.standard}', ${ref.page})" title="${ref.note}">
+                            ${getStandardName(ref.standard)} p.${ref.page}
+                        </button>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
 // Process Generator Setup
 function setupProcessGenerator() {
     const generateBtn = document.getElementById('generateProcess');
@@ -604,9 +1007,6 @@ function setupProcessGenerator() {
     generateBtn.addEventListener('click', () => {
         generateTailoredProcess();
     });
-    
-    // Display the Custom Software Development tailored process
-    displayTailoredProcess();
 }
 
 function generateTailoredProcess() {
